@@ -1,0 +1,189 @@
+HTTrack3.49-2+htsswf+htsjava launched on Sat, 11 Oct 2025 21:37:07 at https://energiejeunes.fr/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -WC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://energiejeunes.fr/ -O1 "C:\Users\celia\Downloads\but2\energiejeunes" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+21:40:18	Error: 	"Bad Request" (400) at link https://energiejeunes.fr/wp-admin/admin-ajax.php (from https://energiejeunes.fr/)
+21:40:18	Error: 	"Bad Request" (400) at link www.googletagmanager.com/gtm.js?id= (from https://energiejeunes.fr/)
+21:41:51	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/plugins/youtube-feed-pro/img/small-logo.png (from https://energiejeunes.fr/wp-content/plugins/youtube-feed-pro/css/sb-youtube.min.css?ver=1.4)
+21:42:21	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2019/11/EJ_RA18-19-web.pdf (from https://energiejeunes.fr/nos-publications/)
+21:42:21	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/11/EJ_RA17-18_web.pdf (from https://energiejeunes.fr/nos-publications/)
+21:43:16	Warning: 	Moved Permanently for https://energiejeunes.fr/actualites/page/1/
+21:43:16	Warning: 	File has moved from https://energiejeunes.fr/actualites/page/1/ to https://energiejeunes.fr/actualites/
+21:43:35	Warning: 	Retry after error -4 (No data (connection closed)) at link https://energiejeunes.fr/wp-content/uploads/2020/04/Video-episode-1-150x150.jpg (from https://energiejeunes.fr/actualites/page/12/)
+21:43:37	Warning: 	File not parsed, looks like binary: https://energiejeunes.fr/wp-content/plugins/gravityforms/fonts/gform-icons-theme.woff2?a2cayk
+21:43:53	Warning: 	Moved Permanently for https://energiejeunes.fr/actualites/ca-se-passe-en-classe/page/1/
+21:43:53	Warning: 	File has moved from https://energiejeunes.fr/actualites/ca-se-passe-en-classe/page/1/ to https://energiejeunes.fr/actualites/ca-se-passe-en-classe/
+21:43:55	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2021/07/docusign-ujkG7mTs7IM-unsplash-1024x683.jpg (from https://energiejeunes.fr/lengagement-des-collaborateurs-une-nouvelle-dynamique-dans-les-entreprises/)
+21:43:55	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2021/07/hannah-busing-Zyx1bK9mqmA-unsplash-1024x683.jpg (from https://energiejeunes.fr/lengagement-des-collaborateurs-une-nouvelle-dynamique-dans-les-entreprises/)
+21:43:55	Warning: 	Moved Permanently for https://energiejeunes.fr/mecenat-de-competences/
+21:43:55	Warning: 	File has moved from https://energiejeunes.fr/mecenat-de-competences/ to /agir-avec-nous/devenir-entreprise-partenaire/
+21:43:55	Warning: 	Moved Permanently for https://energiejeunes.fr/devenir-benevole/
+21:43:55	Warning: 	File has moved from https://energiejeunes.fr/devenir-benevole/ to /agir-avec-nous/servir-comme-volontaire/
+21:43:57	Warning: 	Moved Permanently for https://energiejeunes.fr/actualites/ca-nous-concerne/page/1/
+21:43:57	Warning: 	File has moved from https://energiejeunes.fr/actualites/ca-nous-concerne/page/1/ to https://energiejeunes.fr/actualites/ca-nous-concerne/
+21:44:25	Warning: 	Moved Permanently for https://energiejeunes.fr/actualites/nos-evenements/page/1/
+21:44:25	Warning: 	File has moved from https://energiejeunes.fr/actualites/nos-evenements/page/1/ to https://energiejeunes.fr/actualites/nos-evenements/
+21:44:25	Error: 	"Forbidden" (403) at link https://energiejeunes.fr/fondation-totalenergies-sengage-pour-leducation/?preview_id=7391&preview_nonce=a1753cbfc1&preview=true&_thumbnail_id=7392 (from https://energiejeunes.fr/evenement-partenaires-2023-de-nouvelles-actions-pour-lengagement-collaborateur/)
+21:44:44	Warning: 	Moved Permanently for https://energiejeunes.fr/ma-reussite-au-college/
+21:44:44	Warning: 	File has moved from https://energiejeunes.fr/ma-reussite-au-college/ to /notre-action/#programmes
+21:44:49	Warning: 	Moved Permanently for https://energiejeunes.fr/taxe-dapprentissage-2022-soutenez-nous/
+21:44:49	Warning: 	File has moved from https://energiejeunes.fr/taxe-dapprentissage-2022-soutenez-nous/ to /agir-avec-nous/verser-votre-taxe-dapprentissage/
+21:44:53	Warning: 	Moved Permanently for https://energiejeunes.fr/don/
+21:44:53	Warning: 	File has moved from https://energiejeunes.fr/don/ to /agir-avec-nous/faire-un-don/
+21:44:53	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2021/11/Bleu-Illustre-Emojis-Amusant-et-Partageable-Zoom-Arriere-plan-1024x576.png (from https://energiejeunes.fr/nouvelles-sciences-de-leducation-une-serie-video-energie-jeunes-sur-le-coeur-scientifique-de-nos-programmes/)
+21:44:53	Warning: 	Moved Permanently for https://energiejeunes.fr/notre-impact/
+21:44:53	Warning: 	File has moved from https://energiejeunes.fr/notre-impact/ to /notre-action/#impact
+21:44:53	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2021/06/20210528_145636-1024x576.jpg (from https://energiejeunes.fr/grace-a-energie-jeunes-un-nouveau-don-de-pc-portables-pour-des-collegiens-2/)
+21:44:53	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2021/03/tracteur-300x169.png (from https://energiejeunes.fr/zones-rurales-nouveau-programme-ej/)
+21:44:59	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2021/03/Sans-titre-1-300x144.png (from https://energiejeunes.fr/ruralite_il-est-temps-dagir/)
+21:44:59	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2021/01/Catherine-Ozon-300x300.png (from https://energiejeunes.fr/catherine-ozon-nouvelle-dg-energie-jeunes/)
+21:44:59	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2020/11/visuel-Couv-RA-2019-2020-229x300.png (from https://energiejeunes.fr/energie-jeunes-presente-son-rapport-annuel-2019-2020-2/)
+21:44:59	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2021/11/Annexe-3-Rapport-du-commissaire-aux-comptes-sur-les-comptes-annuels.pdf (from https://energiejeunes.fr/assemblee-generale-2021-denergie-jeunes/)
+21:44:59	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2021/09/10324109-4964-4C5D-8B3C-D6A4D7E8E7EF_1_201_a-1-214x300.jpeg (from https://energiejeunes.fr/nouvelle-energie-un-seminaire-sous-le-signe-de-la-nouveaute/)
+21:44:59	Warning: 	Moved Permanently for https://energiejeunes.fr/nos-partenaires/
+21:44:59	Warning: 	File has moved from https://energiejeunes.fr/nos-partenaires/ to /qui-sommes-nous/nos-partenaires/
+21:44:59	Warning: 	Moved Permanently for https://energiejeunes.fr/nous-rejoindre/
+21:44:59	Warning: 	File has moved from https://energiejeunes.fr/nous-rejoindre/ to /rejoignez-nous/
+21:44:59	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2021/04/carte-EGE-2021-1024x838.jpeg (from https://energiejeunes.fr/ege-9-jours-pour-donner-votre-avis/)
+21:44:59	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2021/04/EGE-Plaquette-avril-2021.pdf (from https://energiejeunes.fr/ege-9-jours-pour-donner-votre-avis/)
+21:44:59	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2021/02/Image-appel-EM-1-300x168.png (from https://energiejeunes.fr/convention-annuelle-2021/)
+21:44:59	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2021/02/image-appel-VC-300x200.png (from https://energiejeunes.fr/convention-annuelle-2021/)
+21:44:59	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2021/02/Image-appel-DC-1-300x170.png (from https://energiejeunes.fr/convention-annuelle-2021/)
+21:44:59	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2021/02/image-appel-PK-1-300x168.png (from https://energiejeunes.fr/convention-annuelle-2021/)
+21:44:59	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2021/02/image-appel-HB-1-300x168.png (from https://energiejeunes.fr/convention-annuelle-2021/)
+21:44:59	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2021/02/image-appel-FG-300x186.png (from https://energiejeunes.fr/convention-annuelle-2021/)
+21:44:59	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2021/02/image-appel-Dulac-300x169.jpg (from https://energiejeunes.fr/convention-annuelle-2021/)
+21:44:59	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2021/02/image-appel-GG-1-300x169.png (from https://energiejeunes.fr/convention-annuelle-2021/)
+21:44:59	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2021/02/image-appel-CO-1-300x168.png (from https://energiejeunes.fr/convention-annuelle-2021/)
+21:44:59	Warning: 	Moved Permanently for https://energiejeunes.fr/tout-savoir-sur-le-mecenat-de-competences-chez-energie-jeunes/
+21:44:59	Warning: 	File has moved from https://energiejeunes.fr/tout-savoir-sur-le-mecenat-de-competences-chez-energie-jeunes/ to https://energiejeunes.fr/tout-savoir-sur-le-mecenat-de-competences-chez-energie-jeunes-2/
+21:44:59	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2020/05/survey-297x300.jpg (from https://energiejeunes.fr/nos-volontaires-en-entreprises-ont-la-parole/)
+21:44:59	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2020/04/Video-episode-1-300x169.jpg (from https://energiejeunes.fr/les-actions-deployees-par-energie-jeunes-pendant-le-confinement/)
+21:44:59	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2021/04/VideoLilo1mn.mp4?_=1 (from https://energiejeunes.fr/lilo/)
+21:45:02	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2021/04/VideoLilo1mn.mp4 (from https://energiejeunes.fr/lilo/)
+21:45:02	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2021/12/minia-RA-1-230x300.png (from https://energiejeunes.fr/energie-jeunes-presente-son-rapport-annuel-2020-2021/)
+21:45:09	Warning: 	Moved Permanently for https://energiejeunes.fr/uncategorized/page/1/
+21:45:09	Warning: 	File has moved from https://energiejeunes.fr/uncategorized/page/1/ to https://energiejeunes.fr/uncategorized/
+21:45:32	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2020/03/CEMP-Jeunes-Solidarité-photo-1-1024x341-2-150x150.jpg (from https://energiejeunes.fr/uncategorized/page/4/)
+21:46:23	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2020/03/CEMP-Jeunes-Solidarité-photo-1-1024x341-1.jpg (from https://energiejeunes.fr/energie-jeunes-laureat-de-lappel-a-projet-jeunes-solidarite-de-la-caisse-depargne/)
+21:46:40	Warning: 	Moved Permanently for https://energiejeunes.fr/devenir-volontaire/
+21:46:40	Warning: 	File has moved from https://energiejeunes.fr/devenir-volontaire/ to /agir-avec-nous/servir-comme-volontaire/
+21:46:40	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2019/11/couv_2018-2019-226x300.png (from https://energiejeunes.fr/energie-jeunes-presente-son-rapport-annuel-2018-2019/)
+21:46:43	Warning: 	Moved Permanently for https://energiejeunes.fr/college/
+21:46:43	Warning: 	File has moved from https://energiejeunes.fr/college/ to https://energiejeunes.fr/college-marcel-pagnol-a-montpellier-un-sentiment-daccomplissement/
+21:46:44	Warning: 	Moved Permanently for https://energiejeunes.fr/equipe-et-gouvernance/
+21:46:44	Warning: 	File has moved from https://energiejeunes.fr/equipe-et-gouvernance/ to /qui-sommes-nous/#gouvernance
+21:46:47	Warning: 	Moved Permanently for https://energiejeunes.fr/boules-denergie/
+21:46:47	Warning: 	File has moved from https://energiejeunes.fr/boules-denergie/ to /notre-action/#programmes
+21:46:47	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2019/11/MDA-437-20191106-300x264.png (from https://energiejeunes.fr/le-monde-des-ados-le-conseil-du-mois-12/)
+21:46:47	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2019/09/DEFI-N°10-septembre-2019.jpg (from https://energiejeunes.fr/le-monde-des-ados-le-conseil-du-mois-8/)
+21:47:04	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/07/14-300x298.jpg (from https://energiejeunes.fr/energie-jeunes-au-pantheon-le-27-mai/)
+21:47:04	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/07/14_1-222x300.jpg (from https://energiejeunes.fr/energie-jeunes-au-pantheon-le-27-mai/)
+21:47:04	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/07/img5541c519ab94f-300x141.jpg (from https://energiejeunes.fr/envoye-special-chez-energie-jeunes-pour-filmer-le-service-civique/)
+21:47:07	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/07/15-300x86.jpg (from https://energiejeunes.fr/volontaires-en-service-civique-chez-energie-jeunes/)
+21:47:08	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/07/10-300x171.jpg (from https://energiejeunes.fr/grenay-energie-jeunes-pour-la-prevention-du-decrochage-scolaire/)
+21:47:08	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/07/11_1-247x300.jpg (from https://energiejeunes.fr/nouveau-partenariat-avec-egee/)
+21:47:08	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/07/9-300x137.jpg (from https://energiejeunes.fr/tribune/)
+21:47:25	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/07/24-258x300.jpg (from https://energiejeunes.fr/trappes-les-collegiens-a-la-rencontre-de-patrick-bourdet-et-abdelkader-rahal/)
+21:47:25	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/07/25-201x300.jpg (from https://energiejeunes.fr/service-civique-merci/)
+21:47:26	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/07/18-300x300.jpg (from https://energiejeunes.fr/1297-2/)
+21:47:26	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/07/19-300x300.jpg (from https://energiejeunes.fr/energie-jeunes-celebree-au-forum-la-france-sengage/)
+21:47:26	Error: 	"Not Found" (404) at link energiejeunes.fr/images/icon_telecharger.gif (from https://energiejeunes.fr/pour-tous-nos-volontaires-cette-rentree-scolaire-2015-restera-un-moment-marquant/)
+21:47:39	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2019/06/IMG_1436-300x225.jpg (from https://energiejeunes.fr/hauts-de-france-retour-en-images-sur-une-convention-forte-en-emotion/)
+21:47:39	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2019/06/3-300x225.jpg (from https://energiejeunes.fr/hauts-de-france-retour-en-images-sur-une-convention-forte-en-emotion/)
+21:47:39	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2019/06/4bis-300x225.jpg (from https://energiejeunes.fr/hauts-de-france-retour-en-images-sur-une-convention-forte-en-emotion/)
+21:47:39	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2019/06/principale-249x300.png (from https://energiejeunes.fr/hauts-de-france-retour-en-images-sur-une-convention-forte-en-emotion/)
+21:47:39	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2019/06/IMG_1529-190x300.jpeg (from https://energiejeunes.fr/ile-de-france-3-questions-aux-acteurs-qui-oeuvrent-pour-la-reussite-scolaire/)
+21:47:39	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2019/06/yvette-210x300.jpeg (from https://energiejeunes.fr/ile-de-france-3-questions-aux-acteurs-qui-oeuvrent-pour-la-reussite-scolaire/)
+21:47:39	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2019/06/Edith-Blanc-PA-et-Etienne-Galand-Pr_Collège-Olivier-de-Serres_91-Viry-Châtillon-1-300x300.jpg (from https://energiejeunes.fr/ile-de-france-3-questions-aux-acteurs-qui-oeuvrent-pour-la-reussite-scolaire/)
+21:47:39	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2019/06/guillaume-263x300.jpg (from https://energiejeunes.fr/ile-de-france-3-questions-aux-acteurs-qui-oeuvrent-pour-la-reussite-scolaire/)
+21:47:39	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2019/05/Comédie-23-1024x684.jpg (from https://energiejeunes.fr/boules-denergie-le-college-aragon-fait-danser-villefontaine/)
+21:47:39	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2019/05/Comédie-60-1024x684.jpg (from https://energiejeunes.fr/boules-denergie-le-college-aragon-fait-danser-villefontaine/)
+21:47:39	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2019/05/Comédie-441-2-1024x759.jpg (from https://energiejeunes.fr/boules-denergie-le-college-aragon-fait-danser-villefontaine/)
+21:47:39	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2019/05/Défi-n°9-mai-2019.jpg (from https://energiejeunes.fr/le-monde-des-ados-le-conseil-du-mois-7/)
+21:47:51	Warning: 	Moved Permanently for https://energiejeunes.fr/nos-programmes/
+21:47:51	Warning: 	File has moved from https://energiejeunes.fr/nos-programmes/ to /notre-action/#programmes
+21:47:51	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2019/03/vosges-matin-300x148.jpg (from https://energiejeunes.fr/revue-de-presse-energie-jeunes-en-region/)
+21:47:51	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2019/02/P1000193-300x225.jpg (from https://energiejeunes.fr/2e-convention-regionale-les-volontaires-de-la-la-delegation-auvergne-rhone-alpes-bourgogne-a-lhonneur/)
+21:47:51	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2019/01/Capture-d’écran-2018-12-26-1-1024x889.png (from https://energiejeunes.fr/revue-de-presse-lactualite-en-region/)
+21:47:51	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2019/01/Janvier-Défi-numero-5.jpg (from https://energiejeunes.fr/le-monde-des-ados-le-conseil-du-mois-4/)
+21:47:51	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/12/Conseil-n°4-Numero-420-291x300.jpg (from https://energiejeunes.fr/le-monde-des-ados-le-conseil-du-mois-3/)
+21:47:51	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/12/DSC5731-300x200.jpg (from https://energiejeunes.fr/retour-en-images-7eme-convention-nationale-denergie-jeunes/)
+21:47:58	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/07/38_1-213x300.jpg (from https://energiejeunes.fr/service-civique-energie-jeunes-recrute-dans-toute-la-france/)
+21:47:58	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/07/26-300x272.jpg (from https://energiejeunes.fr/cinquieme-convention-nationale-denergie-jeunes/)
+21:47:58	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/07/26_1-300x200.jpg (from https://energiejeunes.fr/cinquieme-convention-nationale-denergie-jeunes/)
+21:47:58	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/07/26_2-300x200.jpg (from https://energiejeunes.fr/cinquieme-convention-nationale-denergie-jeunes/)
+21:47:58	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/07/26_3-300x200.jpg (from https://energiejeunes.fr/cinquieme-convention-nationale-denergie-jeunes/)
+21:47:58	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/07/26_4-300x200.jpg (from https://energiejeunes.fr/cinquieme-convention-nationale-denergie-jeunes/)
+21:47:58	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/07/26_5-300x136.jpg (from https://energiejeunes.fr/cinquieme-convention-nationale-denergie-jeunes/)
+21:47:58	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/07/33-300x200.jpg (from https://energiejeunes.fr/un-nouveau-conseil-dadministration-pour-energie-jeunes/)
+21:47:58	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/07/34-300x200.jpg (from https://energiejeunes.fr/energie-jeunes-celebre-sa-reconnaissance-dutilite-publique/)
+21:47:58	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/07/35-300x169.jpg (from https://energiejeunes.fr/energie-jeunes-participe-au-citizen-day-de-loreal/)
+21:47:58	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/07/31-300x225.jpg (from https://energiejeunes.fr/hauts-de-france-une-belle-convention-regionale/)
+21:47:58	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/07/27-300x150.jpg (from https://energiejeunes.fr/partenariat-enedis-energie-jeunes-laventure-se-poursuit/)
+21:47:58	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/07/32-300x248.jpg (from https://energiejeunes.fr/la-fondation-veolia-devient-partenaire-denergie-jeunes/)
+21:47:58	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/07/28-300x149.jpg (from https://energiejeunes.fr/retour-en-images-premieres-interventions-sur-lile-de-la-reunion/)
+21:47:58	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/07/28_1-300x205.jpg (from https://energiejeunes.fr/retour-en-images-premieres-interventions-sur-lile-de-la-reunion/)
+21:47:58	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/07/28_2-300x150.jpg (from https://energiejeunes.fr/retour-en-images-premieres-interventions-sur-lile-de-la-reunion/)
+21:47:58	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/07/28_3-300x131.jpg (from https://energiejeunes.fr/retour-en-images-premieres-interventions-sur-lile-de-la-reunion/)
+21:47:58	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/07/28_4-300x149.jpg (from https://energiejeunes.fr/retour-en-images-premieres-interventions-sur-lile-de-la-reunion/)
+21:47:58	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/07/28_5-300x140.jpg (from https://energiejeunes.fr/retour-en-images-premieres-interventions-sur-lile-de-la-reunion/)
+21:48:19	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/07/46-300x215.jpg (from https://energiejeunes.fr/bonne-annee-2018/)
+21:48:19	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/07/47-300x174.jpg (from https://energiejeunes.fr/energie-jeunes-et-lacademie-damiens-signent-une-nouvelle-convention/)
+21:48:19	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/07/40-238x300.jpg (from https://energiejeunes.fr/revue-de-presse-comme-un-defi-le-reportage-du-monde-des-ados/)
+21:48:19	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/07/44-300x193.jpg (from https://energiejeunes.fr/6e-convention-nationale-avec-jacques-attali/)
+21:48:19	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/07/44_1-300x200.jpg (from https://energiejeunes.fr/6e-convention-nationale-avec-jacques-attali/)
+21:48:19	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/07/44_2-300x192.jpg (from https://energiejeunes.fr/6e-convention-nationale-avec-jacques-attali/)
+21:48:19	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/07/44_3-300x300.jpg (from https://energiejeunes.fr/6e-convention-nationale-avec-jacques-attali/)
+21:48:19	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/07/44_4-300x201.jpg (from https://energiejeunes.fr/6e-convention-nationale-avec-jacques-attali/)
+21:48:19	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/07/44_5-300x212.jpg (from https://energiejeunes.fr/6e-convention-nationale-avec-jacques-attali/)
+21:48:19	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/07/44_6-300x200.jpg (from https://energiejeunes.fr/6e-convention-nationale-avec-jacques-attali/)
+21:48:19	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/07/44_7-300x200.jpg (from https://energiejeunes.fr/6e-convention-nationale-avec-jacques-attali/)
+21:48:19	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/07/44_8-300x200.jpg (from https://energiejeunes.fr/6e-convention-nationale-avec-jacques-attali/)
+21:48:19	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/07/44_9-300x200.jpg (from https://energiejeunes.fr/6e-convention-nationale-avec-jacques-attali/)
+21:48:19	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/07/44_10-300x215.jpg (from https://energiejeunes.fr/6e-convention-nationale-avec-jacques-attali/)
+21:48:19	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/07/44_11-300x200.jpg (from https://energiejeunes.fr/6e-convention-nationale-avec-jacques-attali/)
+21:48:19	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/07/44_12-300x200.jpg (from https://energiejeunes.fr/6e-convention-nationale-avec-jacques-attali/)
+21:48:19	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/07/44_13-300x191.jpg (from https://energiejeunes.fr/6e-convention-nationale-avec-jacques-attali/)
+21:48:19	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2017/11/rapport_annuel_16_17-230x300.jpg (from https://energiejeunes.fr/le-rapport-annuel-2016-2017-est-en-ligne/)
+21:48:19	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/09/Réglement-Concours-régional-Boules-dEnergie.pdf (from https://energiejeunes.fr/boules-denergie-le-concours-regional/)
+21:48:19	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/09/Notice-Concours-régional-Boules-dEnergie.pdf (from https://energiejeunes.fr/boules-denergie-le-concours-regional/)
+21:48:19	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/09/Flyer-Concours-régional-Boules-dEnergie.pdf (from https://energiejeunes.fr/boules-denergie-le-concours-regional/)
+21:48:19	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/09/Affiche-Concours-régional-Boules-dEnergie.pdf (from https://energiejeunes.fr/boules-denergie-le-concours-regional/)
+21:48:19	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/11/rapport-annuel-231x300.jpg (from https://energiejeunes.fr/energie-jeunes-presente-son-rapport-annuel-2017-2018/)
+21:48:19	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/11/Defi-3-novembre-300x243.jpg (from https://energiejeunes.fr/le-monde-des-ados-le-conseil-du-mois-2/)
+21:48:19	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/10/Defi-Numero-2-octobre-numero-416-295x300.jpg (from https://energiejeunes.fr/le-monde-des-ados-le-conseil-du-mois/)
+21:48:19	Warning: 	Moved Permanently for https://energiejeunes.fr/service-civique/
+21:48:19	Warning: 	File has moved from https://energiejeunes.fr/service-civique/ to /agir-avec-nous/servir-comme-volontaire/
+21:48:19	Error: 	"Not Found" (404) at link https://energiejeunes.fr/equipe-et-gourvernance/ (from https://energiejeunes.fr/anne-becquet-nouvelle-directrice-generale-denergie-jeunes/)
+21:48:19	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/07/63-1-300x223.png (from https://energiejeunes.fr/college-marcel-pagnol-a-montpellier-un-sentiment-daccomplissement/)
+21:48:19	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/07/63_1-1-300x224.jpg (from https://energiejeunes.fr/college-marcel-pagnol-a-montpellier-un-sentiment-daccomplissement/)
+21:48:19	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/07/63_2-1-300x176.jpg (from https://energiejeunes.fr/college-marcel-pagnol-a-montpellier-un-sentiment-daccomplissement/)
+21:48:19	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/09/MG_3392-2-1024x406.jpg (from https://energiejeunes.fr/decouvrez-les-nouveautes-pedagogiques-de-la-rentree/)
+21:48:19	Error: 	"Not Found" (404) at link https://energiejeunes.fr/images/minimoi.jpg (from https://energiejeunes.fr/decouvrez-les-nouveautes-pedagogiques-de-la-rentree/)
+21:48:19	Error: 	"Not Found" (404) at link https://energiejeunes.fr/images/rayan.jpg (from https://energiejeunes.fr/decouvrez-les-nouveautes-pedagogiques-de-la-rentree/)
+21:48:19	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/07/65-300x183.jpg (from https://energiejeunes.fr/citizen-day-energie-jeunes-a-la-rencontre-des-salaries-de-loreal/)
+21:48:19	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/07/65_1-300x183.jpg (from https://energiejeunes.fr/citizen-day-energie-jeunes-a-la-rencontre-des-salaries-de-loreal/)
+21:48:19	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/09/tours-300x180.jpg (from https://energiejeunes.fr/revue-de-presse-le-college-lamartine-de-tours-fait-lactualite/)
+21:48:19	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/07/55_1-194x300.jpg (from https://energiejeunes.fr/revue-presse-les-reportages-en-region/)
+21:48:19	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/07/60_1-300x180.jpg (from https://energiejeunes.fr/revue-presse-les-reportages-en-region/)
+21:48:19	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/07/55-212x300.jpg (from https://energiejeunes.fr/revue-de-presse-les-reportages-en-region/)
+21:48:19	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/07/55_2-300x228.jpg (from https://energiejeunes.fr/revue-de-presse-les-reportages-en-region/)
+21:48:19	Error: 	"Not Found" (404) at link https://energiejeunes.fr/actualites/137-une-etude-de-grande-ampleur-confirme-l-impact-du-programme-sur-les-comportements-et-les-resultats-scolaires (from https://energiejeunes.fr/taxe-dapprentissage-2018-energie-jeunes-a-besoin-de-vous/)
+21:48:19	Error: 	"Not Found" (404) at link energiejeunes.fr/images/130218_1.jpg (from https://energiejeunes.fr/devoir-maison-dessine-moi-energie-jeunes/)
+21:48:19	Error: 	"Not Found" (404) at link energiejeunes.fr/images/130218_2.jpg (from https://energiejeunes.fr/devoir-maison-dessine-moi-energie-jeunes/)
+21:48:19	Error: 	"Not Found" (404) at link energiejeunes.fr/images/130218_3.jpg (from https://energiejeunes.fr/devoir-maison-dessine-moi-energie-jeunes/)
+21:48:19	Error: 	"Not Found" (404) at link energiejeunes.fr/images/130218_4.jpg (from https://energiejeunes.fr/devoir-maison-dessine-moi-energie-jeunes/)
+21:48:19	Error: 	"Not Found" (404) at link energiejeunes.fr/images/130218_5.jpg (from https://energiejeunes.fr/devoir-maison-dessine-moi-energie-jeunes/)
+21:48:19	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/07/49-300x140.jpg (from https://energiejeunes.fr/la-delegation-auvergne-bourgogne-rhone-alpes-organise-sa-1ere-convention-regionale/)
+21:48:19	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/07/49_2-300x225.jpg (from https://energiejeunes.fr/la-delegation-auvergne-bourgogne-rhone-alpes-organise-sa-1ere-convention-regionale/)
+21:48:19	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/07/49_3-300x225.jpg (from https://energiejeunes.fr/la-delegation-auvergne-bourgogne-rhone-alpes-organise-sa-1ere-convention-regionale/)
+21:48:19	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/07/49_4-300x225.jpg (from https://energiejeunes.fr/la-delegation-auvergne-bourgogne-rhone-alpes-organise-sa-1ere-convention-regionale/)
+21:48:19	Error: 	"Not Found" (404) at link https://energiejeunes.fr/wp-content/uploads/2018/07/49_5-300x168.jpg (from https://energiejeunes.fr/la-delegation-auvergne-bourgogne-rhone-alpes-organise-sa-1ere-convention-regionale/)
+
+HTTrack Website Copier/3.49-2 mirror complete in 11 minutes 12 seconds : 1585 links scanned, 1427 files written (271528294 bytes overall) [254215814 bytes received at 378297 bytes/sec], 32340569 bytes transferred using HTTP compression in 343 files, ratio 19%, 40.1 requests per connection
+(136 errors, 42 warnings, 0 messages)
