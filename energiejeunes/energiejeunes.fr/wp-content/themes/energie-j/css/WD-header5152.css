@@ -12,7 +12,7 @@ body.nav-open {
 	width: 100%;
 	padding: 1.6rem 0;
 	transition: all 200ms ease-in;
-	background-color: hsla(301, 67%, 18%, 1);
+	background-color: hsl(207, 95%, 8%);
 	box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
 }
 .home .header {
@@ -25,7 +25,7 @@ body.nav-open {
 	top: 0;
 	left: 0;
 	/*animation: smoothScroll 200ms both;*/
-	background-color: hsla(301, 67%, 18%, 1);
+	background-color: hsl(207, 95%, 8%);
 	box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
 }
 .fixed-header .logo{
@@ -89,7 +89,7 @@ body.nav-open {
 	left: 0;
 	top: 0;
 	padding: 2rem calc(10px + 2vw) 2rem;
-	background: hsla(301, 67%, 18%, 1);
+	background: hsl(207, 95%, 8%);
 	transform: translateX(-100%); 
 	will-change: transform;
 	pointer-events: none;
