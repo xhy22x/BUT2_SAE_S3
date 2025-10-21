@@ -1,0 +1,31 @@
+#Source: https://github.com/github/gitignore
+
+# JetBraens IDEs (PHPStorm, IntelliJ, WebStorm)
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+__MACOSX/
+
+# Windows
+Thumbs.db
+ehthumbs.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+
+# Logs et temporaires
+*.log
+*.tmp
+*.bak
+*.swp
+
+### AJOUTS SPÉCIFIQUES AU PROJET ###
+node_modules/
+.sass-cache/
+.env
