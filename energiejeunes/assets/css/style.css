@@ -53,6 +53,10 @@ body{
     background-color: #FFF;
     color: #000;
 }
+body > main{
+    position: relative;
+    min-height: 80vh;
+}
 h1, h2, h3, h4, h5, h6 {
     margin-bottom: 2rem;
 }
@@ -65,72 +69,12 @@ img {
     height: auto;
     border-style: none;
 }
-/* ======================== HEADER ======================== */
-header{
-    background-color: var(--color-bleuf);
-}
-nav{
-    font-size: 0.8rem;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    width: 100%;
-}
-.logo{
-    width: 250px;
-}
-.menu-options{
-    font-weight: 700;
-}
-.navbar-elements{
-    position: relative;
-    padding-left: 100px;
-    padding-right: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
 a {
-    text-decoration: none;
-}
-.navbar-elements .menu-options {
-    color: white;
-    transition: 0.3s ease;
-}
-.navbar-elements .menu-options:hover{
-    color: var(--color-bleu)!important;
-    transform: scale(1.1, 1.1);
-}
-.logo-image img{
-    width: 100px;
-}
-.bouton-don{
-    background-color: var(--color-bleu);
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-bottom: 8px;
-    padding-top: 8px;
-    color: white;
-    font-weight: 800;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s ease;
-}
-.bouton-don:hover{
-    background-color: var(--color-orange);
-    color: var(--color-bleuf);
-}
-
-.icon-loupe:before {
-    content: "\e907";
     color: #000;
-    cursor: pointer;
+    text-decoration: none;
+    transition: all 300ms
+    ease !important;
 }
-.intro div{
-    display: flex;
-    flex-direction: column;
-    width:100%;
-}
-
 /* ======================== BUTTONS ======================== */
 /* Général */
 button{
@@ -193,6 +137,23 @@ button:hover, button:active{
     text-decoration: none;
     outline: 0;
 }
+/* Bouton Don */
+.bouton-don{
+    background-color: var(--color-bleu);
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    color: white;
+    font-weight: 800;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.bouton-don:hover{
+    background-color: var(--color-orange);
+    color: var(--color-bleuf);
+}
 /* Découvrir les programmes */
 .btn-decouvrir {
     /* display: flex; */
@@ -236,47 +197,6 @@ button:hover, button:active{
 .btn-service button.item-service:hover{
     opacity: 1 !important;
 }
-.btn-service .item-service .item-service-text {
-    font-size: 3rem;
-    line-height: 3.5rem;
-    padding-right: 15px;
-    text-align: center !important;
-}
-.btn-service .item-service-img {
-    width: 60%;
-    display: block !important;
-}
-.btn-service .item-service-img img {
-    transform: scale(125%);
-}
-.item-service .item-service-text{
-    font-weight: 700;
-    text-transform: uppercase;
-    font-family: 'Barlow', sans-serif;
-}
-.item-service-text{
-    margin-bottom: 2rem;
-    margin-top: 0;
-}
-.item-service{
-    height: 100%;
-}
-.item-service div {
-    width: 100%;
-}
-.item-service:hover{
-    opacity: 0.0;
-}
-.item-service, .item-service:hover{
-    background-color: var(--color-jaune) !important;
-}
-.item-service:hover::before{
-    border: 1px solid var(--color-jaune)!important;
-}
-.item-service::before{
-    border-radius: 10px !important;
-}
-
 /* Responsive */
 @media only screen and (min-width: 769px) {
     .btn-service{
@@ -307,7 +227,55 @@ button:hover, button:active{
         margin-bottom: 0;
     }
 }
-
+/* ======================== HEADER ======================== */
+header{
+    background-color: var(--color-bleuf);
+}
+nav{
+    font-size: 0.8rem;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+}
+.logo{
+    width: 250px;
+}
+.menu-options{
+    font-weight: 700;
+}
+.navbar-elements{
+    position: relative;
+    padding-left: 100px;
+    padding-right: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+a {
+    text-decoration: none;
+}
+.navbar-elements .menu-options {
+    color: white;
+    transition: 0.3s ease;
+}
+.navbar-elements .menu-options:hover{
+    color: var(--color-bleu)!important;
+    transform: scale(1.1, 1.1);
+}
+.logo-image img{
+    width: 100px;
+}
+.icon-loupe:before {
+    content: "\e907";
+    color: #000;
+    cursor: pointer;
+}
+/* Responsive */
+@media only screen and (min-width: 990px) {
+    .header {
+        padding: 2rem 0;
+    }
+}
 /* ======================== PAGE D'ACCUEIL ======================== */
 /* Section Intro */
 .intro{
@@ -331,6 +299,11 @@ button:hover, button:active{
     text-align: center;
     text-transform: uppercase;
 }
+.intro div{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+}
 .intro-titre{
     padding-bottom: 0.2em;
 }
@@ -339,9 +312,133 @@ button:hover, button:active{
     font-weight: 700;
     font-size: 2rem;
     line-height: 2.8rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
 }
 .intro > .container {
     padding-top: 10em;
+}
+/* Service Civique */
+.btn-service .item-service .item-service-text {
+    font-size: 3rem;
+    line-height: 3.5rem;
+    padding-right: 15px;
+    text-align: center !important;
+}
+.btn-service .item-service-img {
+    width: 60%;
+    display: block !important;
+    transform: scale(125%);
+}
+.item-service .item-service-text{
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: 'Barlow', sans-serif;
+    margin-bottom: 2rem;
+    margin-top: 0;
+}
+.item-service-text{
+    margin-bottom: 2rem;
+    margin-top: 0;
+}
+.item-service{
+    height: 100%;
+}
+.item-service div {
+    width: 100%;
+}
+.item-service:hover{
+    opacity: 0.0;
+}
+.item-service, .item-service:hover{
+    background-color: var(--color-jaune) !important;
+}
+.item-service:hover::before{
+    border: 1px solid var(--color-jaune)!important;
+}
+.item-service::before{
+    border-radius: 10px !important;
+}
+/* Scroll down */
+.scroll-down{
+    position: relative;
+    z-index: 10;
+}
+.scroll-down a{
+    position: absolute;
+    bottom: 10vh;
+    left: 49%;
+    z-index: 10;
+    display: inline-block;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    color: #fff;
+    letter-spacing: .1em;
+    text-decoration: none;
+    transition: opacity .3s;
+}
+.scroll-down a:hover{
+    opacity: .5;
+}
+a.scroll-down{
+    padding-top: 60px;
+}
+.scroll-down a span{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 30px;
+    height: 60px;
+    margin-left: -15px;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    box-sizing: border-box;
+}
+.scroll-down a span::before{
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    content: '';
+    width: 6px;
+    height: 6px;
+    margin-left: -3px;
+    background-color: #fff;
+    border-radius: 100%;
+    -webkit-animation: scland 2s infinite;
+    animation: scland 2s infinite;
+    box-sizing: border-box;
+}
+@-webkit-keyframes scland{
+    0%{
+        -webkit-transform: translate(0, 0);
+        opacity: 0;
+    }
+    40%{
+        opacity: 1;
+    }
+    80%{
+        -webkit-transform: translate(0, 20px);
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes scland{
+    0%{
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+    40%{
+        opacity: 1;
+    }
+    80%{
+        transform: translate(0, 20px);
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
 }
 /* Responsive */
 @media only screen and (max-width: 1023px) {
@@ -351,10 +448,30 @@ button:hover, button:active{
         line-height: clamp(3.3rem, -2.875rem + 10.333333vw, 7.3rem);
     }
 }
+@media only screen and (max-width:769px){
+    .btn-decouvrir{
+        flex-wrap: nowrap;
+        /*margin-top: 5em;*/
+    }
+}
 @media only screen and (max-width: 768px) {
     .intro {
-        padding-top: 100px;
         clip-path: ellipse(166% 65% at 50% 35%);
+    }
+    .item-service-img img{  /* A enlever si ca pose problème dans la responsive*/
+        display: block !important;
+    }
+}
+@media only screen and (max-height: 768px) {
+    .intro {
+        padding-top: 100px;
+    }
+}
+@media only screen and (min-width: 769px) {
+    .btn-service .item-service .item-service-text {
+        font-size: 3.6rem;
+        line-height: 4rem;
+        text-align: left !important;
     }
 }
 @media only screen and (min-width: 768px) {
@@ -373,14 +490,8 @@ button:hover, button:active{
     .btn-decouvrir li:nth-last-child(2) {
         margin-right: 0;
     }
+}
 
-}
-@media only screen and (max-width:769px){
-    .btn-decouvrir{
-        flex-wrap: nowrap;
-        /*margin-top: 5em;*/
-    }
-}
 
 
 /* ======================== PAGE - AGIR AVEC NOUS  ======================== */
