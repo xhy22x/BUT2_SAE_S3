@@ -1,3 +1,5 @@
+/* ======================== IMPORTS POLICES ======================== */
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Barlow+Condensed:wght@700&display=swap');
 
 /* ======================== MAIN ======================== */
 :root {
@@ -18,7 +20,7 @@
 }
 
 [class^="icon-"], [class*=" icon-"] {
-    font-family: 'ej' !important;
+    font-family: 'ej', serif !important;
     speak: never;
     font-style: normal;
     font-weight: normal;
@@ -28,10 +30,22 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
+/* ======================== GLOBAL ======================== */
+*, *:after, *:before {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+html{
+    font-size:62.5%;
+    scroll-behavior: smooth;
+}
 body{
     overflow-x: hidden;
-    white-space: nowrap;
-    font-family: 'Barlow', sans-serif;
+    font-family: 'Barlow', sans-serif !important;
     font-size: 1.6rem;
     line-height: 2.2rem;
     font-style: normal;
@@ -39,6 +53,19 @@ body{
     background-color: #FFF;
     color: #000;
 }
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 2rem;
+}
+.txt-rouge{
+    color: var(--color-rouge);
+}
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+    height: auto;
+    border-style: none;
+}
+/* ======================== HEADER ======================== */
 header{
     background-color: var(--color-bleuf);
 }
@@ -103,16 +130,257 @@ a {
     flex-direction: column;
     width:100%;
 }
-.text-center{
+
+/* ======================== BUTTONS ======================== */
+/* Général */
+button{
+    text-decoration: none;
+    transition: all 300ms ease !important;
+}
+.btn-slide {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 1.3rem;
+    border-radius: 5px;
+    color: #FFF;
+    line-height: 2.2rem;
+}
+button.btn-slide{
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 20px;
+    position: relative;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 1.3rem;
+    color: #FFF;
+    line-height: 2.2rem;
+}
+button.btn-slide:hover{
+    transform: translate(0.25em,-0.25em) ;
+    transition: 0.25s !important;
+    border-radius: 5px;
+}
+button.btn-slide::before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    transition: 0.25s!important;
+}
+button.btn-slide:hover:before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.25s!important;
+    transform: translate(-0.25em, 0.25em);
+}
+button:hover, button:active{
+    text-decoration: none;
+    outline: 0;
+}
+/* Découvrir les programmes */
+.btn-decouvrir {
+    /* display: flex; */
+    flex-wrap: wrap;
+    align-content: center;
+    padding: 0;
+    margin-top: 1em;
+    /* width: 100%; */
+    list-style: none;
+    font-size: 2rem;
+    line-height: 2.8rem;
+    font-family: 'Barlow Condensed', sans-serif;
+    margin-left: 0;
+    margin-bottom: 1rem;
+}
+.btn-decouvrir button{
+    border: 0;
+    font-weight: 700;
+    background-color: hsla(194, 80%, 63%, 0.7);
+}
+.btn-decouvrir button::before {
+    border: 1px solid hsla(194, 80%, 63%, 0.7);
+}
+.btn-decouvrir button:hover{
+    background-color: hsla(194, 80%, 63%, 1);
+}
+/* Service Civique */
+.btn-service{
+    display: flex;
+    max-width: 100%;
+    justify-content: center;
+    margin: 15px 3vw 0 0;
     text-align: center;
-    margin-right: 100px;
-    margin-left: 100px;
+}
+.btn-service button {
+    border: 0;
+}
+.btn-service button.item-service {
+    padding: 10px 10px 0 30px !important;
+}
+.btn-service button.item-service:hover{
+    opacity: 1 !important;
+}
+.btn-service .item-service .item-service-text {
+    font-size: 3rem;
+    line-height: 3.5rem;
+    padding-right: 15px;
+    text-align: center !important;
+}
+.btn-service .item-service-img {
+    width: 60%;
+    display: block !important;
+}
+.btn-service .item-service-img img {
+    transform: scale(125%);
+}
+.item-service .item-service-text{
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: 'Barlow', sans-serif;
+}
+.item-service-text{
+    margin-bottom: 2rem;
+    margin-top: 0;
+}
+.item-service{
+    height: 100%;
+}
+.item-service div {
+    width: 100%;
+}
+.item-service:hover{
+    opacity: 0.0;
+}
+.item-service, .item-service:hover{
+    background-color: var(--color-jaune) !important;
+}
+.item-service:hover::before{
+    border: 1px solid var(--color-jaune)!important;
+}
+.item-service::before{
+    border-radius: 10px !important;
 }
 
+/* Responsive */
+@media only screen and (min-width: 769px) {
+    .btn-service{
+        max-width: 58%;
+        margin-right: 0;
+        text-align: left;
+    }
+    .btn-service .item-service .item-service-text {
+        font-size: 3.6rem;
+        line-height: 4rem;
+        text-align: left !important;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .item-service-img img {
+        display: none;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .item-service {
+        display: flex;
+        justify-content: space-between !important;
+        padding: 30px 10px 15px 30px !important;
+        border-radius: 10px !important;
+        flex-direction: row !important;
+        /* overflow: hidden; */
+        align-items: center;
+        margin-bottom: 0;
+    }
+}
 
-/* ======================== HEADER  ======================== */
-/* commentaire */
+/* ======================== PAGE D'ACCUEIL ======================== */
+/* Section Intro */
+.intro{
+    background-image: url("../images/uploads/2021/09/bg-home.jpg");
+    margin-bottom: -120px;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 10;
+    padding-bottom: 125px;
+    clip-path: ellipse(77% 64% at 50% 36%);
+}
+.intro h1{
+    font-family: 'Barlow Condensed', sans-serif;
+    margin-bottom: 0;
+    font-size: clamp(3.3rem, -2.875rem + 14.333333vw, 7.3rem);
+    line-height: clamp(3.3rem, -2.875rem + 14.333333vw, 7.3rem);
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+}
+.intro-titre{
+    padding-bottom: 0.2em;
+}
+.intro-text{
+    color: #FFF;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 2.8rem;
+}
+.intro > .container {
+    padding-top: 10em;
+}
+/* Responsive */
+@media only screen and (max-width: 1023px) {
+    .intro h1 {
+        font-size: 3.3rem;
+        font-size: clamp(3.3rem, -2.875rem + 10.333333vw, 7.3rem);
+        line-height: clamp(3.3rem, -2.875rem + 10.333333vw, 7.3rem);
+    }
+}
+@media only screen and (max-width: 768px) {
+    .intro {
+        padding-top: 100px;
+        clip-path: ellipse(166% 65% at 50% 35%);
+    }
+}
+@media only screen and (min-width: 768px) {
+    .intro > .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        padding-top: 0;
+    }
+    .intro .intro-text {
+        max-width: calc(60vw + 0.5vmin);
+    }
 
+    .btn-decouvrir li:nth-last-child(2) {
+        margin-right: 0;
+    }
+
+}
+@media only screen and (max-width:769px){
+    .btn-decouvrir{
+        flex-wrap: nowrap;
+        /*margin-top: 5em;*/
+    }
+}
 
 
 /* ======================== PAGE - AGIR AVEC NOUS  ======================== */
@@ -142,3 +410,21 @@ a {
 
 /* ======================== FOOTER  ======================== */
 /* commentaire */
+
+
+/* ======================== RESPONSIVE ======================== */
+@media only screen and (min-width:320px){
+    section{
+        scroll-margin-top: 60px;
+    }
+
+}
+@media only screen and (min-width:769px){
+    section{
+        scroll-margin-top: 90px;
+    }
+}
+
+
+
+
