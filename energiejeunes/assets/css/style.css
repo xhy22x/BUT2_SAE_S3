@@ -1,5 +1,5 @@
 /* ======================== IMPORTS POLICES ======================== */
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Barlow+Condensed:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Barlow+Condensed:wght@400;700&display=swap');
 
 /* ======================== MAIN ======================== */
 :root {
@@ -33,18 +33,18 @@
 
 /* ======================== GLOBAL ======================== */
 /* Couleurs principaux */
-.color-blue{color: var(--color-bleu);}
+.color-bleu{color: var(--color-bleu);}
 .color-bleuf{color: var(--color-bleuf);}
 .color-orange{color: var(--color-orange);}
 .color-jaune{color: var(--color-jaune);}
-.color-red{color: var(--color-rouge);}
+.color-rouge{color: var(--color-rouge);}
 
 /* Couleurs Backgrounds */
 .fond-bleu { background-color: var(--color-bleu); }
 .fond-bleuf { background-color: var(--color-bleuf); }
 .fond-orange { background-color: var(--color-orange); }
 .fond-jaune{ background-color: var(--color-jaune);}
-.fond-red{ background-color: var(--color-rouge);}
+.fond-rouge{ background-color: var(--color-rouge);}
 
 /* Les Fonts personnalisés */
 .font-1{
@@ -56,6 +56,11 @@
 .font-3{
     font-family: 'ej', serif;
 }
+.txt-regular {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 400 !important;
+    font-style: normal !important;
+}
 /* La Flèche */
 .fleche {
     position: relative;
@@ -66,6 +71,12 @@
     position: absolute;
     top: 0;
     content: "\e908";
+}
+/* Titre des sections */
+.section-titre {
+    padding-top: 2.7em;
+    font-size: clamp(3rem, 11.7vw - 1.7rem, 4rem);
+    line-height: clamp(3rem, 11.7vw - 1.7rem, 4rem);
 }
 /* Zones courbés haut & bas (avec la responsive) */
 .top-curved{
@@ -267,35 +278,115 @@ a {
     height: auto;
 }
 /* Section Intro Chiffres */
-.item-chiffres-titre {
-    padding-top: 2.7em;
-    font-size: clamp(3rem, 11.7vw - 1.7rem, 4rem);
-    line-height: clamp(3rem, 11.7vw - 1.7rem, 4rem);
-}
-.item-chiffres img {
+.item-chiffre img {
     max-width: 100px;
     height: auto;
 }
-.item-chiffres h3{
+.item-chiffre h3{
+    margin-top: 1.2rem;
     margin-bottom: 1.2rem;
-    font-size: 2.3rem;
-    line-height: 2.6rem;
+    font-size: 1.5rem;
+    line-height: 1.7rem;
 }
-
+.item-chiffre span{
+    font-size: clamp(2.5rem, 8vw - 1rem, 4rem);
+}
+/* Section Nos Valeurs */
+.item-valeurs {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.item-valeur img{
+    max-width: 60px;
+    height: auto;
+}
+.item-valeurs .item-valeur{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    clip-path: circle(50%);
+    width: 75%;
+    padding: 30px 0;
+    margin: 5px;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+}
+.item-valeurs .item-valeur h3 {
+    font-size: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    line-height: 1.5rem;
+    margin-bottom: 1.2rem;
+}
+.item-valeur h3 div{
+    margin-top: 0.6rem;
+}
 /* Responsive */
+/*@media only screen and (min-width:1400px){*/
+/*    .item-valeurs .item-valeur{*/
+/*        width: calc(20em + 3vw);*/
+/*        height: calc(20em + 3vw);*/
+/*    }*/
+/*    .item-valeurs .item-valeur-4{*/
+/*        right: 2%;*/
+/*    }*/
+/*}*/
+/*@media only screen and (min-width:1098px){*/
+/*    .item-valeurs .item-valeur{*/
+/*        width: calc(18em + 3vw);*/
+/*        height: calc(18em + 3vw);*/
+/*    }*/
+/*}*/
 @media only screen and (max-width: 1023px) {
     .intro h1 {
         font-size: clamp(3.3rem, -2.875rem + 10.333333vw, 7.3rem);
         line-height: clamp(3.3rem, -2.875rem + 10.333333vw, 7.3rem);
     }
 }
-@media only screen and (min-width: 780px) {
-    .item-chiffres {
-        flex-wrap: nowrap;
+@media only screen and (min-width: 969px) {
+    .item-valeurs {
+        height: 600px;
     }
+    .item-valeurs .item-valeur {
+        position: absolute;
+        width: 70%;   /* 80% du parent */
+        height: 70%;  /* 80% du parent */
+        max-width: 400px; /* Mais pas trop grand */
+        max-height: 400px;
+        margin: 0;
+    }
+    .item-valeurs .item-valeur-1 {
+        left: 0;
+        bottom: 0;
+    }
+    .item-valeurs .item-valeur-2{
+        left: 22%;
+        top:0;
+    }
+    .item-valeurs .item-valeur-3{
+        left: 46%;
+        bottom: 0;
+    }
+    .item-valeurs .item-valeur-4{
+        right: 0;
+        top: 0;
+    }
+    .item-valeurs .item-valeur img{
+        max-width: 100px;
+    }
+}
+@media only screen and (min-width: 780px) {
     .item-chiffres .item-chiffre {
-        width: 100%;
         padding: 0 15px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .item-valeurs {
+        padding-bottom: 2em;
     }
 }
 @media only screen and (max-height: 768px) {
@@ -303,6 +394,12 @@ a {
         padding-top: 100px;
     }
 }
+@media only screen and (min-width: 640px) {
+    .item-valeurs .item-valeur {
+        width: 45%;
+    }
+}
+
 
 /* ======================== SCROLL DOWN  ======================== */
 .scroll-down{
