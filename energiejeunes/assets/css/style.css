@@ -1,5 +1,5 @@
 /* ======================== IMPORTS POLICES ======================== */
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Barlow+Condensed:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@300;400;500;600;700&display=swap');
 
 /* ======================== MAIN ======================== */
 :root {
@@ -56,10 +56,15 @@
 .font-3{
     font-family: 'ej', serif;
 }
-.txt-regular {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 400 !important;
-    font-style: normal !important;
+/* Liens */
+a{
+    color: #000;
+    text-decoration: none;
+    transition: all 300ms
+    ease !important;
+}
+a:hover{
+    text-decoration: underline;
 }
 /* La Flèche */
 .fleche {
@@ -74,7 +79,7 @@
 }
 /* Titre des sections */
 .section-titre {
-    padding-top: 2.7em;
+    padding-top: 1em;
     font-size: clamp(3rem, 11.7vw - 1.7rem, 4rem);
     line-height: clamp(3rem, 11.7vw - 1.7rem, 4rem);
 }
@@ -174,6 +179,72 @@ button:hover, button:active{
 .bouton-don:hover{
     background-color: var(--color-orange);
     color: var(--color-bleuf);
+}
+/* Bouton en savoir plus */
+.btn-savoir-plus{
+    display: inline-block;
+    position: relative;
+    border-radius: 10rem;
+    padding: 0 1rem 0 1rem;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 700;
+    line-height: 2.6rem;
+    border: 2px solid var(--color-bleu);
+    background: transparent;
+    font-size: 1.2rem;
+}
+.icon-plus{
+    display: inline-block;
+    position: relative;
+    left: 0;
+    padding: 0.8rem;
+    margin-left: -1rem;
+    border-radius: 10rem;
+    background-color: var(--color-bleu);
+    transition: all 0.5s;
+}
+.icon-plus:before {
+    content: "\e909";
+    color: #fff;
+}
+.btn-savoir-plus:hover .icon-plus {
+    background-color: #fff;
+    transition: all 0.5s;
+}
+.btn-savoir-plus:hover .icon-plus::before{
+    color: var(--color-bleu);
+}
+.btn-txt{
+    margin-left: 0.4rem;
+
+}
+/* Bouton lire la suite */
+.btn-lire-la-suite{
+    border: 0;
+    margin-top: 10px;
+    text-transform: uppercase;
+    background: transparent;
+
+}
+.btn-lire-la-suite:hover, .btn-lire-la-suite:hover::before {
+    transition: all 0.5s;
+    background-color: transparent;
+    color: var(--color-bleu);
+}
+.btn-lire-la-suite::before{
+    font-family: 'ej', sans-serif;
+    content: "\e909";
+    width: 18px;
+    text-align: center;
+    font-size: 0.7rem;
+    padding: 0.3rem;
+    border-radius: 1rem;
+    line-height: 1.8rem;
+    color: #fff;
+    background-color: var(--color-bleu);
+    clip-path: circle(50% at 50% 50%);
+    transition: all 0.5s;
+
 }
 
 /* ======================== HEADER ======================== */
@@ -325,38 +396,45 @@ a {
 .item-valeur h3 div{
     margin-top: 0.6rem;
 }
+/* Section Nos Actualités */
+.item-actualites{
+    position: relative;
+}
+.item-actualites img{
+    max-width: 100%;
+    vertical-align: bottom;
+    height: auto;
+}
+.item-actualites .item-actualites-content{
+    position: absolute;
+    z-index: 5;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    padding: 30px;
+    background-color: rgba(51, 51, 51, 0.7);
+}
+.item-actualites-content:hover {
+    background-color: rgba(0, 155, 66, 0.8);
+}
 /* Responsive */
-/*@media only screen and (min-width:1400px){*/
-/*    .item-valeurs .item-valeur{*/
-/*        width: calc(20em + 3vw);*/
-/*        height: calc(20em + 3vw);*/
-/*    }*/
-/*    .item-valeurs .item-valeur-4{*/
-/*        right: 2%;*/
-/*    }*/
-/*}*/
-/*@media only screen and (min-width:1098px){*/
-/*    .item-valeurs .item-valeur{*/
-/*        width: calc(18em + 3vw);*/
-/*        height: calc(18em + 3vw);*/
-/*    }*/
-/*}*/
 @media only screen and (max-width: 1023px) {
     .intro h1 {
         font-size: clamp(3.3rem, -2.875rem + 10.333333vw, 7.3rem);
         line-height: clamp(3.3rem, -2.875rem + 10.333333vw, 7.3rem);
     }
 }
-@media only screen and (min-width: 969px) {
+@media only screen and (min-width: 1000px) {
     .item-valeurs {
         height: 600px;
     }
     .item-valeurs .item-valeur {
         position: absolute;
-        width: 70%;   /* 80% du parent */
-        height: 70%;  /* 80% du parent */
-        max-width: 400px; /* Mais pas trop grand */
-        max-height: 400px;
+        width: 60%;
+        height: 60%;
+        max-width: 350px;
+        max-height: 350px;
         margin: 0;
     }
     .item-valeurs .item-valeur-1 {
@@ -377,6 +455,11 @@ a {
     }
     .item-valeurs .item-valeur img{
         max-width: 100px;
+    }
+}
+@media only screen and (min-width: 980px) {
+    .item-actualites .item-actualites-content {
+        width: 40%;
     }
 }
 @media only screen and (min-width: 780px) {
