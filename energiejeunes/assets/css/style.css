@@ -1,3 +1,5 @@
+/* ======================== IMPORTS POLICES ======================== */
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Barlow+Condensed:wght@700&display=swap');
 
 /* ======================== MAIN ======================== */
 :root {
@@ -18,7 +20,7 @@
 }
 
 [class^="icon-"], [class*=" icon-"] {
-    font-family: 'ej' !important;
+    font-family: 'ej', serif !important;
     speak: never;
     font-style: normal;
     font-weight: normal;
@@ -28,17 +30,142 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-body{
-    overflow-x: hidden;
-    white-space: nowrap;
+
+/* ======================== GLOBAL ======================== */
+/* Couleurs principaux */
+.color-blue{color: var(--color-bleu);}
+.color-bleuf{color: var(--color-bleuf);}
+.color-orange{color: var(--color-orange);}
+.color-jaune{color: var(--color-jaune);}
+.color-red{color: var(--color-rouge);}
+
+/* Couleurs Backgrounds */
+.fond-bleu { background-color: var(--color-bleu); }
+.fond-bleuf { background-color: var(--color-bleuf); }
+.fond-orange { background-color: var(--color-orange); }
+.fond-jaune{ background-color: var(--color-jaune);}
+.fond-red{ background-color: var(--color-rouge);}
+
+/* Les Fonts personnalisés */
+.font-1{
     font-family: 'Barlow', sans-serif;
-    font-size: 1.6rem;
-    line-height: 2.2rem;
-    font-style: normal;
-    font-weight: 400;
-    background-color: #FFF;
-    color: #000;
 }
+.font-2{
+    font-family: 'Barlow Condensed', sans-serif;
+}
+.font-3{
+    font-family: 'ej', serif;
+}
+/* La Flèche */
+.fleche {
+    position: relative;
+    padding: 4.3rem 0 3rem 0;
+}
+.fleche::before {
+    font-family: 'ej', serif;
+    position: absolute;
+    top: 0;
+    content: "\e908";
+}
+/* Zones courbés haut & bas (avec la responsive) */
+.top-curved{
+    position: relative;
+    padding-top: 170px;
+}
+.top-curved::before {
+    position: absolute;
+    display: block;
+    width: 100%;
+    content: "";
+    top: 0;
+    z-index: 1;
+    height: 200px;
+    clip-path: ellipse(61% 122% at 50% -58%);
+    background-color: #FFF;
+}
+.bottom-curved{
+    position: relative;
+    z-index: 10;
+    padding-bottom: 125px;
+    margin-bottom: -120px;
+    clip-path: ellipse(77% 64% at 50% 36%);
+}
+.bottom-curved.top-curved {
+    z-index: 5;
+}
+@media only screen and (max-width: 768px) {
+    .bottom-curved {
+        clip-path: ellipse(166% 65% at 50% 35%);
+    }
+    .top-curved::before {
+        clip-path: ellipse(105% 122% at 50% -58%);
+    }
+}
+/* ======================== BOUTONS ======================== */
+/* Général */
+button{
+    text-decoration: none;
+    transition: all 300ms ease !important;
+}
+.btn-slide, button.btn-slide {
+    position: relative;
+    z-index: 5;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(0.5rem, 2vw, 0.8rem) clamp(1rem, 3vw, 1.5rem);
+    border-radius: 5px;
+    line-height: 2.2rem;
+}
+
+button.btn-slide:hover{
+    transform: translate(0.25em,-0.25em) ;
+    transition: 0.25s !important;
+    border-radius: 5px;
+}
+button.btn-slide::before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    transition: 0.25s!important;
+}
+button.btn-slide:hover:before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.25s!important;
+    transform: translate(-0.25em, 0.25em);
+}
+button:hover, button:active{
+    text-decoration: none;
+    outline: 0;
+}
+/* Bouton Don */
+.bouton-don{
+    background-color: var(--color-bleu);
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    color: white;
+    font-weight: 800;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.bouton-don:hover{
+    background-color: var(--color-orange);
+    color: var(--color-bleuf);
+}
+
+/* ======================== HEADER ======================== */
 header{
     background-color: var(--color-bleuf);
 }
@@ -76,45 +203,188 @@ a {
 .logo-image img{
     width: 100px;
 }
-.bouton-don{
-    background-color: var(--color-bleu);
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-bottom: 8px;
-    padding-top: 8px;
-    color: white;
-    font-weight: 800;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s ease;
-}
-.bouton-don:hover{
-    background-color: var(--color-orange);
-    color: var(--color-bleuf);
-}
-
 .icon-loupe:before {
     content: "\e907";
     color: #000;
     cursor: pointer;
 }
-.intro div{
-    display: flex;
-    flex-direction: column;
-    width:100%;
+@media only screen and (min-width: 990px) {
+    .header {
+        padding: 2rem 0;
+    }
 }
-.text-center{
+/* ======================== PAGE D'ACCUEIL ======================== */
+/* Section Intro */
+.intro{
+    background-image: url("../images/uploads/2021/09/bg-home.jpg");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.intro > .container {
+    padding-top: 10em;
+}
+.intro-titre{
+    font-size: clamp(3rem, 10.7vw - 1.7rem, 5rem);
+    line-height: clamp(3rem, 10.7vw - 1.7rem, 5rem);
+}
+.intro-txt{
+    font-size: 20px;
+}
+/* Bouton découvrir */
+.btn-decouvrir {
     text-align: center;
-    margin-right: 100px;
-    margin-left: 100px;
+}
+.btn-decouvrir button {
+    border: 0;
+    background-color: hsla(194, 80%, 63%, 0.7);
+}
+.btn-decouvrir button::before {
+    border: 1px solid hsla(194, 80%, 63%, 0.7);
+}
+.btn-decouvrir button:hover{
+    background-color: var(--color-bleu);
+}
+/* Bouton Service Civique */
+.btn-service{
+    text-align: center;
+}
+.btn-service button {
+    border: 0;
+    background-color: var(--color-jaune);
+}
+.btn-service button::before {
+    border: 1px solid var(--color-jaune);
+}
+.btn-service button.item-service {
+    padding: 10px 10px 0 30px !important;
+}
+.btn-service button.item-service:hover{
+    opacity: 1 !important;
+}
+.item-service-img img{
+    width: 150px;
+    height: auto;
+}
+/* Section Intro Chiffres */
+.item-chiffres-titre {
+    padding-top: 2.7em;
+    font-size: clamp(3rem, 11.7vw - 1.7rem, 4rem);
+    line-height: clamp(3rem, 11.7vw - 1.7rem, 4rem);
+}
+.item-chiffres img {
+    max-width: 100px;
+    height: auto;
+}
+.item-chiffres h3{
+    margin-bottom: 1.2rem;
+    font-size: 2.3rem;
+    line-height: 2.6rem;
 }
 
+/* Responsive */
+@media only screen and (max-width: 1023px) {
+    .intro h1 {
+        font-size: clamp(3.3rem, -2.875rem + 10.333333vw, 7.3rem);
+        line-height: clamp(3.3rem, -2.875rem + 10.333333vw, 7.3rem);
+    }
+}
+@media only screen and (min-width: 780px) {
+    .item-chiffres {
+        flex-wrap: nowrap;
+    }
+    .item-chiffres .item-chiffre {
+        width: 100%;
+        padding: 0 15px;
+    }
+}
+@media only screen and (max-height: 768px) {
+    .intro {
+        padding-top: 100px;
+    }
+}
 
-/* ======================== HEADER  ======================== */
-/* commentaire */
-
-
-
+/* ======================== SCROLL DOWN  ======================== */
+.scroll-down{
+    position: relative;
+    z-index: 10;
+}
+.scroll-down a{
+    position: absolute;
+    bottom: 10vh;
+    left: 49%;
+    z-index: 10;
+    display: inline-block;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    color: #fff;
+    letter-spacing: .1em;
+    text-decoration: none;
+    transition: opacity .3s;
+}
+.scroll-down a:hover{
+    opacity: .5;
+}
+a.scroll-down{
+    padding-top: 60px;
+}
+.scroll-down a span{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 30px;
+    height: 60px;
+    margin-left: -15px;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    box-sizing: border-box;
+}
+.scroll-down a span::before{
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    content: '';
+    width: 6px;
+    height: 6px;
+    margin-left: -3px;
+    background-color: #fff;
+    border-radius: 100%;
+    -webkit-animation: scland 2s infinite;
+    animation: scland 2s infinite;
+    box-sizing: border-box;
+}
+@-webkit-keyframes scland{
+    0%{
+        -webkit-transform: translate(0, 0);
+        opacity: 0;
+    }
+    40%{
+        opacity: 1;
+    }
+    80%{
+        -webkit-transform: translate(0, 20px);
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes scland{
+    0%{
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+    40%{
+        opacity: 1;
+    }
+    80%{
+        transform: translate(0, 20px);
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
 /* ======================== PAGE - AGIR AVEC NOUS  ======================== */
 /* commentaire */
 
@@ -142,3 +412,22 @@ a {
 
 /* ======================== FOOTER  ======================== */
 /* commentaire */
+
+
+
+/* ======================== RESPONSIVE ======================== */
+@media only screen and (min-width:320px){
+    section{
+        scroll-margin-top: 60px;
+    }
+
+}
+@media only screen and (min-width:769px){
+    section{
+        scroll-margin-top: 90px;
+    }
+}
+
+
+
+
