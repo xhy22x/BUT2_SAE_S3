@@ -61,8 +61,22 @@ a{
 }
 a:hover{text-decoration: underline;}
 
+/* Les Images */
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+    height: auto;
+}
+
 /* Pas de Margin */
 .no-margin {margin: 0 !important;}
+
+/* Placer au centre */
+.d-flex-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
 /* La Flèche */
 .fleche {
@@ -956,10 +970,85 @@ a.scroll-down{
 
 
 /* ======================== FOOTER  ======================== */
-/* commentaire */
-
-
-
+#section-footer{
+    background: var(--color-bleuf);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1rem;
+    line-height: 1.8rem;
+    letter-spacing: 0.025rem;
+}
+#section-footer, .item-footer a, .item-footer i{
+    color: #fff;
+}
+.item-footer-g img{
+    max-width: 140px;
+    vertical-align: bottom;
+    height: auto;
+}
+.item-footer-g p{
+    margin-top: 16px;
+}
+.item-footer-g i::before{
+    font-size: 1.8rem;
+}
+.icon-facebook:before {content: "\e902";}
+.icon-x:before {content: "\e90d";}
+.icon-linkedin:before {content: "\e903";}
+.icon-youtube:before {content: "\e90b";}
+.item-footer ul{
+    list-style: none;
+    padding-left: 0;
+}
+.item-formulaire{
+    display: flex;
+}
+input[type="email"]{
+    width: 100%;
+    padding: 6px 6px;
+    border: none;
+    color: #fff;
+    border-radius: 0;
+    background-color: hsla(194, 80%, 63%, 0.1);
+}
+input[type="submit"] {
+    margin-left: 20px;
+    padding: 6px 15px;
+    background-color: var(--color-rouge) !important;
+    color: #FFF;
+    border-radius: 10px !important;
+    border: none;
+    font-weight: 500;
+}
+.item-footer-bottom ul{
+    display: flex;
+    justify-content: center;
+}
+.item-footer-bottom ul li {
+    position: relative;
+    padding: 0 10px;
+    font-size: 14px;
+}
+.item-footer-bottom ul li a:hover {
+    text-decoration: underline !important;
+}
+.item-footer-bottom ul li:not(:last-child)::after {
+    position: absolute;
+    content: "|";
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+/* Responsive */
+@media only screen and (max-width: 480px){
+    .item-footer-bottom ul li {
+        font-size: 10px;
+    }
+}
+@media only screen and (min-width: 1280px) {
+    .item-footer-d-2 {
+        padding-right: 150px;
+    }
+}
 /* ======================== AUTRES RESPONSIVES ======================== */
 @media only screen and (min-width:320px){
     section{
