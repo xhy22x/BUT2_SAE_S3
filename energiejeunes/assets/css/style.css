@@ -970,11 +970,10 @@ a.scroll-down{
 
 
 /* ======================== FOOTER  ======================== */
-/* commentaire */
 #section-footer{
     background: var(--color-bleuf);
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1rem;
     line-height: 1.8rem;
     letter-spacing: 0.025rem;
 }
@@ -1013,7 +1012,7 @@ input[type="email"]{
 }
 input[type="submit"] {
     margin-left: 20px;
-    padding: 6px 10px;
+    padding: 6px 15px;
     background-color: var(--color-rouge) !important;
     color: #FFF;
     border-radius: 10px !important;
@@ -1026,8 +1025,11 @@ input[type="submit"] {
 }
 .item-footer-bottom ul li {
     position: relative;
-    padding: 0 15px;
+    padding: 0 10px;
     font-size: 14px;
+}
+.item-footer-bottom ul li a:hover {
+    text-decoration: underline !important;
 }
 .item-footer-bottom ul li:not(:last-child)::after {
     position: absolute;
@@ -1035,6 +1037,17 @@ input[type="submit"] {
     right: 0;
     top: 50%;
     transform: translateY(-50%);
+}
+/* Responsive */
+@media only screen and (max-width: 480px){
+    .item-footer-bottom ul li {
+        font-size: 10px;
+    }
+}
+@media only screen and (min-width: 1280px) {
+    .item-footer-d-2 {
+        padding-right: 150px;
+    }
 }
 /* ======================== AUTRES RESPONSIVES ======================== */
 @media only screen and (min-width:320px){
