@@ -58,9 +58,10 @@
 /* Liens */
 a{
     color: #000;
-    text-decoration: none;
+    text-decoration: none !important;
     transition: all 300ms
     ease !important;
+    cursor: pointer;
 }
 a:hover{
     text-decoration: underline;
@@ -208,6 +209,9 @@ button:hover, button:active, .btn-consultez a:hover, .btn-consultez a:active{
     background: transparent;
     font-size: 1rem;
 }
+.btn-savoir-plus a{
+    text-decoration: none;
+}
 .icon-plus{
     display: inline-block;
     position: relative;
@@ -231,7 +235,6 @@ button:hover, button:active, .btn-consultez a:hover, .btn-consultez a:active{
 }
 .btn-txt{
     margin-left: 0.4rem;
-
 }
 /* Bouton lire la suite */
 .btn-lire-la-suite{
@@ -556,8 +559,15 @@ a {
     background-color: rgba(51, 51, 51, 0.7);
 }
 .item-actualites-content:hover {
+    color: #fff;
     background-color: var(--color-bleuf);
     opacity: 0.8;
+}
+.item-actualites-content h2:hover{
+    text-decoration: underline;
+}
+.item-actu-content a:first-child{
+    margin-bottom: 10px;
 }
 /* Section Agir avec Nous */
 #section-agir-avec-nous {
@@ -693,6 +703,11 @@ a {
     font-size: .9em;
     line-height: 1.4;
     padding: 15px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+.item-r-content a:hover{
+    text-decoration: underline !important;
 }
 .item-r-footer{
     display: flex;
@@ -819,7 +834,7 @@ a {
 }
 @media only screen and (min-width: 1000px) {
     .item-valeurs {
-        height: 650px;
+        height: 700px;
     }
     .item-valeurs .item-valeur {
         position: absolute;
@@ -827,7 +842,6 @@ a {
         height: 100%;
         max-width: 450px;
         max-height: 450px;
-
     }
     .item-valeurs .item-valeur-1 {
         left: 0;
