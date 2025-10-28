@@ -87,8 +87,8 @@ a:hover{
     font-weight: 700;
     text-transform: uppercase;
     padding-top: 1em;
-    font-size: clamp(3rem, 11.7vw - 1.7rem, 4rem);
-    line-height: clamp(3rem, 11.7vw - 1.7rem, 4rem);
+    font-size: clamp(3rem, 11.7vw - 1.7rem, 3.5rem);
+    line-height: clamp(3rem, 11.7vw - 1.7rem, 3.5rem);
 }
 /* Zones courbés haut & bas (avec la responsive) */
 .top-curved{
@@ -120,6 +120,9 @@ a:hover{
     height: 20px;
     background-color: #EDEDED;
     clip-path: ellipse(55% 150% at 50% -50%);
+}
+.bottom-curved-fix {
+    clip-path: ellipse(55% 88% at 50% 10%);
 }
 @media only screen and (max-width: 768px) {
     .bottom-curved {
@@ -549,6 +552,9 @@ a {
     padding: 15px 0;
 }
 /* Section Sur les réseaux */
+#section-reseaux{
+    background: url("../images/bg-social.png") right top / contain no-repeat var(--color-bleu);
+}
 .item-r-header{
     border-radius: 3px 3px 0 0;
     background: rgba(255, 255, 255, .95);
@@ -581,10 +587,13 @@ a {
 .item-r-author{
     padding: 5px 0;
 }
+.item-r-author a{
+    text-decoration: none;
+}
 .item-r-titre{
+    font-size: 14px;
     font-family: 'Barlow', sans-serif;
     font-weight: 700;
-    font-size: 14px;
 }
 .item-r-date{
     font-family: 'Barlow', sans-serif;
@@ -595,6 +604,18 @@ a {
     max-width: 100%;
     vertical-align: bottom;
     height: auto;
+}
+.item-r-video-1, .item-r-video-2 {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+}
+.item-r-video-1 iframe,
+.item-r-video-2 iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    vertical-align: bottom;
 }
 .item-r-content{
     background: #fff;
@@ -631,6 +652,58 @@ a {
     align-items: center;
     gap: 10px;
 }
+/* Section Ils Nous Soutiennent & Bouton Ils Nous Soutiennent */
+.container-soutiens{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.item-slide{
+    max-width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.item-slide ul{
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    width: max-content;
+    height: 200px;
+}
+.item-slide li{
+    list-style: none;
+    height: auto;
+    padding-right: 15px;
+    flex-shrink: 0;
+}
+.item-slide img{
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+.btn-soutien{
+    display:flex;
+    justify-content: center;
+}
+.btn-soutien .btn{
+    color: var(--color-bleu);
+    border: 2px solid var(--color-bleu);
+    opacity: 0.5;
+    cursor: pointer;
+    border-radius: 50px;
+    padding: 5px 15px;
+    margin: 0 20px;
+    font-size: 20px;
+}
+.btn-soutien .btn:hover {
+    opacity: 1;
+}
 /* Responsive */
 @media only screen and (min-width: 640px) {
     .item-valeurs .item-valeur {
@@ -666,7 +739,6 @@ a {
     .item-actu-content {
         max-width: 300px;
     }
-    .i
 }
 @media only screen and (max-width: 990px) {
     .autre-actu img{
@@ -707,6 +779,13 @@ a {
     }
     #section-agir-avec-nous::before {
         clip-path: circle(55% at 115% 40%);
+    }
+    .item-r-logo img{
+        width: 40px;
+        height: auto;
+    }
+    .item-r-titre{
+        font-size: 17px;
     }
 }
 @media only screen and (max-width: 1023px) {
