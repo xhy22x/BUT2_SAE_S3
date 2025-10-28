@@ -45,17 +45,13 @@
 .fond-orange { background-color: var(--color-orange); }
 .fond-jaune{ background-color: var(--color-jaune);}
 .fond-rouge{ background-color: var(--color-rouge);}
+
 /* Les Fonts personnalisés */
-.font-1{
-    font-family: 'Barlow', sans-serif;
-}
-.font-2{
-    font-family: 'Barlow Condensed', sans-serif;
-}
-.font-3{
-    font-family: 'ej', serif;
-}
-/* Liens */
+.font-1{font-family: 'Barlow', sans-serif;}
+.font-2{font-family: 'Barlow Condensed', sans-serif;}
+.font-3{font-family: 'ej', serif;}
+
+/* Les Liens */
 a{
     color: #000;
     text-decoration: none !important;
@@ -63,13 +59,11 @@ a{
     ease !important;
     cursor: pointer;
 }
-a:hover{
-    text-decoration: underline;
-}
+a:hover{text-decoration: underline;}
+
 /* Pas de Margin */
-.no-margin {
-    margin: 0 !important;
-}
+.no-margin {margin: 0 !important;}
+
 /* La Flèche */
 .fleche {
     position: relative;
@@ -81,7 +75,8 @@ a:hover{
     top: 0;
     content: "\e908";
 }
-/* Titre des sections */
+
+/* Titre des sections - Personnalisés */
 .section-titre {
     font-family: 'Barlow Condensed', sans-serif ;
     font-weight: 700;
@@ -90,6 +85,7 @@ a:hover{
     font-size: clamp(3rem, 11.7vw - 1.7rem, 3.5rem);
     line-height: clamp(3rem, 11.7vw - 1.7rem, 3.5rem);
 }
+
 /* Zones courbés haut & bas (avec la responsive) */
 .top-curved{
     position: relative;
@@ -149,7 +145,6 @@ button, .btn-consultez a{
     border-radius: 10px;
     line-height: 2.2rem;
 }
-
 button.btn-slide:hover, a.btn-slide:hover{
     transform: translate(0.25em,-0.25em) ;
     transition: 0.25s !important;
@@ -178,23 +173,6 @@ button.btn-slide:hover:before, a.btn-slide:hover:before{
 button:hover, button:active, .btn-consultez a:hover, .btn-consultez a:active{
     text-decoration: none;
     outline: 0;
-}
-/* Bouton Don */
-.bouton-don{
-    background-color: var(--color-bleu);
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-bottom: 8px;
-    padding-top: 8px;
-    color: white;
-    font-weight: 800;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s ease;
-}
-.bouton-don:hover{
-    background-color: var(--color-orange);
-    color: var(--color-bleuf);
 }
 /* Bouton en savoir plus */
 .btn-savoir-plus{
@@ -262,7 +240,7 @@ button:hover, button:active, .btn-consultez a:hover, .btn-consultez a:active{
     clip-path: circle(50% at 50% 50%);
     transition: all 0.5s;
 }
-/* Bouton Consultez Notre Dernier Rapport Annuel*/
+/* Bouton Consultez - Notre Dernier Rapport Annuel */
 .btn-consultez a{
     border: 0;
     color: #fff;
@@ -270,21 +248,12 @@ button:hover, button:active, .btn-consultez a:hover, .btn-consultez a:active{
     text-transform: uppercase;
     background-color: var(--color-jaune);
 }
-.btn-consultez a::before{
-    border: 1px solid var(--color-jaune);
-}
-.btn-consultez a:hover{
-    background-color: var(--color-jaune);
-}
-.item-consultez{
-    height: 100%;
-}
-.item-consultez div{
-    width: 100%;
-}
-.item-consultez img{
-    margin-bottom: 15px;
-}
+.btn-consultez a::before{border: 1px solid var(--color-jaune);}
+.btn-consultez a:hover{background-color: var(--color-jaune);}
+.item-consultez {height: 100%;}
+.item-consultez:hover{opacity: 0.8;}
+.item-consultez div{width: 100%;}
+.item-consultez img{margin-bottom: 15px;}
 .item-consultez h2{
     font-size: 26px;
     font-weight: 700;
@@ -293,20 +262,13 @@ button:hover, button:active, .btn-consultez a:hover, .btn-consultez a:active{
     padding-right: 30px;
     font-family: 'Barlow', sans-serif;
 }
-.item-consultez:hover{
-    opacity: 0.8;
-}
 .item-consultez::before{
     border: 1px solid var(--color-jaune) !important;
     border-radius: 10px !important;
 }
 @media only screen and (min-width: 960px){
-    .item-consultez{
-        height: auto;
-    }
-    .item-consultez div{
-        width: auto;
-    }
+    .item-consultez{height: auto;}
+    .item-consultez div{width: auto;}
 }
 @media only screen and (min-width: 768px){
     .btn-consultez{
@@ -315,12 +277,8 @@ button:hover, button:active, .btn-consultez a:hover, .btn-consultez a:active{
     }
 }
 @media only screen and (max-width: 680px){
-    .item-consultez{
-        height: auto;
-    }
-    .item-consultez div{
-        width: auto;
-    }
+    .item-consultez{height: auto;}
+    .item-consultez div{width: auto;}
 }
 /* Bouton Rejoignez-Nous */
 .btn-rejoindre a{
@@ -363,33 +321,24 @@ button:hover, button:active, .btn-consultez a:hover, .btn-consultez a:active{
     padding: 0 20px 0 20px;
 }
 @media only screen and (max-width: 980px) {
-    .item-rejoindre div {
-        width: auto;
-    }
-    .item-rejoindre-g{
-        padding: 0 10px 0 10px;
-    }
+    .item-rejoindre div {width: auto;}
+    .item-rejoindre-g{padding: 0 10px 0 10px;}
     .item-rejoindre h2{
         font-size: 2rem;
         line-height: 2rem;
     }
-    .item-rejoindre h2::before{
-        font-size: 1.5rem;
-    }
+    .item-rejoindre h2::before{font-size: 1.5rem;}
 }
 @media only screen and (min-width: 1280px) {
-    .item-rejoindre-g{
-        padding: 0 40px 0 40px;
-    }
+    .item-rejoindre-g{padding: 0 40px 0 40px;}
     .item-rejoindre h2{
         font-size: 3.2rem;
         line-height: 3.8rem;
     }
-    .item-rejoindre h2::before{
-        font-size: 2rem;
-    }
+    .item-rejoindre h2::before{font-size: 2rem;}
 }
 /* ======================== HEADER ======================== */
+/* NavBar */
 header{
     background-color: var(--color-bleuf);
 }
@@ -413,9 +362,6 @@ nav{
     align-items: center;
     justify-content: space-around;
 }
-a {
-    text-decoration: none;
-}
 .navbar-elements .menu-options {
     color: white;
     transition: 0.3s ease;
@@ -432,6 +378,21 @@ a {
     color: #000;
     cursor: pointer;
 }
+/* Bouton Don */
+.bouton-don{
+    background-color: var(--color-bleu);
+    padding: 8px 15px 8px 15px;  /* HAUT & DROIT & BAS & GAUCHE */
+    color: white;
+    font-weight: 800;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.bouton-don:hover{
+    background-color: var(--color-orange);
+    color: var(--color-bleuf);
+}
+/* Responsive */
 @media only screen and (min-width: 990px) {
     .header {
         padding: 2rem 0;
@@ -455,7 +416,8 @@ a {
 .intro-txt{
     font-size: 20px;
 }
-/* Bouton découvrir */
+
+/* Bouton Découvrir */
 .btn-decouvrir {
     text-align: center;
 }
@@ -469,6 +431,7 @@ a {
 .btn-decouvrir button:hover{
     background-color: var(--color-bleu);
 }
+
 /* Bouton Service Civique */
 .btn-service{
     text-align: center;
@@ -490,6 +453,7 @@ a {
     width: 150px;
     height: auto;
 }
+
 /* Section Intro Chiffres */
 .item-chiffre img {
     max-width: 100px;
@@ -504,6 +468,7 @@ a {
 .item-chiffre span{
     font-size: clamp(2.5rem, 8vw - 1rem, 4rem);
 }
+
 /* Section Nos Valeurs */
 .item-valeurs {
     position: relative;
@@ -539,6 +504,7 @@ a {
 .item-valeur h3 div{
     margin-top: 0.6rem;
 }
+
 /* Section Nos Actualités */
 .item-actualites{
     position: relative;
@@ -569,6 +535,7 @@ a {
 .item-actu-content a:first-child{
     margin-bottom: 10px;
 }
+
 /* Section Agir avec Nous */
 #section-agir-avec-nous {
     position: relative;
@@ -586,6 +553,7 @@ a {
     background-position: 80% 45%;
     background-size: cover;
 }
+
 /* Section Ils Témoignent */
 .item-temoignage img {
     max-width: 100%;
@@ -626,7 +594,8 @@ a {
     color: #FAD119;
     padding: 15px 0;
 }
-/* Section Sur les réseaux */
+
+/* Section Sur les Réseaux */
 #section-reseaux{
     background: url("../images/bg-social.png") right top / contain no-repeat var(--color-bleu);
 }
@@ -738,7 +707,8 @@ a {
     align-items: center;
     gap: 10px;
 }
-/* Section Ils Nous Soutiennent & Bouton Ils Nous Soutiennent */
+
+/* Section Ils Nous Soutiennent */
 .container-soutiens{
     height: 80vh;
     display: flex;
@@ -773,6 +743,7 @@ a {
     object-position: center;
     display: block;
 }
+/* Bouton Slide Automatique */
 .btn-soutien{
     display:flex;
     justify-content: center;
@@ -890,7 +861,6 @@ a {
     left: 49%;
     z-index: 10;
     display: inline-block;
-    -webkit-transform: translate(0, -50%);
     transform: translate(0, -50%);
     color: #fff;
     letter-spacing: .1em;
@@ -930,14 +900,14 @@ a.scroll-down{
 }
 @-webkit-keyframes scland{
     0%{
-        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
         opacity: 0;
     }
     40%{
         opacity: 1;
     }
     80%{
-        -webkit-transform: translate(0, 20px);
+        transform: translate(0, 20px);
         opacity: 0;
     }
     100%{
@@ -990,7 +960,7 @@ a.scroll-down{
 
 
 
-/* ======================== RESPONSIVE ======================== */
+/* ======================== AUTRES RESPONSIVES ======================== */
 @media only screen and (min-width:320px){
     section{
         scroll-margin-top: 60px;
