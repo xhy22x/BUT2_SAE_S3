@@ -1,6 +1,6 @@
 let ul = document.querySelector('.item-slide ul');
 let lis = document.querySelectorAll('.item-slide li');
-let btns = document.querySelectorAll('.btn-soutien .btn');
+let btns = document.querySelectorAll('.btn-s');
 
 // Duplique le contenu
 ul.innerHTML = ul.innerHTML + ul.innerHTML;
