@@ -956,10 +956,16 @@ a.scroll-down{
 
 /* ======================== PAGE - NOS COMMUNAUTES ======================== */
 /* Image */
-img, iframe{
+img{
     max-width: 100%;
     vertical-align: bottom;
     height: auto;
+}
+iframe{
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    vertical-align: bottom;
 }
 /* Zone courbés */
 .zone-courbe{
@@ -990,7 +996,7 @@ img, iframe{
 /* Bouton Commun */
 .btn{
     border: 0;
-    color: #fff;
+    color: #fff !important;
     font-size: 20px;
     font-weight: 700;
     position: relative;
@@ -1007,7 +1013,6 @@ img, iframe{
     border-radius: 5px;
 }
 .btn:hover{
-    color: #fff;
     transform: translate(5px, -5px);
     transition: transform 0.3s ease;
 }
@@ -1024,11 +1029,11 @@ img, iframe{
     border: 1px solid var(--color-bleu);
 }
 .btn-1:hover{
-    background: var(--color-bleu);
+    background: var(--color-bleu) !important;
 }
 
 .btn-2, .btn-3{
-    width: 400px;
+    width: 450px;
     height: 200px;
     font-size: 30px;
 }
@@ -1038,18 +1043,21 @@ img, iframe{
 }
 .btn-2{
     display: flex;
-    justify-content: left;
+    justify-content: center;
     align-items: center;
+    text-align: left;
+    font-family: 'Barlow', sans-serif;
+    line-height: 2rem;
     background: var(--color-jaune);
 }
 .btn-2 img{
-    display: block;
+    padding: 10px;
 }
 .btn-2::before{
     border: 1px solid var(--color-jaune);
 }
 .btn-2:hover{
-    background: var(--color-jaune);
+    background: var(--color-jaune) !important;
 }
 .btn-3{
     display: flex;
@@ -1062,13 +1070,14 @@ img, iframe{
 .btn-3 p::before{
     font-family: 'ej', sans-serif;
     content: "\e906";
+    font-size: 1.5rem;
     padding: 0 5px 0 0;
 }
 .btn-3::before{
     border: 1px solid var(--color-rouge);
 }
 .btn-3:hover{
-    background: var(--color-rouge);
+    background: var(--color-rouge) !important;
 }
 @media only screen and (max-width: 768px) {
     #section-communautes-boutons .container{
@@ -1087,7 +1096,8 @@ img, iframe{
         margin-left: 250px;
         margin-right: 250px;
     }
-    #section-communautes-temoignage .container{
+    #section-communautes-temoignage,
+    #section-communautes-soutien{
         margin-left: 200px;
         margin-right: 200px;
     }
