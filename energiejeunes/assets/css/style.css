@@ -944,9 +944,6 @@ a.scroll-down{
         opacity: 0;
     }
 }
-/* ======================== PAGE - AGIR AVEC NOUS  ======================== */
-/* commentaire */
-
 
 
 /* ======================== PAGE - FAIRE UN DON ======================== */
@@ -954,8 +951,8 @@ a.scroll-down{
 
 
 
-/* ======================== PAGE - NOS COMMUNAUTES ======================== */
-/* Image */
+/* ======================== PAGE - NOS COMMUNAUTES & AGIR AVEC NOUS ======================== */
+/* Image & Vidéos */
 img{
     max-width: 100%;
     vertical-align: bottom;
@@ -977,14 +974,13 @@ iframe{
     align-content: center;
     overflow: hidden;
 }
-.zone-courbe:before{
+.zone-courbe::before{
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: var(--color-bleuf);
     border-radius: 0 0 50% 50%/0 0 50% 50%;
     transform: scaleX(1.5);
 }
@@ -993,7 +989,17 @@ iframe{
         border-radius: 0 0 50% 50%/0 0 15% 15%;
     }
 }
-/* Bouton Commun */
+/* Zones personnalisés en fonction de la Page */
+#section-communautes-menu.zone-courbe:before{
+    background: var(--color-bleuf);
+}
+#section-agir-menu.zone-courbe:before{
+    background-image: url("../../assets/images/uploads/2024/09/359-025-scaled.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/* Bouton */
 .btn{
     border: 0;
     color: #fff !important;
@@ -1031,7 +1037,6 @@ iframe{
 .btn-1:hover{
     background: var(--color-bleu) !important;
 }
-
 .btn-2, .btn-3{
     width: 450px;
     height: 200px;
@@ -1080,49 +1085,10 @@ iframe{
     background: var(--color-rouge) !important;
 }
 @media only screen and (max-width: 768px) {
-    #section-communautes-boutons .container{
+    #section-boutons .container{
         display: flex;
         flex-direction: column;
     }
-}
-/* Contenu */
-#section-communautes-menu h1,
-#section-communautes-temoignage h1,
-#section-communautes-soutien h1 {
-    font-size: 3.2rem;
-}
-@media only screen and (min-width: 1280px) {
-    #section-communautes-menu .container{
-        margin-left: 250px;
-        margin-right: 250px;
-    }
-    #section-communautes-temoignage,
-    #section-communautes-soutien{
-        margin-left: 200px;
-        margin-right: 200px;
-    }
-}
-#section-communautes-temoignage h1::before,
-#section-communautes-soutien h1::before {
-    font-family: 'ej', sans-serif;
-    content:"\e908";
-    color: black;
-    display: block;
-}
-#section-communautes-temoignage p{
-    text-align: center;
-    padding: 10px;
-    background-color: #EDEDED;
-    border-radius: 0 0 50% 50%/ 0 0 15% 15%;
-}
-#section-communautes-temoignage p::before,
-#section-communautes-temoignage p::after {
-    font-family: 'ej', sans-serif;
-    content: "\e90a";
-    color: var(--color-jaune);
-    display: block;
-    text-align: center;
-    padding: 10px 0;
 }
 /* Bouton En Savoir Plus */
 .btn-plus{
@@ -1148,6 +1114,49 @@ iframe{
     color: var(--color-bleu);
     background: #fff;
     transition: all 0.5s;
+}
+/* Contenu en général */
+.section-menu h1,
+#section-temoignage h1,
+#section-soutien h1{
+    font-size: 3.2rem;
+}
+@media only screen and (min-width: 1280px) {
+    .section-menu .container{
+        margin-left: 250px;
+        margin-right: 250px;
+    }
+    .section-menu p{
+        padding: 10px 50px;
+    }
+    #section-temoignage,
+    #section-soutien{
+        margin-left: 200px;
+        margin-right: 200px;
+    }
+}
+#section-temoignage h1::before,
+#section-soutien h1::before {
+    font-family: 'ej', sans-serif;
+    content:"\e908";
+    color: black;
+    display: block;
+}
+#section-temoignage p{
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    padding: 10px;
+    background-color: #EDEDED;
+    border-radius: 0 0 50% 50%/ 0 0 15% 15%;
+}
+#section-temoignage p::before,
+#section-temoignage p::after {
+    font-family: 'ej', sans-serif;
+    content: "\e90a";
+    color: var(--color-jaune);
+    display: block;
+    text-align: center;
+    padding: 10px 0;
 }
 /* Slide Automatique */
 .item-slide{
@@ -1194,7 +1203,6 @@ iframe{
     opacity: 1;
     transition: all 0.3s;
 }
-
 /* ======================== PAGE - NOTRE ACTION ======================== */
 /* commentaire */
 
