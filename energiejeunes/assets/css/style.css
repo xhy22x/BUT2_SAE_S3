@@ -89,7 +89,24 @@ img {
     top: 0;
     content: "\e908";
 }
-
+.navbar{
+    background-color: var(--color-bleuf);
+}
+.navbar a{
+    color: white;
+    font-weight: bold;
+}
+.menu-options {
+    color: white;
+    transition: 0.3s ease;
+}
+.menu-options:hover{
+    color: var(--color-bleu)!important;
+    transform: scale(1.1, 1.1);
+}
+.navbar-brand{
+    margin-left: 30px;
+}
 /* Titre des sections - Personnalisés */
 .section-titre {
     font-family: 'Barlow Condensed', sans-serif ;
@@ -404,7 +421,6 @@ nav{
 }
 .bouton-don:hover{
     background-color: var(--color-orange);
-    color: var(--color-bleuf);
 }
 /* Responsive */
 @media only screen and (min-width: 990px) {
