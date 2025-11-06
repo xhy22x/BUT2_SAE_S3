@@ -1,0 +1,472 @@
+/* ======================== IMPORTS POLICES ======================== */
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@300;400;500;600;700&display=swap');
+
+/* ======================== MAIN ======================== */
+:root {
+    --color-bleu: #5FC3E1;
+    --color-bleuf: #011627;
+    --color-orange: #FF9F1C;
+    --color-jaune: #FAD119;
+    --color-rouge: #F71735;
+}
+/* ======================== FONTS ======================== */
+@font-face {
+    font-family: 'ej';
+    src:  url('../images/fonts/ejb741.woff?fokl7l') format('woff'),
+    url('../images/fonts/ejb741.svg?fokl7l#ej') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'ej', serif !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ======================== GLOBAL ======================== */
+/* Couleurs principaux */
+.color-bleu{color: var(--color-bleu);}
+.color-bleuf{color: var(--color-bleuf);}
+.color-orange{color: var(--color-orange);}
+.color-jaune{color: var(--color-jaune);}
+.color-rouge{color: var(--color-rouge);}
+
+/* Couleurs Backgrounds */
+.fond-bleu { background-color: var(--color-bleu); }
+.fond-bleuf { background-color: var(--color-bleuf); }
+.fond-orange { background-color: var(--color-orange); }
+.fond-jaune{ background-color: var(--color-jaune);}
+.fond-rouge{ background-color: var(--color-rouge);}
+
+/* Les Fonts personnalisés */
+.font-1{font-family: 'Barlow', sans-serif;}
+.font-2{font-family: 'Barlow Condensed', sans-serif;}
+
+/* Image & Vidéos */
+img{
+    max-width: 100%;
+    vertical-align: bottom;
+    height: auto;
+}
+iframe{
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    vertical-align: bottom;
+}
+
+/* Bord arrondi */
+.rounded-edge{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    overflow: hidden;
+}
+.rounded-edge::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: ellipse(95% 100% at top)
+}
+@media only screen and (max-width: 768px) {
+    .rounded-edge::before{
+        clip-path: ellipse(1050px 100% at top)
+    }
+}
+
+/* ======================== BOUTONS ======================== */
+.btn{
+    border: 0;
+    color: #fff !important;
+    font-size: 20px;
+    font-weight: 700;
+    position: relative;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+.btn::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-radius: 5px;
+}
+.btn:hover{
+    transform: translate(5px, -5px);
+    transition: transform 0.3s ease;
+}
+.btn:hover::before{
+    transform: translate(-5px, 5px);
+    transition: transform 0.3s ease;
+}
+
+/* Bouton Personnalisé */
+.btn-1{
+    padding: 10px 0;
+    background: rgba(95, 195, 225, 0.7);
+}
+.btn-1::before{
+    border: 1px solid var(--color-bleu);
+}
+.btn-1:hover{
+    background: var(--color-bleu) !important;
+}
+.btn-2, .btn-3{
+    width: 450px;
+    height: 200px;
+    font-size: 30px;
+}
+.btn-2, .btn-2::before,
+.btn-3, .btn-3::before{
+    border-radius: 10px;
+}
+.btn-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    font-family: 'Barlow', sans-serif;
+    line-height: 2rem;
+    background: var(--color-jaune);
+}
+.btn-2 img{
+    padding: 10px;
+}
+.btn-2::before{
+    border: 1px solid var(--color-jaune);
+}
+.btn-2:hover{
+    background: var(--color-jaune) !important;
+}
+.btn-3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: 400;
+    background: var(--color-rouge);
+}
+.btn-3 p::before{
+    font-family: 'ej', sans-serif;
+    content: "\e906";
+    font-size: 1.5rem;
+    padding: 0 5px 0 0;
+}
+.btn-3::before{
+    border: 1px solid var(--color-rouge);
+}
+.btn-3:hover{
+    background: var(--color-rouge) !important;
+}
+@media only screen and (max-width: 768px) {
+    #section-boutons .container{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* Bouton En Savoir Plus */
+.btn-plus{
+    font-family: 'Barlow', sans-serif;
+    font-weight: 700;
+    color: black;
+    text-decoration: none;
+    padding: 9px 10px 8px 0;
+    border-radius: 20px;
+    border: 2px solid var(--color-bleu);
+}
+.btn-plus::before{
+    font-family: 'ej', sans-serif;
+    content:"\e909";
+    color: #fff;
+    display: inline-block;
+    padding: 6px 10px;
+    margin-right: 10px;
+    border-radius: 20px;
+    background: var(--color-bleu);
+}
+.btn-plus:hover::before{
+    color: var(--color-bleu);
+    background: #fff;
+    transition: all 0.5s;
+}
+/* ======================== HEADER ======================== */
+/* NavBar */
+header{
+    background-color: var(--color-bleuf);
+}
+nav{
+    font-size: 0.8rem;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+}
+.logo{
+    width: 250px;
+}
+.menu-options{
+    font-weight: 700;
+}
+.navbar-elements{
+    position: relative;
+    padding-left: 100px;
+    padding-right: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.navbar-elements .menu-options {
+    color: white;
+    transition: 0.3s ease;
+}
+.navbar-elements .menu-options:hover{
+    color: var(--color-bleu)!important;
+    transform: scale(1.1, 1.1);
+}
+.logo-image img{
+    width: 100px;
+}
+.icon-loupe:before {
+    content: "\e907";
+    color: #000;
+    cursor: pointer;
+}
+/* Bouton Don */
+.bouton-don{
+    background-color: var(--color-bleu);
+    padding: 8px 15px 8px 15px;  /* HAUT & DROIT & BAS & GAUCHE */
+    color: white;
+    font-weight: 800;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.bouton-don:hover{
+    background-color: var(--color-orange);
+}
+/* Responsive */
+@media only screen and (min-width: 990px) {
+    .header {
+        padding: 2rem 0;
+    }
+}
+/* ======================== PAGE D'ACCUEIL ======================== */
+
+/* ======================== PAGE - QUI SOMMES NOUS ======================== */
+/* commentaire */
+
+
+/* ======================== PAGE - NOTRE ACTION ======================== */
+/* commentaire */
+
+
+/* ======================== PAGE - MENUS NOS COMMUNAUTES & AGIR AVEC NOUS ======================== */
+/* Bords arrondi en fonction de la Page */
+#section-communautes-menu.rounded-edge:before{
+    background: var(--color-bleuf);
+}
+#section-agir-menu.rounded-edge:before{
+    background-image: url("../../assets/images/uploads/2024/09/359-025-scaled.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/* Contenu en général */
+.section-menu h1,
+#section-temoignage h1,
+#section-soutien h1{
+    font-size: 3.2rem;
+}
+@media only screen and (min-width: 1280px) {
+    .section-menu .container{
+        margin-left: 250px;
+        margin-right: 250px;
+    }
+    .section-menu p{
+        padding: 10px 50px;
+    }
+    #section-temoignage,
+    #section-soutien{
+        margin-left: 200px;
+        margin-right: 200px;
+    }
+}
+#section-temoignage h1::before,
+#section-soutien h1::before {
+    font-family: 'ej', sans-serif;
+    content:"\e908";
+    color: black;
+    display: block;
+}
+#section-temoignage p{
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    padding: 10px;
+    background-color: #EDEDED;
+    border-radius: 0 0 50% 50%/ 0 0 15% 15%;
+}
+#section-temoignage p::before,
+#section-temoignage p::after {
+    font-family: 'ej', sans-serif;
+    content: "\e90a";
+    color: var(--color-jaune);
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* ======================== SOUS-PAGE - AGIR AVEC NOUS ======================== */
+/* commentaire */
+
+
+/* ======================== PAGE - FAIRE UN DON ======================== */
+/* commentaire */
+
+
+
+/* ======================== CAROUSSEL - SLIDE AUTOMATIQUE ======================== */
+.item-slide{
+    max-width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.item-slide ul{
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    width: max-content;
+    height: 200px;
+}
+.item-slide li{
+    list-style: none;
+    height: auto;
+    padding-right: 15px;
+    flex-shrink: 0;
+}
+.item-slide img{
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+/* Bouton Slide Automatique */
+.btn-s{
+    color: var(--color-bleu);
+    border: 2px solid var(--color-bleu);
+    background: transparent;
+    opacity: 0.5;
+    cursor: pointer;
+    border-radius: 50px;
+    padding: 5px 15px;
+    margin: 0 20px;
+    font-size: 20px;
+}
+.btn-s:hover {
+    opacity: 1;
+    transition: all 0.3s;
+}
+
+/* ======================== FOOTER  ======================== */
+#section-footer{
+    background: var(--color-bleuf);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1rem;
+    line-height: 1.8rem;
+    letter-spacing: 0.025rem;
+}
+#section-footer, .item-footer a, .item-footer i{
+    color: #fff;
+}
+.item-footer-g img{
+    max-width: 140px;
+    vertical-align: bottom;
+    height: auto;
+}
+.item-footer-g p{
+    margin-top: 16px;
+}
+.item-footer-g i::before{
+    font-size: 1.8rem;
+}
+.icon-facebook:before {content: "\e902";}
+.icon-x:before {content: "\e90d";}
+.icon-linkedin:before {content: "\e903";}
+.icon-youtube:before {content: "\e90b";}
+.item-footer ul{
+    list-style: none;
+    padding-left: 0;
+}
+.item-formulaire{
+    display: flex;
+}
+input[type="email"]{
+    width: 100%;
+    padding: 6px 6px;
+    border: none;
+    color: #fff;
+    border-radius: 0;
+    background-color: hsla(194, 80%, 63%, 0.1);
+}
+input[type="submit"] {
+    margin-left: 20px;
+    padding: 6px 15px;
+    background-color: var(--color-rouge) !important;
+    color: #FFF;
+    border-radius: 10px !important;
+    border: none;
+    font-weight: 500;
+}
+.item-footer-bottom ul{
+    display: flex;
+    justify-content: center;
+}
+.item-footer-bottom ul li {
+    position: relative;
+    padding: 0 10px;
+    font-size: 14px;
+}
+.item-footer-bottom ul li a:hover {
+    text-decoration: underline !important;
+}
+.item-footer-bottom ul li:not(:last-child)::after {
+    position: absolute;
+    content: "|";
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+/* Responsive */
+@media only screen and (max-width: 480px){
+    .item-footer-bottom ul li {
+        font-size: 10px;
+    }
+}
+@media only screen and (min-width: 1280px) {
+    .item-footer-d-2 {
+        padding-right: 150px;
+    }
+}
+
+
+
+
