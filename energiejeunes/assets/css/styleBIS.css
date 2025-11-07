@@ -237,13 +237,14 @@ iframe{
 /* NavBar */
 header{
     height: 100px;     /* 100-(2x20)-60=0 */
-    background: var(--color-bleuf);
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 1.2rem;
 }
 .navbar{
+    position: fixed;
+    box-shadow: 0 2px 10px var(--color-bleuf);
+    background: var(--color-bleuf);
     color: white;
-    position: absolute;
     padding: 20px 50px;
     width: 100%;
     box-sizing: border-box;
