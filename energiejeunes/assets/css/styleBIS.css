@@ -290,26 +290,26 @@ header{
     font-size: 25px;
     z-index: 1;
 }
+.navbar i:hover{
+    color: var(--color-bleu) ;
+}
+i.menu-close{
+    font-size: 30px;
+}
 .navbar .nav-objects{
     display: flex;
     align-items: center;
     justify-content: space-between;
     z-index: 3;
 }
-.navbar i:hover{
-    color: var(--color-bleu) ;
+/* Quelques Configuration pour le JAVA*/
+.nav-links.menu-mobile.menuM{
+    margin-left: 0;
 }
 .nav-links.menu-desktop,
 .menu-close{
     display: none;
 }
-.nav-links.menu-mobile.menuM{
-    margin-left: 0;
-}
-i.menu-close{
-    font-size: 30px;
-}
-/* Quelques Configuration pour le JAVA*/
 .menu-hamburger.active,
 .nav-links.menu-mobile .nav-others{
     display: none;
@@ -354,7 +354,7 @@ i.menu-close{
         transition: all 0.3s ease;
         z-index: 2;
     }
-    /* Configuration formes */
+    /* La Forme */
     .menu-mobile{
         margin: 40px 0;
     }
@@ -403,7 +403,6 @@ i.menu-close{
     ul.nav-others.active li:hover{
         opacity: 1;
     }
-
 }
 @media only screen and (min-width: 1051px){
     .navbar a.nav-title{
@@ -450,7 +449,7 @@ i.menu-close{
     ul.nav-sous-menu li{
         margin-top: 0;
         font-weight: 400;
-        width: 150px;
+        width: 155px;
         list-style: disc ;
     }
     .nav-sous-menu li a:hover{
@@ -470,7 +469,7 @@ i.menu-close{
 }
 @media only screen and (min-width: 1200px){
     .navbar{
-        padding: 20px 220px;
+        padding: 20px 200px;
     }
 }
 
