@@ -6,6 +6,7 @@
     --color-bleu: #5FC3E1;
     --color-bleuf: #011627;
     --color-orange: #FF9F1C;
+    --color-orangef: #DC8439;
     --color-jaune: #FAD119;
     --color-rouge: #F71735;
 }
@@ -32,6 +33,14 @@
 }
 
 /* ======================== GLOBAL ======================== */
+/* Configuration */
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none !important;
+    list-style: none;
+}
+
 /* Couleurs principaux */
 .color-bleu{color: var(--color-bleu);}
 .color-bleuf{color: var(--color-bleuf);}
@@ -206,66 +215,154 @@ iframe{
     background: #fff;
     transition: all 0.5s;
 }
+
+/* Bouton Faire un Don */
+.btn-Don{
+    text-transform: uppercase;
+    background: var(--color-bleu);
+    color: var(--color-bleuf) !important;
+    padding: 10px 8px;
+    border-radius: 5px;
+    font-weight: 700;
+}
+.btn-Don:hover{
+    color: white !important;
+}
 /* ======================== HEADER ======================== */
 /* NavBar */
 header{
-    background-color: var(--color-bleuf);
+    height: 100px;     /* 100-(2x20)-60=0 */
+    background: var(--color-bleuf);
+    font-family: 'Barlow', sans-serif;
 }
-nav{
-    font-size: 0.8rem;
-    padding-top: 20px;
-    padding-bottom: 20px;
+.navbar{
+    color: white;
+    position: absolute;
+    padding: 20px 50px;
     width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-.logo{
-    width: 250px;
+.nav-right{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-.menu-options{
-    font-weight: 700;
+.navbar a{
+    color: white;
+    text-decoration-color: transparent !important;
 }
-.navbar-elements{
-    position: relative;
-    padding-left: 100px;
-    padding-right: 100px;
+.nav-links li:not(:last-child) a:hover,
+.nav-links ul li:not(:last-child) a:focus{
+    text-decoration: underline !important;
+    text-decoration-color: var(--color-bleu) !important;
+    text-underline-offset: 5px;
+    text-decoration-thickness: 3px;
+}
+.nav-links li:not(:last-child) a:hover{
+    transition: all 0.3s ease;
+}
+.navbar img{
+    height: 60px;
+}
+.navbar .nav-links ul{
+    display: flex;
+    margin: 0;
+    padding: 20px 0;
+    font-weight: 600;
+}
+.navbar .nav-links ul li{
+    margin: 0 10px;
+}
+.navbar i{
+    padding: 0 10px;
+    font-size: 25px;
+    z-index: 1;
+}
+.navbar .nav-objects{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    z-index: 3;
 }
-.navbar-elements .menu-options {
-    color: white;
-    transition: 0.3s ease;
+.navbar i:hover{
+    color: var(--color-bleu);
 }
-.navbar-elements .menu-options:hover{
-    color: var(--color-bleu)!important;
-    transform: scale(1.1, 1.1);
+.nav-links.menu-desktop,
+.menu-close{
+    display: none;
 }
-.logo-image img{
-    width: 100px;
+.nav-links.menu-mobile.menuM{
+    margin-left: 0;
 }
-.icon-loupe:before {
-    content: "\e907";
-    color: #000;
-    cursor: pointer;
+i.menu-close{
+    font-size: 30px;
 }
-/* Bouton Don */
-.bouton-don{
-    background-color: var(--color-bleu);
-    padding: 8px 15px 8px 15px;  /* HAUT & DROIT & BAS & GAUCHE */
-    color: white;
-    font-weight: 800;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s ease;
+/* L'ouverture & fermeture */
+.menu-hamburger.active {
+    display: none;
 }
-.bouton-don:hover{
-    background-color: var(--color-orange);
+.menu-close.active{
+    display: block ;
 }
 /* Responsive */
-@media only screen and (min-width: 990px) {
-    .header {
-        padding: 2rem 0;
+@media only screen and (max-width: 1040px){
+    .navbar .nav-objects i{
+        padding: 0 10px;
+    }
+    .menu-hamburger{
+        display: block;
+    }
+    .nav-links{
+        top: 0;
+        left: 0;
+        position: absolute;
+        background: var(--color-bleuf);
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .nav-links ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+    .navbar .nav-links ul li{
+        margin: 25px 0;
+        font-size: 1.2rem;
+    }
+    .nav-links.menu-mobile{
+        margin-left: -100%;
+        transition: all 0.3s ease;
+        z-index: 2;
     }
 }
+@media only screen and (min-width: 1041px){
+    .nav-links.menu-desktop{
+        top: 0;
+        left: 0;
+        position: absolute;
+        background: var(--color-bleuf);
+        width: 100%;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -100%;
+        transition: all 0.3s ease;
+        z-index: 2;
+    }
+    .nav-links.menu-desktop.menuD{
+        margin-top: 0;
+    }
+
+}
+
 /* ======================== PAGE D'ACCUEIL ======================== */
 
 /* ======================== PAGE - QUI SOMMES NOUS ======================== */
