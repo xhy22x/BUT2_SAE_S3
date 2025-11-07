@@ -6,7 +6,7 @@
     --color-bleu: #5FC3E1;
     --color-bleuf: #011627;
     --color-orange: #FF9F1C;
-    --color-orangef: #DC8439;
+    --color-orangef: #DE9645;
     --color-jaune: #FAD119;
     --color-rouge: #F71735;
 }
@@ -215,25 +215,31 @@ iframe{
     background: #fff;
     transition: all 0.5s;
 }
-
 /* Bouton Faire un Don */
 .btn-Don{
     text-transform: uppercase;
-    background: var(--color-bleu);
+    background: var(--color-orange);
     color: var(--color-bleuf) !important;
-    padding: 10px 8px;
+    padding: 10px 15px;
     border-radius: 5px;
     font-weight: 700;
+    opacity: 0.9;
 }
 .btn-Don:hover{
     color: white !important;
+    background: var(--color-orange);
+    opacity: 1;
+}
+.btn-Don.active{
+    display: none;
 }
 /* ======================== HEADER ======================== */
 /* NavBar */
 header{
     height: 100px;     /* 100-(2x20)-60=0 */
     background: var(--color-bleuf);
-    font-family: 'Barlow', sans-serif;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.2rem;
 }
 .navbar{
     color: white;
@@ -267,10 +273,12 @@ header{
 .navbar img{
     height: 60px;
 }
+.navbar .logo{
+    z-index: 3;
+}
 .navbar .nav-links ul{
     display: flex;
     margin: 0;
-    padding: 20px 0;
     font-weight: 600;
 }
 .navbar .nav-links ul li{
@@ -288,7 +296,7 @@ header{
     z-index: 3;
 }
 .navbar i:hover{
-    color: var(--color-bleu);
+    color: var(--color-bleu) ;
 }
 .nav-links.menu-desktop,
 .menu-close{
@@ -300,15 +308,20 @@ header{
 i.menu-close{
     font-size: 30px;
 }
-/* L'ouverture & fermeture */
-.menu-hamburger.active {
+/* Quelques Configuration pour le JAVA*/
+.menu-hamburger.active,
+.nav-links.menu-mobile .nav-others{
     display: none;
 }
-.menu-close.active{
+.menu-close.active,
+.nav-others.active{
     display: block ;
 }
+.nav-others.active{
+    z-index: 2;
+}
 /* Responsive */
-@media only screen and (max-width: 1040px){
+@media only screen and (max-width: 1050px){
     .navbar .nav-objects i{
         padding: 0 10px;
     }
@@ -323,17 +336,16 @@ i.menu-close{
         width: 100%;
         height: 100vh;
         display: flex;
-        justify-content: center;
+        justify-content: left;
         align-items: center;
     }
     .nav-links ul{
         display: flex;
         flex-direction: column;
-        align-items: center;
-        padding: 0;
+        align-items: start;
     }
     .navbar .nav-links ul li{
-        margin: 25px 0;
+        margin: 10px 50px;
         font-size: 1.2rem;
     }
     .nav-links.menu-mobile{
@@ -341,26 +353,124 @@ i.menu-close{
         transition: all 0.3s ease;
         z-index: 2;
     }
+    /* Configuration formes */
+    .menu-mobile{
+        margin: 40px 0;
+    }
+    .menu-mobile ul{
+        padding: 0;
+        width: 80%;
+    }
+    .menu-mobile ul li{
+        line-height: 1.2rem;
+    }
+    .menu-mobile ul li:not(:last-child){
+        width: 100%;
+    }
+    .menu-mobile ul li a{
+        font-size: 1.8rem !important;
+    }
+    .menu-mobile ul li:not(:last-child) a{
+        opacity: 0.7;
+    }
+    .menu-mobile ul li:not(:last-child) a:hover{
+        text-decoration: none !important;
+        opacity: 1;
+    }
+    .menu-mobile ul li a.btn-Don {
+        margin: 10px 0;
+        padding: 30px 20px;
+        display: block;
+    }
+    /* Pour JAVA */
+    .nav-links.menu-mobile .nav-others.active{
+        display: block;
+    }
+    /* Autres Navbar */
+    ul.nav-others.active{
+        padding: 0;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+    ul.nav-others.active li{
+        margin: 0;
+        line-height: 2.5rem;
+        border-bottom: 2px solid white;
+        opacity: 0.7;
+    }
+    ul.nav-others.active li:hover{
+        opacity: 1;
+    }
+
 }
-@media only screen and (min-width: 1041px){
+@media only screen and (min-width: 1051px){
+    .navbar a.nav-title{
+        color: var(--color-bleu);
+    }
+    .nav-links.menu-desktop ul li a:hover{
+        color: var(--color-orangef);
+    }
+    .nav-links ul li a.nav-title:hover,
+    .navbar .nav-links.menu-desktop ul li a{
+        text-decoration: none !important;
+    }
     .nav-links.menu-desktop{
         top: 0;
         left: 0;
         position: absolute;
         background: var(--color-bleuf);
         width: 100%;
-        height: 300px;
+        height: 400px;
         display: flex;
         justify-content: center;
         align-items: center;
         margin-top: -100%;
         transition: all 0.3s ease;
         z-index: 2;
+        padding-top: 50px;
     }
     .nav-links.menu-desktop.menuD{
         margin-top: 0;
     }
+    .nav-links.menu-desktop ul{
+        padding-left: 10px;
+    }
 
+    .nav-links .nav-sous-menu{
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+    }
+    ul.nav-sous-menu{
+        list-style-position: inside;
+        padding-left: 10px;
+    }
+    ul.nav-sous-menu li{
+        margin-top: 0;
+        font-weight: 400;
+        width: 150px;
+        list-style: disc ;
+    }
+    .nav-sous-menu li a:hover{
+        color: var(--color-bleu);
+    }
+    /* Autres Navbar */
+    ul.nav-others.active{
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+    }
+    .nav-others.active li{
+        line-height: 2.5rem;
+        border-bottom: 2px solid var(--color-bleu);
+    }
+}
+@media only screen and (min-width: 1200px){
+    .navbar{
+        padding: 20px 220px;
+    }
 }
 
 /* ======================== PAGE D'ACCUEIL ======================== */
