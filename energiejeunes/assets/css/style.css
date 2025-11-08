@@ -900,7 +900,69 @@ i.menu-close{
 
 
 /* ======================== PAGE - FAIRE UN DON ======================== */
-/* commentaire */
+.image-fond-faire-un-don {
+    background-size: cover;
+    height: auto;
+    position: relative;
+    color: white;
+    padding-bottom: 3rem;
+    padding-top: 6rem;
+}
+.image-fond-faire-un-don .mask{
+    height: auto;
+    padding-bottom: 3rem;
+    padding-top: 7rem;
+}
+
+.image-fond-faire-un-don h2{
+    font-size: 30px;
+    text-align: center;
+    width: 90vh;
+    font-weight: bold;
+}
+.image-fond-faire-un-don .texte-don{
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+.image-fond-faire-un-don .don-item{
+    margin-top: 3rem;
+    margin-left: 2rem;
+    width: 50vh;
+    text-align: center;
+
+}
+.image-fond-faire-un-don .don-item-seul-titre{
+    font-weight: bold;
+    border-color: white;
+    border-style: solid;
+    border-radius: 40px;
+}
+.image-fond-faire-un-don .don-item-seul-titre span{
+    font-size: 2rem;
+}
+.image-fond-faire-un-don .don-item-seul{
+    padding-top: 10px;
+}
+#intro-don{
+    margin-top: 2rem;
+}
+@media only screen and (max-width:769px){
+
+}
+.formulaire-don{
+    margin-top: 10rem;
+}
+.avantages{
+    background-color: var(--color-rouge);
+    padding-top: 8rem;
+    color: white;
+    padding-bottom: 8rem;
+
+}
+.consultez-faire-un-don{
+    padding-top: 10rem;
+}
 
 
 
