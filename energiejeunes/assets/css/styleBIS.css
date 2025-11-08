@@ -72,6 +72,13 @@ iframe{
     vertical-align: bottom;
 }
 
+/* Placer au centre */
+.d-flex-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 /* Bord arrondi */
 .rounded-edge{
     position: relative;
@@ -91,9 +98,20 @@ iframe{
     height: 100%;
     clip-path: ellipse(95% 100% at top)
 }
+.curved-t-b{
+    height: auto;
+    margin-top: -60px ;
+    mask: radial-gradient(60% 70px at top,#0000 99%,#000);
+    clip-path: ellipse(95% 100% at top);
+}
 @media only screen and (max-width: 768px) {
     .rounded-edge::before{
-        clip-path: ellipse(1050px 100% at top)
+        clip-path: ellipse(1050px 100% at top);
+    }
+    .curved-t-b{
+        margin-top: -90px;
+        mask: radial-gradient(80% 100px at top,#0000 99%,#000);
+        clip-path: ellipse(1050px 100% at top);
     }
 }
 
@@ -127,7 +145,7 @@ iframe{
 
 /* Bouton Personnalisé */
 .btn-1{
-    padding: 10px 0;
+    padding: 10px 30px;
     background: rgba(95, 195, 225, 0.7);
 }
 .btn-1::before{
@@ -171,25 +189,59 @@ iframe{
     font-weight: 400;
     background: var(--color-rouge);
 }
-.btn-3 p::before{
+.btn-3 p::before,
+.btn-3-bis p::before{
     font-family: 'ej', sans-serif;
     content: "\e906";
     font-size: 1.5rem;
     padding: 0 5px 0 0;
 }
-.btn-3::before{
+.btn-3::before,
+.btn-3-bis::before{
     border: 1px solid var(--color-rouge);
 }
-.btn-3:hover{
+.btn-3:hover,
+.btn-3-bis:hover{
     background: var(--color-rouge) !important;
+}
+.btn-3-bis{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 30px;
+    font-size: 2rem;
+    font-weight: 500;
+    background: var(--color-rouge) !important;
+    padding: 30px 50px;
+}
+.btn-3-bis p{
+    margin: 0;
+    padding-right: 20px;
+}
+.btn-3-bis img{
+    padding: 10px;
+    width: 400px;
 }
 @media only screen and (max-width: 768px) {
     #section-boutons .container{
         display: flex;
         flex-direction: column;
     }
+    .btn-3-bis{
+        gap: 15px;
+        font-size: 2rem;
+        font-weight: 500;
+        background: var(--color-rouge) !important;
+        padding: 15px 25px;
+    }
+    .btn-3-bis:before{
+        font-size: 1rem;
+    }
+    .btn-3-bis img{
+        padding: 5px;
+        width: 250px;
+    }
 }
-
 /* Bouton En Savoir Plus */
 .btn-plus{
     font-family: 'Barlow', sans-serif;
@@ -233,6 +285,64 @@ iframe{
 .btn-Don.active{
     display: none;
 }
+/* Bouton Lire la suite */
+a.btn-lire{
+    display: flex;
+    align-items: center;
+}
+.btn-lire{
+    font-family: 'Barlow', sans-serif;
+    text-transform: uppercase;
+    color: var(--color-bleu);
+    padding: 5px 0;
+}
+.btn-lire:hover{
+    text-decoration: none !important;
+}
+.btn-lire::before{
+    font-family: 'ej', sans-serif;
+    content:"\e909";
+    color: #fff;
+    font-size: 0.5rem;
+    padding: 3px 5px;
+    border-radius: 10px;
+    background: var(--color-bleu);
+}
+.btn-lire:hover::before{
+    color: var(--color-bleu);
+    background: transparent;
+    transition: all 0.5s;
+}
+/* ======================== SCROLL DOWN ======================== */
+.scroll{
+    width: 25px;
+    height: 50px;
+    border: 1px solid white;
+    border-radius: 20px;
+    display: flex;
+}
+.scroll-D{
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    margin: auto;
+    animation: move-scroll 1s linear infinite;
+}
+@keyframes move-scroll {
+    0%{
+        opacity: 0;
+        transform: translateY(-1rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(1rem);
+    }
+}
+@media only screen and (min-width: 1120px){
+
+}
 /* ======================== HEADER ======================== */
 /* NavBar */
 header{
@@ -251,6 +361,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 1000;
 }
 .nav-right{
     display: flex;
@@ -472,38 +583,19 @@ i.menu-close{
         padding: 20px 200px;
     }
 }
-
-/* ======================== PAGE D'ACCUEIL ======================== */
-
-/* ======================== PAGE - QUI SOMMES NOUS ======================== */
-/* commentaire */
-
-
-/* ======================== PAGE - NOTRE ACTION ======================== */
-/* commentaire */
-
-
-/* ======================== PAGE - MENUS NOS COMMUNAUTES & AGIR AVEC NOUS ======================== */
-/* Bords arrondi en fonction de la Page */
-#section-communautes-menu.rounded-edge:before{
-    background: var(--color-bleuf);
+/* ======================== CONTENU EN GENERAL ======================== */
+.section-menu h1{
+    font-size: 70px;
 }
-#section-agir-menu.rounded-edge:before{
-    background-image: url("../../assets/images/uploads/2024/09/359-025-scaled.webp");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-/* Contenu en général */
-.section-menu h1,
+.section-titre h1,
 #section-temoignage h1,
 #section-soutien h1{
-    font-size: 3.2rem;
+    font-size: 3.5rem;
 }
 @media only screen and (min-width: 1280px) {
     .section-menu .container{
-        margin-left: 250px;
-        margin-right: 250px;
+        margin-left: 230px;
+        margin-right: 230px;
     }
     .section-menu p{
         padding: 10px 50px;
@@ -514,6 +606,7 @@ i.menu-close{
         margin-right: 200px;
     }
 }
+.section-titre h1::before,
 #section-temoignage h1::before,
 #section-soutien h1::before {
     font-family: 'ej', sans-serif;
@@ -537,7 +630,271 @@ i.menu-close{
     text-align: center;
     padding: 10px 0;
 }
+/* ======================== PAGE D'ACCUEIL ======================== */
+/* Général */
+#section-H-impact h1::before,
+#section-H-agir h1::before{
+    color: white;
+}
+/* Section Intro */
+#section-home.rounded-edge:before{
+    background-image: url("../../assets/images/bg-home.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/* Section Impact */
+#section-H-impact.curved-t-b{
+    padding: 100px 0 100px 0;
+    background-color: var(--color-rouge);
+}
+.item-impacts img{
+    width: 100px;
+    height: auto;
+}
+.item-impacts p{
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
+    font-size: 1.5rem;
+    line-height: 1.7rem;
+}
+.item-impacts span{
+    font-size: clamp(2.5rem, 8vw - 1rem, 4rem);
+}
+/* Section Nos Valeurs */
+.item-valeurs{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.item-valeur img{
+    max-width: 60px;
+    height: auto;
+}
+.item-valeurs .item-valeur{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    clip-path: circle(50%);
+    width: 60%;
+    padding: 30px 0;
+    margin: 5px;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+}
+.item-valeurs .item-valeur h3,
+.item-valeurs p{
+    font-size: 20px;
+    font-weight: 400;
+    padding-left: 30px;
+    padding-right: 30px;
+    line-height: 1.5rem;
+    margin-bottom: 1.2rem;
+}
+.item-valeur p{
+    margin-top: 0.6rem;
+}
+/* Section Nos actualités */
+#section-H-actualites p{
+    margin: 0;
+}
+.item-actualites{
+    position: relative;
+}
+.item-actualites .item-actualites-content{
+    position: absolute;
+    z-index: 5;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    padding: 30px;
+    background-color: rgba(51, 51, 51, 0.7);
+}
+.item-actualites-content:hover {
+    background-color: var(--color-bleuf);
+    opacity: 0.8;
+}
+.item-actualites a:hover h2,
+.item-actu-content a:first-of-type:hover {
+    text-decoration: underline !important;
+}
+/* Section Agir avec nous */
+#section-H-agir.rounded-edge:before{
+    background: var(--color-bleuf);
+}
+.item-agir-txt{
+    margin: 50px 0;
+}
+/* Section Sur les Réseaux */
+#section-H-reseaux.curved-t-b{
+    padding: 130px 0 100px 0;
+    background-color: var(--color-bleu);
+    clip-path: none;
+}
+/* Contenu 1 */
+.item-r-header,
+.item-r-body,
+.item-r-footer{
+    font-family: 'Barlow', sans-serif ;
+    background: white;
+    padding: 10px;
+}
+.item-r-header{
+    border-radius: 10px 10px 0 0;
+}
+.item-r-header a{
+    display: flex;
+    align-items: center;
+}
+.item-r-header img{
+    margin-right: 15px;
+    width: 40px;
+    border: 10px;
+}
+.item-r-header ul{
+    color: black;
+    line-height: 1rem;
+    margin: 0;
+    padding: 5px 0;
+}
+.item-r-header li:first-child{
+    font-weight: 700;
+    font-size: 1rem;
+}
+.item-r-header li:last-child{
+    opacity: 0.6;
+    font-size: 0.8rem;
+}
+.item-r-header svg{
+    color: black;
+    opacity: 0.4;
+    padding: 5px;
+    margin-left: auto;
+    width: 35px;
+}
+.item-r-header svg:hover{
+    opacity: 1;
+    color: #475E8F;
+}
+.item-r-body p{
+    margin: 0;
+    overflow-wrap: break-word;
+}
+.item-r-body a{
+    text-decoration: underline !important;
+}
+.item-r-footer{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-radius: 0 0 10px 10px;
+}
+.item-r-footer svg{
+    margin-right: 2px;
+    width: 1rem;
+}
+.item-r-footer a:last-child{
+    margin-left: auto;
+    color: black;
+}
+/* Contenu 2 */
+.item-r-content2{
+    padding: 10px;
+}
+/* Responsive */
+@media only screen and (min-width: 640px) {
+    .item-valeurs .item-valeur {
+        width: 45%;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .item-valeurs{
+        padding-bottom: 2em;
+    }
+}
+@media only screen and (min-width: 1000px) {
+    /* Section Nos Valeurs */
+    .item-valeurs{
+        height: 700px;
+    }
+    .item-valeurs .item-valeur {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        max-width: 410px;
+        max-height: 410px;
+    }
+    .item-valeurs .item-valeur-1 {
+        left: 0;
+        bottom: 0;
+    }
+    .item-valeurs .item-valeur-2{
+        left: 22%;
+        top:0;
+    }
+    .item-valeurs .item-valeur-3{
+        left: 46%;
+        bottom: 0;
+    }
+    .item-valeurs .item-valeur-4{
+        right: 0;
+        top: 0;
+    }
+    .item-valeurs .item-valeur img{
+        max-width: 100px;
+    }
+    /* Nos actualités */
+    .item-actualites .item-actualites-content {
+        width: 40%;
+    }
+    .item-actu-content {
+        max-width: 300px;
+    }
+}
+@media only screen and (min-width: 1280px){
+    /* ALL */
+    #section-H-impact h1,
+    .item-impacts,
+    .item-impacts-txt,
+    #section-H-valeurs h1,
+    #section-H-actualites,
+    #section-H-agir .container,
+    #section-H-reseaux h1{
+        margin: 0 150px;
+    }
+    .item-r-content1,
+    .item-r-content2{
+        margin: 0 150px;
+    }
+    /* Section Nos Valeurs */
+    .item-valeurs .item-valeur {
+        max-width: 450px;
+        max-height: 450px;
+    }
+}
+/* ======================== PAGE - QUI SOMMES NOUS ======================== */
+/* commentaire */
 
+
+/* ======================== PAGE - NOTRE ACTION ======================== */
+/* commentaire */
+
+
+/* ======================== PAGE - MENUS NOS COMMUNAUTES & AGIR AVEC NOUS ======================== */
+/* Bords arrondi en fonction de la Page */
+#section-communautes-menu.rounded-edge:before{
+    background: var(--color-bleuf);
+}
+#section-agir-menu.rounded-edge:before{
+    background-image: url("../../assets/images/uploads/2024/09/359-025-scaled.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 /* ======================== SOUS-PAGE - AGIR AVEC NOUS ======================== */
 /* commentaire */
 
@@ -600,9 +957,13 @@ i.menu-close{
     font-size: 1rem;
     line-height: 1.8rem;
     letter-spacing: 0.025rem;
+    margin: 0;
 }
 #section-footer, .item-footer a, .item-footer i{
     color: #fff;
+}
+.item-footer{
+    margin: 0 20px;
 }
 .item-footer-g img{
     max-width: 140px;
@@ -663,12 +1024,18 @@ input[type="submit"] {
     transform: translateY(-50%);
 }
 /* Responsive */
-@media only screen and (max-width: 480px){
+@media only screen and (max-width: 768px){
+    .item-footer{
+        margin: 0 50px;
+    }
     .item-footer-bottom ul li {
         font-size: 10px;
     }
 }
 @media only screen and (min-width: 1280px) {
+    .item-footer{
+        margin: 0 150px;
+    }
     .item-footer-d-2 {
         padding-right: 150px;
     }
