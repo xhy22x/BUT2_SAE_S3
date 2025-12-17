@@ -1,12 +1,11 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <link rel='stylesheet' id='style-css' href='../../assets/css/style.css' media='all' /></head>
-<title>Inscription</title>
-</head>
-<body>
+<?php
+$title = "Servir comme volontaire - Energie Jeunes";
+require 'templates/header.php';
 
+
+
+
+echo <<<HTML
 <form method="POST" action="registerBenevole.php">
     <h2>Inscription</h2>
 
@@ -21,5 +20,6 @@
     <button type="submit">S'inscrire</button>
 </form>
 
-</body>
-</html>
+HTML;
+
+require 'templates/footer.php';
