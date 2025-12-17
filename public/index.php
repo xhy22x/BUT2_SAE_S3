@@ -1,107 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <title>Accueil - Energie Jeunes</title>
-    <link rel='stylesheet' id='style-css' href='assets/css/style.css' media='all' />
-</head>
-<body>
-<!-- EN-TETE -->
-<header>
-    <nav class="navbar">
-        <a href="index.html" class="logo"><img src="assets/images/logo.svg" alt="Image du logo, Page d'accueil" ></a>
-        <div class="nav-right">
-            <!-- Menu Mobile -->
-            <div class="nav-links menu-mobile">
-                <ul>
-                    <li><a href="#">Qui sommes-nous ?</a></li>
-                    <li><a href="#">Notre action</a></li>
-                    <li><a href="pages/agir-avec-nous/index.html">Agir avec nous</a></li>
-                    <li><a href="pages/nos-communautes/index.html">Nos communautés</a></li>
-                    <li>
-                        <ul class="nav-others">
-                            <li><a href="#">Espace élèves</a></li>
-                            <li><a href="#">Espace intervenants</a></li>
-                            <li><a href="#">Espace presse</a></li>
-                            <li><a href="#">Nos publications</a></li>
-                            <li><a href="pages/rejoignez-nous/index.html">Rejoignez-nous</a></li>
-                            <li><a href="#">Nous contacter</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="btn-Don" href="pages/faire-un-don-merci/index.html">Faire un don</a></li>
-                </ul>
-            </div>
-            <!-- Menu Desktop -->
-            <div class="nav-links menu-desktop">
-                <ul>
-                    <li>
-                        <a class="nav-title" href="#">Qui sommes-nous ?</a>
-                        <ul class="nav-sous-menu">
-                            <li><a href="#">Mission</a></li>
-                            <li><a href="#">Histoire</a></li>
-                            <li><a href="#">Équipe et gouvernance</a></li>
-                            <li><a href="#">Nos implantations</a></li>
-                            <li><a href="#">Nos actualités</a></li>
-                            <li><a href="#">Nos partenaires</a></li>
-                            <li><a href="assets/pdf/ENERGIE-JEUNES-Statuts-du-15-janvier-2016-1.pdf">Statuts de l'association</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a class="nav-title" href="#">Notre action</a>
-                        <ul class="nav-sous-menu">
-                            <li><a href="#">Projet associatif</a></li>
-                            <li><a href="#">Nos programmes</a></li>
-                            <li><a href="#">Notre méthode</a></li>
-                            <li><a href="#">Comité scientifique</a></li>
-                            <li><a href="#">Notre impact</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a class="nav-title" href="pages/agir-avec-nous/index.html">Agir avec nous</a>
-                        <ul class="nav-sous-menu">
-                            <li><a href="#">Devenir entreprise partenaire</a></li>
-                            <li><a href="pages/servir-comme-volontaire/index.html">Servir comme volontaire</a></li>
-                            <li><a href="#">Verser votre taxe d'apprentissage</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a class="nav-title" href="pages/nos-communautes/index.html">Nos communautés</a>
-                        <ul class="nav-sous-menu">
-                            <li><a href="#">Communauté éducative</a></li>
-                            <li><a href="#">Parents</a></li>
-                            <li><a href="#">Volontaire</a></li>
-                            <li><a href="#">Partenaires privés</a></li>
-                            <li><a href="#">Partenaires institutionnels</a></li>
-                            <li><a href="#">Ils témoignent</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <ul class="nav-others">
-                            <li><a href="#">Espace élèves</a></li>
-                            <li><a href="https://maestro.energiejeunes.fr/?_ga=2.138450163.193960742.1762460242-249901347.1757787629">Espace intervenants</a></li>
-                            <li><a href="#">Espace presse</a></li>
-                            <li><a href="#">Nos publications</a></li>
-                            <li><a href="pages/rejoignez-nous/index.html">Rejoignez-nous</a></li>
-                            <li><a href="#">Nous contacter</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="btn-Don" href="pages/faire-un-don-merci/index.html">Faire un don</a></li>
-                </ul>
-            </div>
-            <div class="nav-objects">
-                <i class="nav-loupe fa-solid fa-magnifying-glass"></i>
-                <i class="menu-hamburger fa-solid fa-bars"></i>
-                <i class="menu-close fa-solid fa-xmark"></i>
-            </div>
-            <script src="assets/js/menu.js"></script>
-        </div>
-    </nav>
-</header>
+<?php
+$title = "Accueil - Energie Jeunes";
+require '../templates/header.php';
 
 
+
+echo <<<HTML
 <!-- CONTENU -->
 <main>
     <!-- Section Intro -->
@@ -564,60 +467,10 @@
     <!-- Section Bouton Rejoignez-nous! -->
     <section>
         <div class="container text-uppercase d-flex justify-content-center align-items-center gap-5 pt-5 pb-5">
-            <a class="btn btn-3-bis" href="pages/rejoignez-nous/index.html" role="button"><p>Rejoignez-nous !</p><img src="assets/images/uploads/2021/10/pave-rejoindre-587x330.jpg" alt="Image Rejoignez-Nous, Page d'Accueil"></a>
+            <a class="btn btn-3-bis" href="rejoignez-nous.php" role="button"><p>Rejoignez-nous !</p><img src="assets/images/uploads/2021/10/pave-rejoindre-587x330.jpg" alt="Image Rejoignez-Nous, Page d'Accueil"></a>
         </div>
     </section>
 </main>
+HTML;
 
-<!-- PIED DE PAGE -->
-<footer>
-    <section id="section-footer">
-        <div class="">
-            <div class="item-footer">
-            <div class="row pt-5 pb-2 justify-content-center">
-                <div class="col-md-3 col-12">
-                    <div class="item-footer-g">
-                        <img src="assets/images/logo-footer.png" alt="Logo, Energie Jeunes"/>
-                        <p>RETROUVEZ NOUS SUR </p>
-                        <div class="item-footer-social pb-4">
-                            <a href="https://www.facebook.com/AssoEnergieJeunes/" target="_blank"><i class="icon-facebook"></i></a>
-                            <a href="https://x.com/energie_jeunes" target="_blank"><i class="icon-x"></i></a>
-                            <a href="https://fr.linkedin.com/company/association-energie-jeunes" target="_blank"><i class="icon-linkedin"></i></a>
-                            <a href="https://www.youtube.com/user/EnergieJeunes" target="_blank"><i class="icon-youtube"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-8 mt15">
-                    <div class="row col-12">
-                        <div class="col-auto mr-1 d-flex-center"><ul><li> S'inscrire à la newsletter </li></ul></div>
-                        <div class="col-auto">
-                            <form class="item-formulaire" onsubmit="event.preventDefault(); alert('Merci pour votre inscription !');">
-                                <fieldset class="form-fieldset"><input type="email" placeholder="Entrez votre adresse mail" required class="form-input"></fieldset>
-                                <p><label><span class="" data-name="your-email"><input size="40" maxlength="400" class="" type="submit" value="OK" /></span></label></p>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="row mt-2 mr-1">
-                        <div class="col-md-12 mt-3 mt-3"><p>Le Label IDEAS atteste de la mise en œuvre par l'association Energie Jeunes de bonnes pratiques en matière de gouvernance, de gestion financière et d'évaluation.</p></div>
-                        <div class="col-3 col-md-3 col-lg-2 d-flex-center"><img src="assets/images/uploads/2024/05/Certification-CAF-international-badge.png" alt="Certification CAF international, Energie Jeunes"></div>
-                        <div class="col-3 col-md-3 d-flex-center"><img src="assets/images/uploads/2024/11/label_IDEAS-png.webp" alt="Le Label IDEAS, Energie Jeunes"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="row pt-5">
-                <div class="col-12">
-                    <div class="item-footer-bottom">
-                        <ul>
-                            <li>© Energie Jeunes 2025</li>
-                            <li><a href="#">Mentions légales et politique de confidentialité</a></li>
-                            <li><a href="#">Nous contacter</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </div>
-    </section>
-</footer>
-</body>
-</html>
+require '../templates/footer.php';
