@@ -262,13 +262,9 @@
                         <div class="row col-12">
                             <div class="col-auto mr-1 d-flex-center"><ul><li> S'inscrire à la newsletter </li></ul></div>
                             <div class="col-auto">
-                                <form action="#" method="post" class="item-formulaire" aria-label="Formulaire de contact" novalidate="novalidate" data-status="init">
-                                    <fieldset class=""><input type="hidden" name="_wpcf7" value="10598" /><input type="hidden" name="_wpcf7_version" value="6.1.1" /><input type="hidden" name="_wpcf7_locale" value="fr_FR" /><input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f10598-o1" /><input type="hidden" name="_wpcf7_container_post" value="0" /><input type="hidden" name="_wpcf7_posted_data_hash" value="" />
-                                    </fieldset>
-                                    <p><label><span class="" data-name="your-email"><input size="40" maxlength="400" class="" autocomplete="email" aria-required="true" aria-invalid="false" placeholder="Entrez votre adresse mail" value="" type="email" name="your-email" /></span></label>
-                                    </p>
-                                    <p><input class="" type="submit" value="OK" />
-                                    </p><div class="" aria-hidden="true"></div>
+                                <form class="item-formulaire" onsubmit="event.preventDefault(); alert('Merci pour votre inscription !');">
+                                    <fieldset class="form-fieldset"><input type="email" placeholder="Entrez votre adresse mail" required class="form-input"></fieldset>
+                                    <p><label><span class="" data-name="your-email"><input size="40" maxlength="400" class="" type="submit" value="OK" /></span></label></p>
                                 </form>
                             </div>
                         </div>
