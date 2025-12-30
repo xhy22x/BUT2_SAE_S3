@@ -6,7 +6,7 @@
                 <div class="row pt-5 pb-2 justify-content-center">
                     <div class="col-md-3 col-12">
                         <div class="item-footer-g">
-                            <img src="../public/assets/images/logo-footer.png" alt="Logo, Energie Jeunes"/>
+                            <img src="../../../public/assets/images/logo-footer.png" alt="Logo, Energie Jeunes"/>
                             <p>RETROUVEZ NOUS SUR </p>
                             <div class="item-footer-social pb-4">
                                 <a href="https://www.facebook.com/AssoEnergieJeunes/" target="_blank"><i class="icon-facebook"></i></a>
@@ -28,8 +28,8 @@
                         </div>
                         <div class="row mt-2 mr-1">
                             <div class="col-md-12 mt-3 mt-3"><p>Le Label IDEAS atteste de la mise en œuvre par l'association Energie Jeunes de bonnes pratiques en matière de gouvernance, de gestion financière et d'évaluation.</p></div>
-                            <div class="col-3 col-md-3 col-lg-2 d-flex-center"><img src="../public/assets/images/uploads/2024/05/Certification-CAF-international-badge.png" alt="Certification CAF international, Energie Jeunes"></div>
-                            <div class="col-3 col-md-3 d-flex-center"><img src="../public/assets/images/uploads/2024/11/label_IDEAS-png.webp" alt="Le Label IDEAS, Energie Jeunes"></div>
+                            <div class="col-3 col-md-3 col-lg-2 d-flex-center"><img src="../../../public/assets/images/uploads/2024/05/Certification-CAF-international-badge.png" alt="Certification CAF international, Energie Jeunes"></div>
+                            <div class="col-3 col-md-3 d-flex-center"><img src="../../../public/assets/images/uploads/2024/11/label_IDEAS-png.webp" alt="Le Label IDEAS, Energie Jeunes"></div>
                         </div>
                     </div>
                 </div>

@@ -1,12 +1,12 @@
 <?php
 $title = "Servir comme volontaire - Energie Jeunes";
-require 'templates/header.php';
+require '../app/views/partials/header.php';
 
 
 
 
 echo <<<HTML
-<form method="POST" action="registerBenevole.php">
+<form class="form-servir" method="POST" action="../app/services/registerBenevole.php">
     <h2>Inscription</h2>
 
     <input type="text" name="nom" placeholder="Nom" required>
@@ -22,4 +22,4 @@ echo <<<HTML
 
 HTML;
 
-require 'templates/footer.php';
+require '../app/views/partials/footer.php';

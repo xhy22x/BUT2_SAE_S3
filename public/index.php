@@ -1,6 +1,6 @@
 <?php
 $title = "Accueil - Energie Jeunes";
-require '../templates/header.php';
+require '../app/views/partials/header.php';
 
 
 
@@ -473,4 +473,4 @@ echo <<<HTML
 </main>
 HTML;
 
-require '../templates/footer.php';
+require '../app/views/partials/footer.php';

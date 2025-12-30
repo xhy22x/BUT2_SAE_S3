@@ -1,6 +1,6 @@
 <?php
 $title = "Nos communautés - Energie Jeunes";
-require '../templates/header.php';
+require '../app/views/partials/header.php';
 
 echo <<<HTML
 <main>
@@ -143,4 +143,4 @@ echo <<<HTML
 </main>
 HTML;
 
-require '../templates/footer.php';
+require '../app/views/partials/footer.php';
