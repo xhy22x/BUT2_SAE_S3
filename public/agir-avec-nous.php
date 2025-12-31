@@ -1,8 +1,11 @@
-<?php
-$title = "Agir avec nous - Energie Jeunes";
-require '../app/views/partials/header.php';
+<?php $title = "Agir avec nous - Energie Jeunes"; ?>
 
-echo <<<HTML
+
+<!DOCTYPE html>
+<html lang="en">
+<?php include '../app/views/partials/head.php'; ?>
+<body>
+<?php include '../app/views/partials/navbar.php'; ?>
 <main>
     <!-- Section Menus Agir avec nous -->
     <section id="section-agir-menu" class="section-menu rounded-edge">
@@ -142,6 +145,7 @@ echo <<<HTML
         </div>
     </section>
 </main>
-HTML;
+<?php require '../app/views/partials/footer.php'; ?>
+</body>
+</html>
 
-require '../app/views/partials/footer.php';

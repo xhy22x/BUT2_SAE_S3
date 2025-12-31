@@ -1,4 +1,3 @@
-</main>
 <footer>
     <section id="section-footer">
         <div class="">
@@ -48,5 +47,3 @@
         </div>
     </section>
 </footer>
-</body>
-</html>

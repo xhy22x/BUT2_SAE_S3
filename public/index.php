@@ -1,11 +1,10 @@
-<?php
-$title = "Accueil - Energie Jeunes";
-require '../app/views/partials/header.php';
+<?php $title = "Accueil - Energie Jeunes"; ?>
 
-
-
-echo <<<HTML
-<!-- CONTENU -->
+<!DOCTYPE html>
+<html lang="en">
+<?php include '../app/views/partials/head.php'; ?>
+<body>
+<?php include '../app/views/partials/navbar.php'; ?>
 <main>
     <!-- Section Intro -->
     <section id="section-home" class="section-menu rounded-edge">
@@ -471,6 +470,6 @@ echo <<<HTML
         </div>
     </section>
 </main>
-HTML;
-
-require '../app/views/partials/footer.php';
+<?php require '../app/views/partials/footer.php'; ?>
+</body>
+</html>

@@ -1,8 +1,10 @@
-<?php
-$title = "Rejoignez Energie Jeunes";
-require '../app/views/partials/header.php';
+<?php $title = "Rejoignez Energie Jeunes"; ?>
 
-echo <<<HTML
+<!DOCTYPE html>
+<html lang="en">
+<?php include '../app/views/partials/head.php'; ?>
+<body>
+<?php include '../app/views/partials/navbar.php'; ?>
 <main>
     <!-- Bouton Don Fixe -->
     <a href="#don" class="btn-don-fixe">FAIRE UN DON</a>
@@ -212,6 +214,6 @@ echo <<<HTML
         </div>
     </section>
 </main>
-HTML;
-
-require '../app/views/partials/footer.php';
+<?php require '../app/views/partials/footer.php'; ?>
+</body>
+</html>
