@@ -30,4 +30,3 @@ node_modules/
 .sass-cache/
 .env
 /vendor/
-/composer.lock
