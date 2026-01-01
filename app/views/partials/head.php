@@ -8,7 +8,7 @@ $title = $title ?? 'EnergieJeunes'; //Default value
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title><?php echo $title; ?></title>
-    <link rel='stylesheet' id='style-css' href='../../../public/assets/css/style.css' media='all' />
+    <link rel='stylesheet' id='style-css' href='assets/css/style.css' media='all' />
 </head>
 
 
