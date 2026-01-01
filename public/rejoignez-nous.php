@@ -159,38 +159,38 @@
             <div class="partners-carousel">
                 <div class="partners-track">
                     <!-- Première série de partenaires -->
-                    <div class="partner-item"><img src="../public/assets/images/uploads/2024/02/avatar-rs-53.png" alt="Partenaire"></div>
-                    <div class="partner-item"><img src="../public/assets/images/uploads/2024/02/avatar-rs-62.png" alt="Partenaire"></div>
-                    <div class="partner-item"><img src="../public/assets/images/uploads/2024/02/avatar-rs-66.png" alt="Partenaire"></div>
-                    <div class="partner-item"><img src="../public/assets/images/uploads/2024/02/avatar-rs-77.png" alt="Partenaire"></div>
-                    <div class="partner-item"><img src="../public/assets/images/uploads/2024/02/avatar-rs-53.png" alt="Partenaire"></div>
-                    <div class="partner-item"><img src="../public/assets/images/uploads/2024/02/avatar-rs-62.png" alt="Partenaire"></div>
-                    <div class="partner-item"><img src="../public/assets/images/uploads/2024/02/avatar-rs-66.png" alt="Partenaire"></div>
-                    <div class="partner-item"><img src="../public/assets/images/uploads/2024/02/avatar-rs-77.png" alt="Partenaire"></div>
-                    <div class="partner-item"><img src="../public/assets/images/uploads/2024/02/avatar-rs-53.png" alt="Partenaire"></div>
-                    <div class="partner-item"><img src="../public/assets/images/uploads/2024/02/avatar-rs-62.png" alt="Partenaire"></div>
-                    <div class="partner-item"><img src="../public/assets/images/uploads/2024/02/avatar-rs-66.png" alt="Partenaire"></div>
-                    <div class="partner-item"><img src="../public/assets/images/uploads/2024/02/avatar-rs-77.png" alt="Partenaire"></div>
-                    <div class="partner-item"><img src="../public/assets/images/uploads/2024/02/avatar-rs-53.png" alt="Partenaire"></div>
-                    <div class="partner-item"><img src="../public/assets/images/uploads/2024/02/avatar-rs-62.png" alt="Partenaire"></div>
-                    <div class="partner-item"><img src="../public/assets/images/uploads/2024/02/avatar-rs-66.png" alt="Partenaire"></div>
-                    <div class="partner-item"><img src="../public/assets/images/uploads/2024/02/avatar-rs-77.png" alt="Partenaire"></div>
-                    <div class="partner-item"><img src="../public/assets/images/uploads/2024/02/avatar-rs-53.png" alt="Partenaire"></div>
-                    <div class="partner-item"><img src="../public/assets/images/uploads/2024/02/avatar-rs-62.png" alt="Partenaire"></div>
-                    <div class="partner-item"><img src="../public/assets/images/uploads/2024/02/avatar-rs-66.png" alt="Partenaire"></div>
-                    <div class="partner-item"><img src="../public/assets/images/uploads/2024/02/avatar-rs-77.png" alt="Partenaire"></div>
-                    <div class="partner-item"><img src="../public/assets/images/uploads/2024/02/avatar-rs-53.png" alt="Partenaire"></div>
-                    <div class="partner-item"><img src="../public/assets/images/uploads/2024/02/avatar-rs-62.png" alt="Partenaire"></div>
-                    <div class="partner-item"><img src="../public/assets/images/uploads/2024/02/avatar-rs-66.png" alt="Partenaire"></div>
-                    <div class="partner-item"><img src="../public/assets/images/uploads/2024/02/avatar-rs-77.png" alt="Partenaire"></div>
-                    <div class="partner-item"><img src="../public/assets/images/uploads/2024/02/avatar-rs-53.png" alt="Partenaire"></div>
-                    <div class="partner-item"><img src="../public/assets/images/uploads/2024/02/avatar-rs-62.png" alt="Partenaire"></div>
-                    <div class="partner-item"><img src="../public/assets/images/uploads/2024/02/avatar-rs-66.png" alt="Partenaire"></div>
-                    <div class="partner-item"><img src="../public/assets/images/uploads/2024/02/avatar-rs-77.png" alt="Partenaire"></div>
-                    <div class="partner-item"><img src="../public/assets/images/uploads/2024/02/avatar-rs-53.png" alt="Partenaire"></div>
-                    <div class="partner-item"><img src="../public/assets/images/uploads/2024/02/avatar-rs-62.png" alt="Partenaire"></div>
-                    <div class="partner-item"><img src="../public/assets/images/uploads/2024/02/avatar-rs-66.png" alt="Partenaire"></div>
-                    <div class="partner-item"><img src="../public/assets/images/uploads/2024/02/avatar-rs-77.png" alt="Partenaire"></div>
+                    <div class="partner-item"><img src="assets/images/uploads/2024/02/avatar-rs-53.png" alt="Partenaire"></div>
+                    <div class="partner-item"><img src="assets/images/uploads/2024/02/avatar-rs-62.png" alt="Partenaire"></div>
+                    <div class="partner-item"><img src="assets/images/uploads/2024/02/avatar-rs-66.png" alt="Partenaire"></div>
+                    <div class="partner-item"><img src="assets/images/uploads/2024/02/avatar-rs-77.png" alt="Partenaire"></div>
+                    <div class="partner-item"><img src="assets/images/uploads/2024/02/avatar-rs-53.png" alt="Partenaire"></div>
+                    <div class="partner-item"><img src="assets/images/uploads/2024/02/avatar-rs-62.png" alt="Partenaire"></div>
+                    <div class="partner-item"><img src="assets/images/uploads/2024/02/avatar-rs-66.png" alt="Partenaire"></div>
+                    <div class="partner-item"><img src="assets/images/uploads/2024/02/avatar-rs-77.png" alt="Partenaire"></div>
+                    <div class="partner-item"><img src="assets/images/uploads/2024/02/avatar-rs-53.png" alt="Partenaire"></div>
+                    <div class="partner-item"><img src="assets/images/uploads/2024/02/avatar-rs-62.png" alt="Partenaire"></div>
+                    <div class="partner-item"><img src="assets/images/uploads/2024/02/avatar-rs-66.png" alt="Partenaire"></div>
+                    <div class="partner-item"><img src="assets/images/uploads/2024/02/avatar-rs-77.png" alt="Partenaire"></div>
+                    <div class="partner-item"><img src="assets/images/uploads/2024/02/avatar-rs-53.png" alt="Partenaire"></div>
+                    <div class="partner-item"><img src="assets/images/uploads/2024/02/avatar-rs-62.png" alt="Partenaire"></div>
+                    <div class="partner-item"><img src="assets/images/uploads/2024/02/avatar-rs-66.png" alt="Partenaire"></div>
+                    <div class="partner-item"><img src="assets/images/uploads/2024/02/avatar-rs-77.png" alt="Partenaire"></div>
+                    <div class="partner-item"><img src="assets/images/uploads/2024/02/avatar-rs-53.png" alt="Partenaire"></div>
+                    <div class="partner-item"><img src="assets/images/uploads/2024/02/avatar-rs-62.png" alt="Partenaire"></div>
+                    <div class="partner-item"><img src="assets/images/uploads/2024/02/avatar-rs-66.png" alt="Partenaire"></div>
+                    <div class="partner-item"><img src="assets/images/uploads/2024/02/avatar-rs-77.png" alt="Partenaire"></div>
+                    <div class="partner-item"><img src="assets/images/uploads/2024/02/avatar-rs-53.png" alt="Partenaire"></div>
+                    <div class="partner-item"><img src="assets/images/uploads/2024/02/avatar-rs-62.png" alt="Partenaire"></div>
+                    <div class="partner-item"><img src="assets/images/uploads/2024/02/avatar-rs-66.png" alt="Partenaire"></div>
+                    <div class="partner-item"><img src="assets/images/uploads/2024/02/avatar-rs-77.png" alt="Partenaire"></div>
+                    <div class="partner-item"><img src="assets/images/uploads/2024/02/avatar-rs-53.png" alt="Partenaire"></div>
+                    <div class="partner-item"><img src="assets/images/uploads/2024/02/avatar-rs-62.png" alt="Partenaire"></div>
+                    <div class="partner-item"><img src="assets/images/uploads/2024/02/avatar-rs-66.png" alt="Partenaire"></div>
+                    <div class="partner-item"><img src="assets/images/uploads/2024/02/avatar-rs-77.png" alt="Partenaire"></div>
+                    <div class="partner-item"><img src="assets/images/uploads/2024/02/avatar-rs-53.png" alt="Partenaire"></div>
+                    <div class="partner-item"><img src="assets/images/uploads/2024/02/avatar-rs-62.png" alt="Partenaire"></div>
+                    <div class="partner-item"><img src="assets/images/uploads/2024/02/avatar-rs-66.png" alt="Partenaire"></div>
+                    <div class="partner-item"><img src="assets/images/uploads/2024/02/avatar-rs-77.png" alt="Partenaire"></div>
                 </div>
             </div>
         </div>
