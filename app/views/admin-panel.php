@@ -45,7 +45,9 @@ $posts = $controller->getAllPosts();
     <!-- -->
     <section class="container">
         <?php if(!empty($posts)): ?>
+        <div class="row g-3">
             <?php foreach($posts as $post): ?>
+            <div class="col-md-4">
                 <div class="card mb-3">
                     <?php if(!empty($post['image_url'])): ?>
                         <img src="<?= $post['image_url'] ?>" class="card-img-top" alt="Image de l'article">
@@ -55,10 +57,12 @@ $posts = $controller->getAllPosts();
                         <div class="d-flex justify-content-between align-items-center pb-3">
                             <h5 class="card-title"><?= $post['title'] ?></h5>
 
-                            <form method="POST">
+                            <form method="POST" class="ms-auto d-flex gap-2">
                                 <input type="hidden" name="post_id" value="<?= $post['id'] ?>">
-                                <a href="edit-post.php?id=<?= $post['id'] ?>" class="btn btn-secondary btn-sm">Modifier</a>
-                                <button type="submit" name="delete" class="btn btn-danger btn-sm">Supprimer</button>
+
+                                <a href="edit-post.php?id=<?= $post['id'] ?>" class="btn btn-secondary btn-sm my-1">Modifier</a>
+                                <button type="submit" name="delete" class="btn btn-danger btn-sm my-1">Supprimer</button>
+
                             </form>
                         </div>
                         <p class="card-text"><?= nl2br($post['content']) ?></p>
@@ -74,7 +78,9 @@ $posts = $controller->getAllPosts();
                         </small>
                     </div>
                 </div>
+            </div>
             <?php endforeach; ?>
+        </div>
         <?php else: ?>
             <p>Aucun article trouvé.</p>
         <?php endif; ?>

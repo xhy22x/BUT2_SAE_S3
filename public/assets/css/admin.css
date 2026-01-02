@@ -2,11 +2,17 @@ body{
     background-color: #F6F6F6;
 }
 form{
-    padding: 20px;
-    background-color: white;
+    padding: 10px;
 }
-
+.form-post{
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(1, 22, 39, 0.2);
+    border-radius: 3px;
+}
 .errorMsg{
     color: red;
     font-weight: bold;
+}
+.navbar {
+    background-color: #d5d5d5 !important;
 }

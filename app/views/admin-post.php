@@ -39,7 +39,7 @@ $controller = new PostManager($db);
             exit();
         }
     ?>
-    <form class="container" method="POST">
+    <form class="form-post container" method="POST">
         <!-- Titre de l'article -->
         <div class="mb-3">
             <label class="form-label">Titre de l'article</label>
