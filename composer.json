@@ -2,8 +2,10 @@
     "name": "g206-iutrds/energiejeunes",
     "autoload": {
         "psr-4": {
-            "G206Iutrds\\Energiejeunes\\": "app/"
+            "App\\": "app/"
         }
     },
-    "require": {}
+    "require": {
+      "ext-pdo": "*"
+    }
 }

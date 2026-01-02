@@ -1,9 +1,9 @@
 <?php $title = "Connexion Administrateur - Energie Jeunes"; ?>
-<?php require('../controller/admin-actions/login.php'); ?>
+<?php require('../app/controllers/admin/login.php'); ?>
 
 <!DOCTYPE html>
 <html lang="en">
-<?php include 'partials/head-admin.php'; ?>
+<?php include '../app/views/partials/head-admin.php'; ?>
 <body>
     <br><br>
     <form class="container" method="POST">

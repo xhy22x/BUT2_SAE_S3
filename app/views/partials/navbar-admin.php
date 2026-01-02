@@ -12,6 +12,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="admin-panel.php">Afficher articles</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../controllers/admin/logout.php">Déconnexion</a>
+                </li>
             </ul>
         </div>
     </div>

@@ -1,4 +1,18 @@
-<?php $title = "Accueil - Energie Jeunes"; ?>
+<?php
+$title = "Accueil - Energie Jeunes";
+
+require '../vendor/autoload.php';
+
+use App\Config\Database;
+use App\Controllers\FacebookController;
+
+$db = new Database();
+$controller = new FacebookController($db);
+$posts = $controller->getPosts();
+
+require_once  __DIR__ . '/../app/helpers/timeHelper.php';
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -224,134 +238,10 @@
         <div class="container">
             <h1 class="font-2 fw-bold text-uppercase">Sur les réseaux</h1>
         </div>
+
         <!-- Contenu 1 -->
-        <div class="container">
-            <div class="item-r-content1">
-                <div class="row">
-                    <!-- 1 -->
-                    <div class="col-md-4 pt-5 pb-5">
-                        <div class="item-r-header">
-                            <a href="https://www.facebook.com/1270906909686096">
-                                <img src="assets/images/logo-facebook.png" alt="Account avatar for Energie Jeunes">
-                                <ul><li>Energie Jeunes</li><li>1jours</li></ul>
-                                <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-facebook fa-w-16"><path fill="currentColor" d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z" class=""></path></svg>
-                            </a>
-                        </div>
-                        <a href="https://www.facebook.com/1270906909686096"><img class="img-r" src="https://scontent-fra3-1.xx.fbcdn.net/v/t39.30808-6/575128363_822281560509142_739055265994246980_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=mzOu4r4O24wQ7kNvwHyEExh&_nc_oc=AdkRl7jwbTyGaTGPlTzHv5It7o5RFGtSYxtP3e4d62bjtm4ONvE1IFG-AaCRcx0DMRc&_nc_zt=23&_nc_ht=scontent-fra3-1.xx&edm=AKIiGfEEAAAA&_nc_gid=FF6h69Mqpb6ZhLC6j5Emkw&_nc_tpa=Q5bMBQEuqkXQzm4odcJBlc35Mjk3ZLYbFTj1L4ftQ-OxjgoHcyOPwANNKBoGdvTaoWP8-IMBMaJWv5867w&oh=00_AfhzfrjI7Z_9SrsHc0q8xPgG0V6a-27ASsSu0Mc1UxnEAg&oe=69139E4A" alt="Lien plus disponible"></a>
-                        <div class="item-r-body">
-                            <p>𝑬́𝒏𝒆𝒓𝒈𝒊𝒆   𝑱𝒆𝒖𝒏𝒆𝒔   𝒆́𝒕𝒂𝒊𝒕   𝒑𝒓𝒆́𝒔𝒆𝒏𝒕   𝒂𝒖   𝑭𝒐𝒓𝒖𝒎   𝒎𝒐𝒏𝒅𝒊𝒂𝒍   𝒅𝒆   𝒍’𝑬𝑺𝑺   𝒂̀   𝑩𝒐𝒓𝒅𝒆𝒂𝒖𝒙   !   📍   <br>
-                                <br>
-                                Du   29   au   31   octobre,   Énergie   Jeunes   a  <a href="#" class="sbsw-more" style="display: none;">...</a><span class="sbsw-remaining" style="display: inline;">participé   au   Forum   mondial   de   l’Économie   Sociale   et   Solidaire   (GSEF)   à   Bordeaux,   un   événement   international   réunissant   associations   et   collectivités,   parties   prenantes   de   l’écosystème   de   l’Économie   Sociale   et   Solidaire.   😀   <br>
-                            <br>
-                            Cette   présence   a   permis   à   Énergie   Jeunes   de   présenter   ses   actions   en   faveur   de   la   réussite   scolaire   et   de   l’égalité   des   chances   aux   habitants   de   la   région.   💪   <br>
-                            <br>
-                            👉   𝗩𝗼𝘂𝘀   𝗮𝘂𝘀𝘀𝗶,   𝘃𝗼𝘂𝘀   𝗮𝘃𝗲𝘇   𝗲𝗻𝘃𝗶𝗲   𝗱𝗲   𝗰𝗼𝗻𝘁𝗿𝗶𝗯𝘂𝗲𝗿   𝗮̀   𝗹𝗮   𝗺𝗶𝘀𝘀𝗶𝗼𝗻   𝗱'𝗘𝗻𝗲𝗿𝗴𝗶𝗲   𝗝𝗲𝘂𝗻𝗲𝘀   ?   Rejoignez   nos   volontaires   et   engagez   vous   dans   votre   région   !   <a href="https://energiejeunes.fr/qui-sommes-nous/#implantations" title="https://energiejeunes.fr/qui-sommes-nous/#implantations" target="_blank" rel="noopener">https://energiejeunes.fr/qui-sommes-nous/#implantations</a><br>
-                            <br>
-                            #EnergieJeunes   #ESS   #education   #association   #reussitescolaire   #eleves   #soutien   #jeunes   #bordeaux   #nouvelleaquitaine   #GSEF   #forumESS</span>
-                            </p>
-                        </div>
-                        <div class="item-r-footer">
-                        <span class="item-r-like">
-                            <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="thumbs-up" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-thumbs-up fa-w-16"><path fill="currentColor" d="M496.656 285.683C506.583 272.809 512 256 512 235.468c-.001-37.674-32.073-72.571-72.727-72.571h-70.15c8.72-17.368 20.695-38.911 20.695-69.817C389.819 34.672 366.518 0 306.91 0c-29.995 0-41.126 37.918-46.829 67.228-3.407 17.511-6.626 34.052-16.525 43.951C219.986 134.75 184 192 162.382 203.625c-2.189.922-4.986 1.648-8.032 2.223C148.577 197.484 138.931 192 128 192H32c-17.673 0-32 14.327-32 32v256c0 17.673 14.327 32 32 32h96c17.673 0 32-14.327 32-32v-8.74c32.495 0 100.687 40.747 177.455 40.726 5.505.003 37.65.03 41.013 0 59.282.014 92.255-35.887 90.335-89.793 15.127-17.727 22.539-43.337 18.225-67.105 12.456-19.526 15.126-47.07 9.628-69.405zM32 480V224h96v256H32zm424.017-203.648C472 288 472 336 450.41 347.017c13.522 22.76 1.352 53.216-15.015 61.996 8.293 52.54-18.961 70.606-57.212 70.974-3.312.03-37.247 0-40.727 0-72.929 0-134.742-40.727-177.455-40.727V235.625c37.708 0 72.305-67.939 106.183-101.818 30.545-30.545 20.363-81.454 40.727-101.817 50.909 0 50.909 35.517 50.909 61.091 0 42.189-30.545 61.09-30.545 101.817h111.999c22.73 0 40.627 20.364 40.727 40.727.099 20.363-8.001 36.375-23.984 40.727zM104 432c0 13.255-10.745 24-24 24s-24-10.745-24-24 10.745-24 24-24 24 10.745 24 24z" class=""></path></svg>
-                            <span class="item-r-count">5</span>
-                        </span>
-                            <span class="item-r-comments">
-                            <svg viewBox="0 0 24 24" aria-label="reply" role="img" xmlns="http://www.w3.org/2000/svg"><g><path fill="currentColor" d="M14.046 2.242l-4.148-.01h-.002c-4.374 0-7.8 3.427-7.8 7.802 0 4.098 3.186 7.206 7.465 7.37v3.828c0 .108.044.286.12.403.142.225.384.347.632.347.138 0 .277-.038.402-.118.264-.168 6.473-4.14 8.088-5.506 1.902-1.61 3.04-3.97 3.043-6.312v-.017c-.006-4.367-3.43-7.787-7.8-7.788zm3.787 12.972c-1.134.96-4.862 3.405-6.772 4.643V16.67c0-.414-.335-.75-.75-.75h-.396c-3.66 0-6.318-2.476-6.318-5.886 0-3.534 2.768-6.302 6.3-6.302l4.147.01h.002c3.532 0 6.3 2.766 6.302 6.296-.003 1.91-.942 3.844-2.514 5.176z"></path></g></svg>
-                            <span class="item-r-count">0</span>
-                        </span>
-                            <a href="#"><svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="share" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="svg-inline--fa fa-share fa-w-18"><path fill="currentColor" d="M564.907 196.35L388.91 12.366C364.216-13.45 320 3.746 320 40.016v88.154C154.548 130.155 0 160.103 0 331.19c0 94.98 55.84 150.231 89.13 174.571 24.233 17.722 58.021-4.992 49.68-34.51C100.937 336.887 165.575 321.972 320 320.16V408c0 36.239 44.19 53.494 68.91 27.65l175.998-184c14.79-15.47 14.79-39.83-.001-55.3zm-23.127 33.18l-176 184c-4.933 5.16-13.78 1.73-13.78-5.53V288c-171.396 0-295.313 9.707-243.98 191.7C72 453.36 32 405.59 32 331.19 32 171.18 194.886 160 352 160V40c0-7.262 8.851-10.69 13.78-5.53l176 184a7.978 7.978 0 0 1 0 11.06z" class=""></path></svg></a>
-                        </div>
-                    </div>
-                    <!-- 2 -->
-                    <div class="col-md-4 pt-5 pb-5">
-                        <div class="item-r-header">
-                            <a href="https://www.facebook.com/1270906909686096">
-                                <img src="assets/images/logo-facebook.png" alt="Account avatar for Energie Jeunes">
-                                <ul><li>Energie Jeunes</li><li>3jours</li></ul>
-                                <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-facebook fa-w-16"><path fill="currentColor" d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z" class=""></path></svg>
-                            </a>
-                        </div>
-                        <a href="https://www.facebook.com/1270906909686096"><img src="https://scontent-fra5-1.xx.fbcdn.net/v/t39.30808-6/576410630_820491657354799_8797063183062496796_n.jpg?stp=dst-jpg_s720x720_tt6&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=UG3JZfhEIk8Q7kNvwFKFPIn&_nc_oc=AdlPzUwn94aOcOOXdVP6QVXjbrWyTT3CDZgetCzwkFc4ofvVGQOwVaeXT2FIRLShUhQ&_nc_zt=23&_nc_ht=scontent-fra5-1.xx&edm=AKIiGfEEAAAA&_nc_gid=FF6h69Mqpb6ZhLC6j5Emkw&_nc_tpa=Q5bMBQGxKhVHwY2tOKpX2SahYagnn3e-8Q56vsoUSbFgpTEvzGQbQjikacmMErtnYFI203RvoXhH651HQg&oh=00_AfjsfAYmpcDdL7K3LDsfK1FORnTTfnSm2svragK66zAK9A&oe=6913C81C" alt="Lien plus disponible"></a>
-                        <div class="item-r-body">
-                            <p class="sbsw-content-text">𝑴𝒆́𝒄𝒆́𝒏𝒂𝒕   𝒅𝒆   𝒄𝒐𝒎𝒑𝒆́𝒕𝒆𝒏𝒄𝒆𝒔   :   𝒗𝒐𝒖𝒔   𝒂𝒖𝒔𝒔𝒊,   𝒓𝒆𝒋𝒐𝒊𝒈𝒏𝒆𝒛   𝒍'𝒂𝒗𝒆𝒏𝒕𝒖𝒓𝒆   !<br>
-                                <br>
-                                Chaque   année,   300   salariés   d'entreprise   s'engagent   chez   Énergie  <a href="#" class="sbsw-more" style="display: none;">...</a><span class="sbsw-remaining" style="display: inline;">Jeunes   (en   courte   ou   longue   durée)   pour   soutenir   nos   actions   et   participer   à   la   réduction   des   inégalités   scolaire.   <br>
-                            <br>
-                            Isabelle,   salariée   @SNCF,   nous   fait   part   de   son   expérience   et   pourquoi   avoir   choisi   le   mécénat   de   compétences   pour   soutenir   notre   association.   <br>
-                            <br>
-                            Toutes   nos   offres   en   mécénat   de   compétences   longue   durée   :   <a href="https://energiejeunes.fr/agir-avec-nous/servir-comme-volontaire/decouvrez-nos-offres-de-mission-en-mecenat-de-competences-long/" title="https://energiejeunes.fr/agir-avec-nous/servir-comme-volontaire/decouvrez-nos-offres-de-mission-en-mecenat-de-competences-long/" target="_blank" rel="noopener">https://energiejeunes.fr/agir-avec-nous/servir-comme-volontaire/decouvrez-nos-offres-de-mission-en-mecenat-de-competences-long/</a><br>
-                            <br>
-                            𝗩𝗼𝘂𝘀   𝗲̂𝘁𝗲𝘀   𝘂𝗻𝗲   𝗲𝗻𝘁𝗿𝗲𝗽𝗿𝗶𝘀𝗲   𝗲𝘁   𝘀𝗼𝘂𝗵𝗮𝗶𝘁𝗲𝘇   𝗮𝘃𝗼𝗶𝗿   𝗽𝗹𝘂𝘀   𝗱'𝗶𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻𝘀   𝘀𝘂𝗿   𝗹𝗲   𝗺𝗲́𝗰𝗲́𝗻𝗮𝘁   𝗱𝗲   𝗰𝗼𝗺𝗽𝗲́𝘁𝗲𝗻𝗰𝗲𝘀   ?   <br>
-                            <br>
-                            Contactez-nous   :   <a href="https://energiejeunes.fr/nous-contacter/" title="https://energiejeunes.fr/nous-contacter/" target="_blank" rel="noopener">https://energiejeunes.fr/nous-contacter/</a><br>
-                            <br>
-                            #entreprise   #association   #reussitescolaire   #ecole   #college   #lycee   #soutien   #recrutement   #hiring   #mecenat   #mecenatdecompetences   #recrutement</span>
-                            </p>
-                        </div>
-                        <div class="item-r-footer">
-                        <span class="item-r-like">
-                            <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="thumbs-up" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-thumbs-up fa-w-16"><path fill="currentColor" d="M496.656 285.683C506.583 272.809 512 256 512 235.468c-.001-37.674-32.073-72.571-72.727-72.571h-70.15c8.72-17.368 20.695-38.911 20.695-69.817C389.819 34.672 366.518 0 306.91 0c-29.995 0-41.126 37.918-46.829 67.228-3.407 17.511-6.626 34.052-16.525 43.951C219.986 134.75 184 192 162.382 203.625c-2.189.922-4.986 1.648-8.032 2.223C148.577 197.484 138.931 192 128 192H32c-17.673 0-32 14.327-32 32v256c0 17.673 14.327 32 32 32h96c17.673 0 32-14.327 32-32v-8.74c32.495 0 100.687 40.747 177.455 40.726 5.505.003 37.65.03 41.013 0 59.282.014 92.255-35.887 90.335-89.793 15.127-17.727 22.539-43.337 18.225-67.105 12.456-19.526 15.126-47.07 9.628-69.405zM32 480V224h96v256H32zm424.017-203.648C472 288 472 336 450.41 347.017c13.522 22.76 1.352 53.216-15.015 61.996 8.293 52.54-18.961 70.606-57.212 70.974-3.312.03-37.247 0-40.727 0-72.929 0-134.742-40.727-177.455-40.727V235.625c37.708 0 72.305-67.939 106.183-101.818 30.545-30.545 20.363-81.454 40.727-101.817 50.909 0 50.909 35.517 50.909 61.091 0 42.189-30.545 61.09-30.545 101.817h111.999c22.73 0 40.627 20.364 40.727 40.727.099 20.363-8.001 36.375-23.984 40.727zM104 432c0 13.255-10.745 24-24 24s-24-10.745-24-24 10.745-24 24-24 24 10.745 24 24z" class=""></path></svg>
-                            <span class="item-r-count">7</span>
-                        </span>
-                            <span class="item-r-comments">
-                            <svg viewBox="0 0 24 24" aria-label="reply" role="img" xmlns="http://www.w3.org/2000/svg"><g><path fill="currentColor" d="M14.046 2.242l-4.148-.01h-.002c-4.374 0-7.8 3.427-7.8 7.802 0 4.098 3.186 7.206 7.465 7.37v3.828c0 .108.044.286.12.403.142.225.384.347.632.347.138 0 .277-.038.402-.118.264-.168 6.473-4.14 8.088-5.506 1.902-1.61 3.04-3.97 3.043-6.312v-.017c-.006-4.367-3.43-7.787-7.8-7.788zm3.787 12.972c-1.134.96-4.862 3.405-6.772 4.643V16.67c0-.414-.335-.75-.75-.75h-.396c-3.66 0-6.318-2.476-6.318-5.886 0-3.534 2.768-6.302 6.3-6.302l4.147.01h.002c3.532 0 6.3 2.766 6.302 6.296-.003 1.91-.942 3.844-2.514 5.176z"></path></g></svg>
-                            <span class="item-r-count">0</span>
-                        </span>
-                            <a href="#"><svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="share" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="svg-inline--fa fa-share fa-w-18"><path fill="currentColor" d="M564.907 196.35L388.91 12.366C364.216-13.45 320 3.746 320 40.016v88.154C154.548 130.155 0 160.103 0 331.19c0 94.98 55.84 150.231 89.13 174.571 24.233 17.722 58.021-4.992 49.68-34.51C100.937 336.887 165.575 321.972 320 320.16V408c0 36.239 44.19 53.494 68.91 27.65l175.998-184c14.79-15.47 14.79-39.83-.001-55.3zm-23.127 33.18l-176 184c-4.933 5.16-13.78 1.73-13.78-5.53V288c-171.396 0-295.313 9.707-243.98 191.7C72 453.36 32 405.59 32 331.19 32 171.18 194.886 160 352 160V40c0-7.262 8.851-10.69 13.78-5.53l176 184a7.978 7.978 0 0 1 0 11.06z" class=""></path></svg></a>
-                        </div>
-                    </div>
-                    <!-- 3 -->
-                    <div class="col-md-4 pt-5 pb-5">
-                        <div class="item-r-header">
-                            <a href="https://www.facebook.com/1270906909686096">
-                                <img src="assets/images/logo-facebook.png" alt="Account avatar for Energie Jeunes">
-                                <ul><li>Energie Jeunes</li><li>1semaines</li></ul>
-                                <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-facebook fa-w-16"><path fill="currentColor" d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z" class=""></path></svg>
-                            </a>
-                        </div>
-                        <a href="https://www.facebook.com/1270906909686096"><img src="https://scontent-fra5-2.xx.fbcdn.net/v/t39.30808-6/573620678_816257241111574_8488420387415630666_n.jpg?stp=dst-jpg_s1080x2048_tt6&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=-QbMY9dXNUoQ7kNvwHG5RD-&_nc_oc=AdlbSU_eJk9TNNKufWydbVxU3u7SYCL-7j98ahVn73IddqQmpwaZPL94A8-Eoa_OFNY&_nc_zt=23&_nc_ht=scontent-fra5-2.xx&edm=AKIiGfEEAAAA&_nc_gid=FF6h69Mqpb6ZhLC6j5Emkw&_nc_tpa=Q5bMBQFd11lvBm-bc2Bb3RI6RXZ9uSwPzR0_FcUMVZMjOBiLttRmbna30R8noODmAhbo_DdoLACD1KVMEA&oh=00_AfgSLmpRh-oTJ6nObZq2UOf15ZseQ7UeAH5NzlatQsuH-w&oe=6913C514" alt="#Lien plus disponible"></a>
-                        <div class="item-r-body">
-                            <p>
-                                𝑷𝒓𝒐𝒋𝒆𝒕   3𝑪   :   𝒅𝒆   𝒏𝒐𝒖𝒗𝒆𝒍𝒍𝒆𝒔   𝒄𝒍𝒂𝒔𝒔𝒆𝒔   𝒑𝒆𝒖𝒗𝒆𝒏𝒕   𝒆𝒏𝒄𝒐𝒓𝒆   𝒑𝒂𝒓𝒕𝒊𝒄𝒊𝒑𝒆𝒓   !<br>
-                                <br>
-                                🤔   𝗘𝗻   𝗾𝘂𝗼𝗶   𝗰𝗼𝗻𝘀𝗶𝘀𝘁𝗲   𝗹𝗲  <a href="#" class="sbsw-more" style="display: none;">...</a>𝗣𝗿𝗼𝗷𝗲𝘁   𝟯𝗖   ?<br>
-                                Après   la   publication   dans   The   Economic   Journal   d’une   étude   mesurant   l’impact   de   son   programme   sur   les   élèves,   Énergie   Jeunes   lance   une   nouvelle   recherche   auprès   de   120   classes   de   6e   :   «   𝑪𝒐𝒎𝒑𝒓𝒆𝒏𝒅𝒓𝒆   𝒔𝒐𝒏   𝑪𝒆𝒓𝒗𝒆𝒂𝒖   𝒂𝒖   𝑪𝒐𝒍𝒍𝒆̀𝒈𝒆   ».   Cette   étude   vise   à   reproduire,   en   contexte   français,   les   effets   d’un   programme   favorisant   la   motivation   scolaire.<br>
-                                <br>
-                                🎯   𝗢𝗯𝗷𝗲𝗰𝘁𝗶𝗳𝘀   𝗱𝗲   𝗹’𝗲́𝘁𝘂𝗱𝗲   :   <br>
-                                📍   Réduire   les   comportements   perturbateurs<br>
-                                📍Accroître   la   motivation   des   élèves<br>
-                                📍Améliorer   les   résultats   scolaires<br>
-                                <br>
-                                𝗠𝗼𝗱𝗮𝗹𝗶𝘁𝗲́𝘀   𝗱𝗲   𝗹’𝗲́𝘁𝘂𝗱𝗲<br>
-                                📍   Les   élèves   suivent   3   épisodes   de   55   minutes   sur   le   thème<br>
-                                «   Comprendre   son   Cerveau   au   Collège   ».   Les   2   premiers<br>
-                                épisodes   peuvent   être   faits   jusqu'au   𝟯𝟭   𝗷𝗮𝗻𝘃𝗶𝗲𝗿   𝟮𝟬𝟮𝟲.<br>
-                                📍   Les   enseignants   bénéficient   d’un   module   d’accompagnement<br>
-                                en   ligne   d’1   heure,   à   suivre   à   leur   convenance   avant   le   premier<br>
-                                épisode.   <br>
-                                📍   L’établissement   transmet,   de   manière   strictement   anonyme,   des   informations   sur   les   élèves   :   notes,   groupes   de   besoins   (le   cas   échéant)   et   profession   des   parents.<br>
-                                <br>
-                                𝑽𝒐𝒖𝒔   𝒆̂𝒕𝒆𝒔   𝒆𝒏𝒔𝒆𝒊𝒈𝒏𝒂𝒏𝒕.𝒆   𝒆𝒏   𝒄𝒍𝒂𝒔𝒔𝒆   𝒅𝒆   6𝒆   𝒆𝒕   𝒔𝒐𝒖𝒉𝒂𝒊𝒕𝒆𝒛   𝒑𝒂𝒓𝒕𝒊𝒄𝒊𝒑𝒆𝒓   𝒂̀   𝒄𝒆𝒕𝒕𝒆   𝒆́𝒕𝒖𝒅𝒆   ?<br>
-                                <br>
-                                👉   𝗖𝗼𝗻𝘁𝗮𝗰𝘁𝗲𝘇   𝗻𝗼𝘂𝘀    :   <span id="eeb-545163-778361">projet3C@energiejeunes.fr</span>
-                                #association   #engagement   #reussitescolaire   #etude   #projet   #ecole   #college   #lycee   #eleves
-                            </p>
-                        </div>
-                        <div class="item-r-footer">
-                        <span class="item-r-like">
-                            <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="thumbs-up" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-thumbs-up fa-w-16"><path fill="currentColor" d="M496.656 285.683C506.583 272.809 512 256 512 235.468c-.001-37.674-32.073-72.571-72.727-72.571h-70.15c8.72-17.368 20.695-38.911 20.695-69.817C389.819 34.672 366.518 0 306.91 0c-29.995 0-41.126 37.918-46.829 67.228-3.407 17.511-6.626 34.052-16.525 43.951C219.986 134.75 184 192 162.382 203.625c-2.189.922-4.986 1.648-8.032 2.223C148.577 197.484 138.931 192 128 192H32c-17.673 0-32 14.327-32 32v256c0 17.673 14.327 32 32 32h96c17.673 0 32-14.327 32-32v-8.74c32.495 0 100.687 40.747 177.455 40.726 5.505.003 37.65.03 41.013 0 59.282.014 92.255-35.887 90.335-89.793 15.127-17.727 22.539-43.337 18.225-67.105 12.456-19.526 15.126-47.07 9.628-69.405zM32 480V224h96v256H32zm424.017-203.648C472 288 472 336 450.41 347.017c13.522 22.76 1.352 53.216-15.015 61.996 8.293 52.54-18.961 70.606-57.212 70.974-3.312.03-37.247 0-40.727 0-72.929 0-134.742-40.727-177.455-40.727V235.625c37.708 0 72.305-67.939 106.183-101.818 30.545-30.545 20.363-81.454 40.727-101.817 50.909 0 50.909 35.517 50.909 61.091 0 42.189-30.545 61.09-30.545 101.817h111.999c22.73 0 40.627 20.364 40.727 40.727.099 20.363-8.001 36.375-23.984 40.727zM104 432c0 13.255-10.745 24-24 24s-24-10.745-24-24 10.745-24 24-24 24 10.745 24 24z" class=""></path></svg>
-                            <span class="item-r-count">8</span>
-                        </span>
-                            <span class="item-r-comments">
-                            <svg viewBox="0 0 24 24" aria-label="reply" role="img" xmlns="http://www.w3.org/2000/svg"><g><path fill="currentColor" d="M14.046 2.242l-4.148-.01h-.002c-4.374 0-7.8 3.427-7.8 7.802 0 4.098 3.186 7.206 7.465 7.37v3.828c0 .108.044.286.12.403.142.225.384.347.632.347.138 0 .277-.038.402-.118.264-.168 6.473-4.14 8.088-5.506 1.902-1.61 3.04-3.97 3.043-6.312v-.017c-.006-4.367-3.43-7.787-7.8-7.788zm3.787 12.972c-1.134.96-4.862 3.405-6.772 4.643V16.67c0-.414-.335-.75-.75-.75h-.396c-3.66 0-6.318-2.476-6.318-5.886 0-3.534 2.768-6.302 6.3-6.302l4.147.01h.002c3.532 0 6.3 2.766 6.302 6.296-.003 1.91-.942 3.844-2.514 5.176z"></path></g></svg>
-                            <span class="item-r-count">0</span>
-                        </span>
-                            <a href="#"><svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="share" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="svg-inline--fa fa-share fa-w-18"><path fill="currentColor" d="M564.907 196.35L388.91 12.366C364.216-13.45 320 3.746 320 40.016v88.154C154.548 130.155 0 160.103 0 331.19c0 94.98 55.84 150.231 89.13 174.571 24.233 17.722 58.021-4.992 49.68-34.51C100.937 336.887 165.575 321.972 320 320.16V408c0 36.239 44.19 53.494 68.91 27.65l175.998-184c14.79-15.47 14.79-39.83-.001-55.3zm-23.127 33.18l-176 184c-4.933 5.16-13.78 1.73-13.78-5.53V288c-171.396 0-295.313 9.707-243.98 191.7C72 453.36 32 405.59 32 331.19 32 171.18 194.886 160 352 160V40c0-7.262 8.851-10.69 13.78-5.53l176 184a7.978 7.978 0 0 1 0 11.06z" class=""></path></svg></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <?php include '../app/views/partials/facebook-posts.php';?>
+
         <!-- Contenu 2 -->
         <div class="container">
             <div class="item-r-content2 bg-white rounded-2 pb-5 pt-5 mb-5">

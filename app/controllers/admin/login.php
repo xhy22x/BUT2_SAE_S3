@@ -23,7 +23,7 @@ if(isset($_POST["validate"])){
             $_SESSION['auth'] = true;
 
             //Redirection vers page d'admin
-            header('Location: admin-panel.php');
+            header('Location: ../app/views/admin-panel.php');
 
         }else{
             $errormsg = "Votre pseudo ou mot de passe est incorrect.";
