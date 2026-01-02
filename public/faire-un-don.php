@@ -2,9 +2,9 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<?php include '../app/views/partials/head.php'; ?>
+<?php include 'app/views/partials/head.php'; ?>
 <body>
-<?php include '../app/views/partials/navbar.php'; ?>
+<?php include 'app/views/partials/navbar.php'; ?>
 <main role="main">
     <!-- section-texte -->
     <section class="section-texte">
@@ -192,6 +192,6 @@
         </div>
     </section>
 </main>
-<?php require '../app/views/partials/footer.php'; ?>
+<?php require 'app/views/partials/footer.php'; ?>
 </body>
 </html>

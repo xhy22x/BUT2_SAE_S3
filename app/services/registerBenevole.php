@@ -11,6 +11,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
+$file = 'data\benevoles.json';
+
+if(file_exists($file) && filesize($file) > 0) {
+    $benevoles = json_decode(file_get_contents($file), true);
+} else {
+    $benevoles = [];
+}
 $nouveauBenevole = [
     "nom" => $nom,
     "prenom" => $prenom,
@@ -18,7 +25,6 @@ $nouveauBenevole = [
     "password" => $hashedPassword,
 ];
 
-$file = __DIR__ . '\data\benevoles.json';
 if (!file_exists($file)) {
     file_put_contents($file, json_encode([]));
 }

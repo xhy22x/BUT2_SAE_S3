@@ -2,9 +2,9 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<?php include '../app/views/partials/head.php'; ?>
+<?php include 'app/views/partials/head.php'; ?>
 <body>
-<?php include '../app/views/partials/navbar.php'; ?>
+<?php include 'app/views/partials/navbar.php'; ?>
 <main>
     <!-- Section Menus Nos Communautés -->
     <section id="section-communautes-menu" class="section-menu rounded-edge">
@@ -143,6 +143,6 @@
         </div>
     </section>
 </main>
-<?php require '../app/views/partials/footer.php'; ?>
+<?php require 'app/views/partials/footer.php'; ?>
 </body>
 </html>
