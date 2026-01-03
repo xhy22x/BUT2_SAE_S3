@@ -4,7 +4,7 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<?php include 'app/views/partials/head.php'; ?>
+<?php include __DIR__ . '/../app/views/partials/head.php'; ?>
 <body>
 <main>
     <form class="connexion-servir" method="POST" action="#connectBenevole">

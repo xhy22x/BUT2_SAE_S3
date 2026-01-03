@@ -2,7 +2,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<?php include 'app/views/partials/head.php'; ?>
+<?php include __DIR__ . '/../app/views/partials/head.php'; ?>
 <body>
 <main>
     <form class="form-servir" method="POST" action="../app/services/registerBenevole.php">
