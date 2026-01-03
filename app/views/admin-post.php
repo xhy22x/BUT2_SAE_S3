@@ -81,6 +81,7 @@ $controller = new PostManager($db);
             <input type="number" class="form-control" name="comments_count" value="0" min="0">
         </div>
         <button type="submit" class="btn btn-primary" name="validate">Submit</button>
+        <a href="admin-panel.php" class="btn btn-secondary">Annuler</a>
     </form>
 </body>
 </html>

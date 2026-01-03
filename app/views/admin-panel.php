@@ -1,6 +1,6 @@
 <?php
 require('../controllers/admin/security.php');
-require '../../vendor/autoload.php'; // Autoload Composer
+require '../../vendor/autoload.php';
 
 use App\Config\Database;
 use App\Controllers\Admin\PostManager;
@@ -86,11 +86,5 @@ $posts = $controller->getAllPosts();
         <?php endif; ?>
     </section>
 
-
-    <section>
-        <?php if(!empty($posts)): ?>
-        <?php endif; ?>
-
-    </section>
 </body>
 </html>

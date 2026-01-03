@@ -75,6 +75,7 @@ if(isset($_POST['update'])){
             <input type="number" class="form-control" name="comments_count" value="<?= (int)$post['comments_count'] ?>" min="0">
         </div>
         <button type="submit" class="btn btn-primary" name="update">Modifier l'article</button>
+        <a href="admin-panel.php" class="btn btn-secondary">Annuler</a>
     </form>
 </body>
 </html>
