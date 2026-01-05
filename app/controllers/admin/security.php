@@ -2,5 +2,5 @@
 
 session_start();
 if(!isset($_SESSION['auth'])){
-    header('Location: ../../public/login.php');
+    header('Location: ../../public/login.css');
 }

@@ -26,11 +26,19 @@ if(isset($_POST["validate"])){
             header('Location: ../app/views/admin-panel.php');
 
         }else{
-            $errormsg = "Votre pseudo ou mot de passe est incorrect.";
+            $_SESSION['error'] = "Votre pseudo ou mot de passe est incorrect.";
+            header('Location: login.php');
+            exit;
         }
 
     }else{
-        $errormsg = 'Veuillez remplir tous les champs';
+        $_SESSION['error'] = "Veuillez remplir tous les champs";
+        header('Location: login.php');
+        exit;
     }
 }
 
+if(isset($_SESSION['error'])){
+    $errormsg = $_SESSION['error'];
+    unset($_SESSION['error']);
+}
