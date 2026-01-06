@@ -1,4 +1,7 @@
-<?php require('../controller/admin-actions/security.php'); ?>
+<?php
+require('../controller/security.php');
+requireAdmin();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <?php include 'partials/head-admin.php' ?>
