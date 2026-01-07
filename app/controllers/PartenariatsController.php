@@ -12,12 +12,15 @@ class PartenariatsController
         $this->pdo = $pdo;
     }
 
-    public function afficher()
-    {
+    public function afficherPartenaire(){
+        $listePartenaires = Partenaire::tous($this->pdo);
+        require __DIR__ . '/../views/components/form-partenaire.php';
+    }
+
+    public function afficherSubvention(){
         $listePartenaires = Partenaire::tous($this->pdo);
         $listeSubventions = Subvention::toutes($this->pdo);
-
-        require __DIR__ . '/../views/pages/all-form-partenariats.php';
+        require __DIR__ . '/../views/components/form-subvention.php';
     }
 
     public function enregistrerPartenaire()
@@ -26,7 +29,7 @@ class PartenariatsController
             Partenaire::creer($this->pdo, $_POST);
         }
 
-        header('Location: /partenariats.php');
+        header('Location: partenariat.php');
         exit;
     }
 
@@ -36,7 +39,7 @@ class PartenariatsController
             Subvention::creer($this->pdo, $_POST);
         }
 
-        header('Location: /public/partenariats.php');
+        header('Location: subvention.php');
         exit;
     }
 }

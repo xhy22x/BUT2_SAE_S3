@@ -2,7 +2,7 @@
 require('../../controllers/security.php');
 requireResponsable(2);
 ob_start();
-$title = "Gestion des partenariats";
+$title = "Gestion des subventions";
 
 /** @var PDO $pdo */
 require('../../../config/database.php');
@@ -10,11 +10,11 @@ require('../../../app/controllers/PartenariatsController.php');
 
 $controller = new PartenariatsController($pdo);
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if ($_POST['type'] === 'partenaire') {
-        $controller->enregistrerPartenaire();
+    if ($_POST['type'] === 'subvention') {
+        $controller->enregistrerSubvention();
     }
 }
-$controller->afficherPartenaire();
+$controller->afficherSubvention();
 
 
 $content = ob_get_clean();

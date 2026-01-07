@@ -57,12 +57,11 @@ $posts = getAllPosts($pdo);
                         <div class="d-flex justify-content-between align-items-center pb-3">
                             <h5 class="card-title"><?= $post['title'] ?></h5>
 
-                            <form method="POST" class="ms-auto d-flex gap-2">
+                            <form method="POST" class="ms-auto d-flex gap-2" onsubmit="return confirm('Êtes-vous sûr de vouloir supprimer cet article ?');">
                                 <input type="hidden" name="post_id" value="<?= $post['id'] ?>">
 
                                 <a href="edit-articles.php?id=<?= $post['id'] ?>" class="btn btn-secondary btn-sm my-1">Modifier</a>
                                 <button type="submit" name="delete" class="btn btn-danger btn-sm my-1">Supprimer</button>
-
                             </form>
                         </div>
                         <p class="card-text"><?= nl2br($post['content']) ?></p>

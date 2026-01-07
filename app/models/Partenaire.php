@@ -1,5 +1,5 @@
 <?php
-
+requireResponsable(2);
 class Partenaire
 {
     public static function tous($pdo)

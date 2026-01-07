@@ -6,7 +6,7 @@ if ($_SESSION['role'] === 'admin') $user = "Admin";
 if ($_SESSION['role'] === 'responsable'){
     if($_SESSION['pole_id'] === 1) $user = "Chef Bénévole";
     if($_SESSION['pole_id'] === 2) $user = "Chef Partenariat";
-    if($_SESSION['pole_id'] === 2) $user = "Chargé Communication";
+    if($_SESSION['pole_id'] === 3) $user = "Chargé Communication";
 
 }
 ob_start();

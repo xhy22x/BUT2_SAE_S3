@@ -1,5 +1,12 @@
 <?php
-$title = $title ?? 'Administrateur - EnergieJeunes'; //Default value
+$title = $title ?? 'DashBoard - EnergieJeunes'; //Default value
+
+if ($_SESSION['role'] === 'admin') $title = "Espace Administrateur - EnergieJeunes";
+if ($_SESSION['role'] === 'responsable') {
+    if ($_SESSION['pole_id'] === 1) $title = "Espace Chef Bénévole - EnergieJeunes";
+    if ($_SESSION['pole_id'] === 2) $title = "Espace Chef Partenariat - EnergieJeunes";
+    if ($_SESSION['pole_id'] === 3) $title = "Espace Chargé Communication - EnergieJeunes";
+}
 ?>
 
 <head>

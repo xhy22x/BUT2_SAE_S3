@@ -71,7 +71,7 @@ $files = getAllFiles($pdo);
                     </button>
                 </form>
 
-                <form method="POST">
+                <form method="POST" onsubmit="return confirm('Êtes-vous sûr de vouloir supprimer ce fichier ?');">
                     <input type="hidden" name="file_id" value="<?= $file['id'] ?>">
                     <button type="submit" class="btn btn-danger" name="delete">Supprimer</button>
                 </form>

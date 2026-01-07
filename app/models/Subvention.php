@@ -1,5 +1,5 @@
 <?php
-
+requireResponsable(2);
 class Subvention
 {
     public static function toutes($pdo)
