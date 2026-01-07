@@ -1,23 +1,42 @@
 <?php
 
+require_once __DIR__ . '/../models/Partenaire.php';
+require_once __DIR__ . '/../models/Subvention.php';
+
 class PartenariatsController
 {
+    private PDO $pdo;
+
+    public function __construct(PDO $pdo)
+    {
+        $this->pdo = $pdo;
+    }
+
     public function afficher()
     {
-        // Ici on récupérerait normalement les données depuis les modèles
-        $listePartenaires = [];
-        $listeSubventions = [];
+        $listePartenaires = Partenaire::tous($this->pdo);
+        $listeSubventions = Subvention::toutes($this->pdo);
 
         require __DIR__ . '/../views/pages/partenariats.php';
     }
 
     public function enregistrerPartenaire()
     {
-        // Ici on validerait et enregistrerait les données
+        if (!empty($_POST)) {
+            Partenaire::creer($this->pdo, $_POST);
+        }
+
+        header('Location: /partenariats.php');
+        exit;
     }
 
     public function enregistrerSubvention()
     {
-        // Traitement futur
+        if (!empty($_POST)) {
+            Subvention::creer($this->pdo, $_POST);
+        }
+
+        header('Location: /public/partenariats.php');
+        exit;
     }
 }
