@@ -1,5 +1,6 @@
 <?php
-
+require('../../controllers/security.php');
+requireResponsable(3);
 ob_start();
 
 /** @var PDO $pdo */
@@ -9,7 +10,7 @@ require('../../models/postsFunctions.php');
 //Suppression
 if(isset($_POST['delete'])){
     deletePost($pdo, (int)$_POST['post_id']);
-    header('Location: admin-panel.php');
+    header('Location: articles.php');
     exit();
 }
 
@@ -86,4 +87,4 @@ $posts = getAllPosts($pdo);
 
 <?php
 $content = ob_get_clean();
-include '../partials/admin-template.php';
+include '../partials/dashboard-template.php';

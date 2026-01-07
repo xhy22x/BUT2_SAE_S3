@@ -1,5 +1,6 @@
 <?php
-
+require('../../controllers/security.php');
+requireResponsable(3);
 ob_start();
 
 /** @var PDO $pdo */
@@ -20,7 +21,7 @@ $data = [
     'comments_count' => $_POST['comments_count']
 ];
 updatePost($pdo, $id, $data);
-header("Location: admin-panel.php");
+header("Location: articles.php");
 exit();
 }
 
@@ -44,4 +45,4 @@ $buttonText = "Modifier l'article";
 
 <?php
 $content = ob_get_clean();
-include '../partials/admin-template.php';
+include '../partials/dashboard-template.php';

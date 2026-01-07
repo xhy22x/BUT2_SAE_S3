@@ -1,5 +1,5 @@
 <?php
-
+requireResponsable(3);
 function validateFile($file){
     $maxSize = 50 * 1024 * 1024; // 50 Mo
     $validExtensions = array('.pdf');

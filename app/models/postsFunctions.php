@@ -1,5 +1,5 @@
 <?php
-
+requireResponsable(3);
 function createPost(PDO $pdo, array $data){
     $stmt = $pdo->prepare(' 
         INSERT INTO articles 
@@ -17,7 +17,7 @@ function createPost(PDO $pdo, array $data){
     ]);
 }
 
-function getAllPosts(PDO $pdo){
+function getAllPosts(PDO $pdo) : array {
     $stmt = $pdo->query('SELECT * FROM articles ORDER BY publish_date DESC');
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }

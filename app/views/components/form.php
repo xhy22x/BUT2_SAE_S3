@@ -14,6 +14,21 @@
             <input type="number" class="form-control" name="<?= $name ?>" placeholder="<?= $options['placeholder'] ?>" value="<?= $options['value'] ?? 0 ?>" min="0">
         <?php elseif($options['type'] === 'file'): ?>
             <input type="file" name="<?= $name ?>">
+        <?php elseif($options['type'] === 'select'): ?>
+            <select name="<?= $name ?>" class="form-select">
+                <?php foreach ($options['options'] as $value => $label): ?>
+                    <option value="<?= htmlspecialchars($value) ?>"
+                            <?php
+                            if (!isset($options['value']) && $value === '') echo 'selected';
+
+                            elseif (isset($options['value']) && ((string)$value === (string)$options['value'])) echo 'selected';
+                            ?>>
+                        <?= htmlspecialchars($label) ?>
+                    </option>
+                <?php endforeach; ?>
+            </select>
+        <?php elseif($options['type'] === 'password'): ?>
+            <input type="password" class="form-control mx-auto" name="<?= $name ?>" placeholder="<?= htmlspecialchars($options['placeholder']) ?>">
         <?php endif; ?>
     </div>
     <?php endforeach; ?>
