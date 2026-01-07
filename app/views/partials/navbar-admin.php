@@ -7,10 +7,18 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="admin-post.php">Publier article</a>
+                    <a class="nav-link" href="create-post.php">Publier article</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="admin-panel.php">Afficher articles</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="admin-gallery.php">Galerie Médias</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="../controllers/logout.php">Déconnexion</a>
                 </li>
             </ul>
         </div>

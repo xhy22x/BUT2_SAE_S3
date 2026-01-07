@@ -1,4 +1,13 @@
-<?php $title = "Faire un Don - Energie Jeunes"; ?>
+<?php
+$title = "Faire un Don - Energie Jeunes";
+
+
+/** @var PDO $pdo */
+require('../config/database.php');
+
+$stmt = $pdo->query("SELECT * FROM fichiers WHERE is_published = 1 ORDER BY id DESC");
+$files = $stmt->fetchAll(PDO::FETCH_ASSOC);
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -84,9 +93,7 @@
         <div class="container">
             <div class="row pt100 mb50">
                 <!-- Bouton Consultez -->
-                <div class="d-flex justify-content-center align-items-center gap-5 pt-5 pb-5 text-uppercase">
-                    <a class="btn btn-2" href="assets/pdf/RAPPORT-EJ-2024-DOUBLE-OK.pdf" role="button"><img src="assets/images/icons/icon-dl.svg" alt="Icon Téléchargez, Nos Communautés">Consultez notre dernier rapport annuel</a>
-                </div>
+                <?php include '../app/views/components/report-link.php'; ?>
             </div>
         </div>
     </section>

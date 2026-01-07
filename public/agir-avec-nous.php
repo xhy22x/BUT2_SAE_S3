@@ -1,4 +1,12 @@
-<?php $title = "Agir avec nous - Energie Jeunes"; ?>
+<?php
+$title = "Agir avec nous - Energie Jeunes";
+
+/** @var PDO $pdo */
+require('../config/database.php');
+
+$stmt = $pdo->query("SELECT * FROM fichiers WHERE is_published = 1 ORDER BY id DESC");
+$files = $stmt->fetchAll(PDO::FETCH_ASSOC);
+?>
 
 
 <!DOCTYPE html>
@@ -140,7 +148,7 @@
     <!-- Section 2 boutons - Agir avec nous -->
     <section id="section-boutons">
         <div class="container text-uppercase d-flex justify-content-center align-items-center gap-5 pt-5 pb-5">
-            <a class="btn btn-2" href="assets/pdf/RAPPORT-EJ-2024-DOUBLE-OK.pdf" role="button"><img src="assets/images/icons/icon-dl.svg" alt="Icon Téléchargez, Nos Communautés">Consultez notre dernier rapport annuel</a>
+            <?php include '../app/views/components/report-link.php'; ?>
             <a class="btn btn-3" href="rejoignez-nous.php" role="button"><p>Rejoignez-nous !</p></a>
         </div>
     </section>

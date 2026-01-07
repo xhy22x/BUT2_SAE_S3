@@ -1,4 +1,4 @@
-<?php require('../app/controller/login.php'); ?>
+<?php require('../app/controllers/login.php'); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -20,7 +20,7 @@
             </div>
             <?php if(isset($errormsg)){echo "<p class='errorMsg'>".$errormsg."</p>";} ?>
             <div class="mb-3">
-                <input type="text" class="form-control mx-auto" name="pseudo" placeholder="Identifiant" autocomplete="off">
+                <input type="text" class="form-control mx-auto" name="pseudo" placeholder="Adresse e-mail" autocomplete="off">
             </div>
             <div class="mb-3">
                 <input type="password" class="form-control mx-auto" name="password" placeholder="Mot de passe">

@@ -1,5 +1,5 @@
 <?php
-require('../controller/security.php');
+require('../controllers/security.php');
 requireResponsable(2);
 ?>
 <!DOCTYPE html>
