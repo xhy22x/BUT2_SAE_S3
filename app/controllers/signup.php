@@ -9,10 +9,13 @@ if (isset($_POST['validate'])) {
 
     $checkIfAllInputsAreValids =
         !empty($_POST['email']) &&
+        !empty($_POST['nom']) &&
+        !empty($_POST['prenom']) &&
         !empty($_POST['password']);
 
     if ($checkIfAllInputsAreValids) {
 
+        $name = $_POST['nom'] . " " . $_POST['prenom'];
         $user_email = htmlspecialchars($_POST['email']);
         $user_password = $_POST['password'];
 
@@ -32,17 +35,17 @@ if (isset($_POST['validate'])) {
         $hashedPassword = password_hash($user_password, PASSWORD_DEFAULT);
 
         $insertUser = $pdo->prepare(
-            'INSERT INTO utilisateurs (email, password, role)
-             VALUES (:email, :password, :role)'
+            'INSERT INTO users (name, email, password, role)
+             VALUES (:name, :email, :password, :role)'
         );
 
         $insertUser->execute([
+            'name' => $name,
             ':email' => $user_email,
             ':password' => $hashedPassword,
             ':role' => 'benevole'
         ]);
 
-        // 6️⃣ Connexion automatique après inscription
         $_SESSION['auth'] = true;
         $_SESSION['email'] = $user_email;
         $_SESSION['role'] = 'benevole';
