@@ -1,5 +1,4 @@
 <?php
-requireAdmin();
 function timeAgo($date) {
     $now = new DateTime();
     $past = new DateTime($date);

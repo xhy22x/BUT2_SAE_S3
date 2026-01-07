@@ -16,23 +16,22 @@ if ($_SESSION['role'] === 'responsable'){
         </div>
     </nav>
     <nav class="nav flex-column">
-
-        <?php if ($_SESSION['role'] === 'admin' || $_SESSION['role'] === 'responsable' && $_SESSION['pole_id'] === 3): ?>
-        <a class="nav-link text-white" style="white-space:nowrap" href="articles.php">
-            <i class="bi bi-file-text"></i><span class="d-none d-sm-inline ms-2">Articles</span>
-        </a>
+        <?php if ($_SESSION['role'] === 'admin' || $_SESSION['role'] === 'responsable' && $_SESSION['pole_id'] === 2): ?>
+            <a class="nav-link text-white" style="white-space:nowrap" href="partenariat.php">
+                <i class="bi bi-heart"></i><span class="d-none d-sm-inline ms-2">Partenaire & Dons</span>
+            </a>
         <?php endif; ?>
         <?php if ($_SESSION['role'] === 'admin' || $_SESSION['role'] === 'responsable' && $_SESSION['pole_id'] === 3): ?>
-        <a class="nav-link text-white" style="white-space:nowrap" href="gallery.php">
-            <i class="bi bi-collection"></i><span class="d-none d-sm-inline ms-2">Galerie Médias</span>
-        </a>
+            <a class="nav-link text-white" style="white-space:nowrap" href="articles.php">
+                <i class="bi bi-file-text"></i><span class="d-none d-sm-inline ms-2">Articles</span>
+            </a>
+            <a class="nav-link text-white" style="white-space:nowrap" href="gallery.php">
+                <i class="bi bi-collection"></i><span class="d-none d-sm-inline ms-2">Galerie Médias</span>
+            </a>
+            <a class="nav-link text-white" style="white-space:nowrap" href="#">
+                <i class="bi bi-envelope"></i><span class="d-none d-sm-inline ms-2">Newsletters</span>
+            </a>
         <?php endif; ?>
-        <?php if ($_SESSION['role'] === 'admin' || $_SESSION['role'] === 'responsable' && $_SESSION['pole_id'] === 3): ?>
-        <a class="nav-link text-white" style="white-space:nowrap" href="#">
-            <i class="bi bi-envelope"></i><span class="d-none d-sm-inline ms-2">Newsletters</span>
-        </a>
-        <?php endif; ?>
-
 
 
         <?php if ($_SESSION['role'] === 'admin'): ?>
