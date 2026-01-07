@@ -9,4 +9,5 @@ $title = $title ?? 'Administrateur - EnergieJeunes'; //Default value
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title><?php echo $title; ?></title>
     <link rel='stylesheet' id='style-css' href='../../public/assets/css/admin.css' media='all' />
+    <link rel="icon" href="../../public/assets/images/icons/favicon.ico" type="image/x-icon">
 </head>
