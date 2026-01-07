@@ -1,5 +1,6 @@
 <?php
-
+require('../../controllers/security.php');
+requireResponsable(3);
 ob_start();
 
 /** @var PDO $pdo */
@@ -81,4 +82,4 @@ $files = getAllFiles($pdo);
 
 <?php
 $content = ob_get_clean();
-include '../partials/admin-template.php';
+include '../partials/dashboard-template.php';

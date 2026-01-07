@@ -1,5 +1,6 @@
 <?php
-
+require('../../controllers/security.php');
+requireResponsable(3);
 ob_start();
 
 /** @var PDO $pdo */
@@ -24,7 +25,7 @@ if(isset($_POST['validate'])){
         'likes_count' => $likes_count,
         'comments_count' => $comments_count
     ]);
-    header('Location: admin-panel.php');
+    header('Location: articles.php');
     exit();
 }
 
@@ -48,5 +49,5 @@ $buttonText = "Ajouter un article";
 
 <?php
 $content = ob_get_clean();
-include '../partials/admin-template.php';
+include '../partials/dashboard-template.php';
 

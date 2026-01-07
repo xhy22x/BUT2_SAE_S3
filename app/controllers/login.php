@@ -16,7 +16,7 @@ if(isset($_POST["validate"])){
         $user_password = htmlspecialchars($_POST['password']);
 
         //Recherche dans la base
-        $stmt = $pdo->prepare('SELECT * FROM utilisateurs WHERE email = :email');
+        $stmt = $pdo->prepare('SELECT * FROM users WHERE email = :email');
         $stmt->bindParam(':email', $user_pseudo);
         $stmt->execute();
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -31,20 +31,10 @@ if(isset($_POST["validate"])){
             $_SESSION['pole_id'] = $user['pole_id'];
 
             //Redirection en fonction du rôle
-            if($user['role'] === 'admin'){
-                header('Location: ../app/views/pages/admin-panel.php');
+            if($user['role'] === 'admin' || $user['role'] === 'responsable'){
+                header('Location: ../app/views/pages/dashboard.php');
                 exit;
-            }
-            if($user['role'] === 'responsable') {
-                if($user['pole_id'] == 1) {
-                    header('Location: ../app/views/pages/chefbenevole-panel.php');
-                    exit;
-                }
-                if($user['pole_id'] == 2) {
-                    header('Location: ../app/views/pages/chefpartenariat-panel.php');
-                    exit;
-                }
-
+            }else{
                 $_SESSION['error'] = "Rôle ou pôle inconnu.";
                 header('Location: login.php');
                 exit;

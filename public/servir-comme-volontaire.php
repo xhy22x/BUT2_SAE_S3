@@ -1,4 +1,5 @@
 <?php $title = "Servir comme volontaire - Energie Jeunes"; ?>
+<?php require('../app/controllers/signup.php'); ?>
 
 <!DOCTYPE html>
 <html lang="en">

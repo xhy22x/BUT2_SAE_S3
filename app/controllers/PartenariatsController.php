@@ -17,7 +17,7 @@ class PartenariatsController
         $listePartenaires = Partenaire::tous($this->pdo);
         $listeSubventions = Subvention::toutes($this->pdo);
 
-        require __DIR__ . '/../views/pages/partenariats.php';
+        require __DIR__ . '/../views/pages/all-form-partenariats.php';
     }
 
     public function enregistrerPartenaire()

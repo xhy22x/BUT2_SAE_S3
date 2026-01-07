@@ -3,7 +3,8 @@ $title = "Accueil - Energie Jeunes";
 
 /** @var PDO $pdo */
 require('../config/database.php');
-require('../app/models/postsFunctions.php');
+require('../app/models/postModel.php');
+
 
 $stmt = $pdo->query("SELECT * FROM fichiers WHERE is_published = 1 ORDER BY id DESC");
 $files = $stmt->fetchAll(PDO::FETCH_ASSOC);
