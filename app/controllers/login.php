@@ -32,16 +32,16 @@ if(isset($_POST["validate"])){
 
             //Redirection en fonction du rôle
             if($user['role'] === 'admin'){
-                header('Location: ../app/views/admin-panel.php');
+                header('Location: ../app/views/pages/admin-panel.php');
                 exit;
             }
             if($user['role'] === 'responsable') {
                 if($user['pole_id'] == 1) {
-                    header('Location: ../app/views/chefbenevole-panel.php');
+                    header('Location: ../app/views/pages/chefbenevole-panel.php');
                     exit;
                 }
                 if($user['pole_id'] == 2) {
-                    header('Location: ../app/views/chefpartenariat-panel.php');
+                    header('Location: ../app/views/pages/chefpartenariat-panel.php');
                     exit;
                 }
 

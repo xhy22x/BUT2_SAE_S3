@@ -1,10 +1,10 @@
 <?php
-require('../controllers/security.php');
-requireAdmin();
+
+ob_start();
 
 /** @var PDO $pdo */
-require('../../config/database.php');
-require('../models/postsFunctions.php');
+require('../../../config/database.php');
+require('../../models/postsFunctions.php');
 
 //Suppression
 if(isset($_POST['delete'])){
@@ -15,13 +15,13 @@ if(isset($_POST['delete'])){
 
 if(isset($_POST['update'])){
     $data = [
-            'title' => $_POST['title'],
-            'content' => $_POST['content'],
-            'publish_date' => $_POST['publish_date'],
-            'image_url' => $_POST['image_url'],
-            'source' => $_POST['source'],
-            'likes_count' => $_POST['likes_count'],
-            'comments_count' => $_POST['comments_count']
+        'title' => $_POST['title'],
+        'content' => $_POST['content'],
+        'publish_date' => $_POST['publish_date'],
+        'image_url' => $_POST['image_url'],
+        'source' => $_POST['source'],
+        'likes_count' => $_POST['likes_count'],
+        'comments_count' => $_POST['comments_count']
     ];
     $id = (int)$_POST['post_id'];
     updatePost($pdo, $id, $data);
@@ -33,22 +33,19 @@ if(isset($_POST['update'])){
 $posts = getAllPosts($pdo);
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<?php include 'partials/head-admin.php' ?>
-<body>
-    <?php include 'partials/navbar-admin.php' ?>
-    <br><br>
-
-
-    <section class="container">
-        <div class="alert alert-info">
-            <strong>Info :</strong> Seuls les 3 articles les plus récents seront visibles par le public.
-        </div>
-        <br>
-        <?php if(!empty($posts)): ?>
-        <div class="row g-3">
-            <?php foreach($posts as $post): ?>
+<div class="d-flex justify-content-center my-5">
+    <a class="btn btn-outline-success btn-lg ms-2" href="create-articles.php">
+        <i class="bi bi-plus-circle"></i> Publier un article
+    </a>
+</div>
+<div class="alert alert-info">
+    <strong>Info :</strong> Seuls les 3 articles les plus récents seront visibles par le public.
+    <a href="../../../public/index.php#section-H-reseaux" target="_blank">Voir sur le site</a>
+</div>
+<br>
+<?php if(!empty($posts)): ?>
+    <div class="row g-3">
+        <?php foreach($posts as $post): ?>
             <div class="col-md-4">
                 <div class="card mb-3">
                     <?php if(!empty($post['image_url'])): ?>
@@ -62,7 +59,7 @@ $posts = getAllPosts($pdo);
                             <form method="POST" class="ms-auto d-flex gap-2">
                                 <input type="hidden" name="post_id" value="<?= $post['id'] ?>">
 
-                                <a href="edit-post.php?id=<?= $post['id'] ?>" class="btn btn-secondary btn-sm my-1">Modifier</a>
+                                <a href="edit-articles.php?id=<?= $post['id'] ?>" class="btn btn-secondary btn-sm my-1">Modifier</a>
                                 <button type="submit" name="delete" class="btn btn-danger btn-sm my-1">Supprimer</button>
 
                             </form>
@@ -81,12 +78,12 @@ $posts = getAllPosts($pdo);
                     </div>
                 </div>
             </div>
-            <?php endforeach; ?>
-        </div>
-        <?php else: ?>
-            <p>Aucun article trouvé.</p>
-        <?php endif; ?>
-    </section>
+        <?php endforeach; ?>
+    </div>
+<?php else: ?>
+    <p>Aucun article trouvé.</p>
+<?php endif; ?>
 
-</body>
-</html>
+<?php
+$content = ob_get_clean();
+include '../partials/admin-template.php';

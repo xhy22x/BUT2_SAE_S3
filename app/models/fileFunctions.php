@@ -45,3 +45,14 @@ function getAllFiles(PDO $pdo): array {
     $stmt = $pdo->query("SELECT * FROM fichiers ORDER BY id DESC");
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
+
+function deleteFile(PDO $pdo, int $fileId, string $publicDir): bool {
+    $stmt = $pdo->prepare("SELECT * FROM fichiers WHERE id = :id");
+    $stmt->execute([':id' => $fileId]);
+    $file = $stmt->fetch(PDO::FETCH_ASSOC);
+    if(!$file) return false;
+    $filePath = $publicDir . $file['path'];
+    if(file_exists($filePath)) unlink($filePath);
+    $stmt = $pdo->prepare("DELETE FROM fichiers WHERE id = :id");
+    return $stmt->execute([':id' => $fileId]);
+}
